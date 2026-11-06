@@ -50,9 +50,7 @@ Data comes from the public NHTSA API (https://www.nhtsa.gov/nhtsa-datasets-and-a
 
 Current scope:
 
-- Make: Honda
-- Models: Civic, Accord, CR-V
-- Model years: 2018 to 2022
+- Model years: 2010 to 2025
 - Source used in experiments: recalls
 
 The download script also saves owner complaints for the same vehicles, which may be used in future work.
