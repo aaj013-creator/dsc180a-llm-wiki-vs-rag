@@ -219,3 +219,12 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 data/raw/*.json
+
+# MacOS
+.DS_Store
+
+# Data
+data/processed/*
+!data/processed/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
