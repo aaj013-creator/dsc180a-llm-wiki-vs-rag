@@ -60,7 +60,7 @@ python run.py data
 
 ## Setup
 
-Requires Python 3.10 or newer.
+Requires Python 3.9 or newer.
 
 1. Clone the repository:
    ```
