@@ -12,7 +12,7 @@ import re
 import time
 from collections.abc import Mapping, Sequence
 from dataclasses import asdict, dataclass
-from typing import Any
+from typing import Any, Literal
 
 
 GROQ_API_KEY_ENV = "GROQ_API_KEY"
@@ -25,7 +25,8 @@ class GenerationSettings:
     model: str = "openai/gpt-oss-20b"
     temperature: float = 0.0
     top_p: float = 1.0
-    max_completion_tokens: int = 1024
+    max_completion_tokens: int = 4096
+    reasoning_effort: Literal["low", "medium", "high"] = "low"
     seed: int = 42
     stream: bool = False
     n: int = 1
@@ -39,6 +40,8 @@ class GenerationSettings:
             raise ValueError("top_p must be between 0 and 1")
         if self.max_completion_tokens <= 0:
             raise ValueError("max_completion_tokens must be positive")
+        if self.reasoning_effort not in {"low", "medium", "high"}:
+            raise ValueError("reasoning_effort must be low, medium, or high")
         if self.n != 1:
             raise ValueError("Groq chat completions currently require n=1")
         if self.stream:
@@ -60,6 +63,7 @@ class TokenUsage:
     prompt_tokens: int | None = None
     completion_tokens: int | None = None
     total_tokens: int | None = None
+    reasoning_tokens: int | None = None
 
     def to_dict(self) -> dict[str, int | None]:
         return asdict(self)
@@ -155,6 +159,7 @@ class GroqLLM:
                 temperature=self.settings.temperature,
                 top_p=self.settings.top_p,
                 max_completion_tokens=self.settings.max_completion_tokens,
+                reasoning_effort=self.settings.reasoning_effort,
                 seed=self.settings.seed,
                 stream=self.settings.stream,
                 n=self.settings.n,
@@ -167,17 +172,35 @@ class GroqLLM:
             choice = choices[0]
             message = getattr(choice, "message", None)
             text = getattr(message, "content", None)
-            if text is None:
-                raise _ResponseFailure("Groq returned a choice without message content")
+            finish_reason = getattr(choice, "finish_reason", None)
+            usage = _extract_usage(response)
+            common_result = {
+                "model": getattr(response, "model", None) or self.settings.model,
+                "usage": usage,
+                "latency_seconds": time.perf_counter() - started,
+                "response_id": getattr(response, "id", None),
+                "system_fingerprint": getattr(response, "system_fingerprint", None),
+                "finish_reason": finish_reason,
+            }
+
+            if not isinstance(text, str) or not text.strip():
+                return LLMResult(
+                    text=None,
+                    **common_result,
+                    error=LLMError(
+                        category="empty_response",
+                        error_type="EmptyResponse",
+                        message=(
+                            "Groq returned empty final content"
+                            f" (finish_reason={finish_reason!r})"
+                        ),
+                        retryable=finish_reason == "length",
+                    ),
+                )
 
             return LLMResult(
                 text=text,
-                model=getattr(response, "model", None) or self.settings.model,
-                usage=_extract_usage(response),
-                latency_seconds=time.perf_counter() - started,
-                response_id=getattr(response, "id", None),
-                system_fingerprint=getattr(response, "system_fingerprint", None),
-                finish_reason=getattr(choice, "finish_reason", None),
+                **common_result,
             )
         except Exception as exc:  # Convert expected SDK/runtime failures to data.
             return LLMResult(
@@ -232,10 +255,12 @@ def _extract_usage(response: Any) -> TokenUsage:
     usage = getattr(response, "usage", None)
     if usage is None:
         return TokenUsage()
+    completion_details = getattr(usage, "completion_tokens_details", None)
     return TokenUsage(
         prompt_tokens=getattr(usage, "prompt_tokens", None),
         completion_tokens=getattr(usage, "completion_tokens", None),
         total_tokens=getattr(usage, "total_tokens", None),
+        reasoning_tokens=getattr(completion_details, "reasoning_tokens", None),
     )
 
 
