@@ -1,0 +1,66 @@
+{
+  "run": {
+    "system": "llm_only_baseline",
+    "started_at_utc": "2026-11-06T02:13:06.300285Z",
+    "completed_at_utc": "2026-11-06T02:13:09.214865Z",
+    "questions_file": "data\\evaluation\\test_questions.json",
+    "question_count": 2,
+    "success_count": 2,
+    "failure_count": 0,
+    "generation_settings": {
+      "model": "openai/gpt-oss-20b",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_completion_tokens": 4096,
+      "reasoning_effort": "low",
+      "seed": 42,
+      "stream": false,
+      "n": 1
+    },
+    "prompt_template": "Answer this automotive safety recall question without external documents or retrieved context.\nUse only your existing knowledge. If you do not know, say \"I don't know\" rather than inventing information.\n\nQuestion: {question}",
+    "dataset_metadata": {
+      "dataset_name": "baseline_smoke_test",
+      "version": "0.1"
+    }
+  },
+  "results": [
+    {
+      "id": "test_001",
+      "question": "What should a vehicle owner do after receiving a safety recall notice?",
+      "metadata": {},
+      "status": "success",
+      "answer": "When you receive a safety‑recall notice, follow these steps:\n\n1. **Read the notice carefully** – It will explain the problem, the part(s) involved, and the repair procedure.  \n2. **Check the repair status** – Most recalls are free of charge and the manufacturer will cover parts and labor.  \n3. **Contact your dealer or the manufacturer’s service center** – Call the number listed on the notice or visit the dealer’s website to schedule an appointment.  \n4. **Bring the vehicle (and any required documents)** – Bring your owner’s manual, registration, and the recall notice when you go in.  \n5. **Have the repair performed promptly** – Safety recalls are issued because the defect could affect vehicle safety; get the repair done as soon as possible.  \n6. **Keep a record** – Save the repair invoice and any correspondence. This can be useful for future resale or warranty claims.  \n\nIf you’re unable to get the repair done immediately (e.g., the dealer is closed), ask if a temporary fix or a loaner vehicle is available. Always follow the manufacturer’s instructions—ignoring a safety recall can compromise your safety and may affect insurance coverage.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.3127268999996886,
+      "usage": {
+        "prompt_tokens": 123,
+        "completion_tokens": 287,
+        "total_tokens": 410,
+        "reasoning_tokens": 34
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-be0390a2-ff09-4bc4-8581-998015fb6113",
+      "system_fingerprint": "fp_ce54c53bd5",
+      "error": null
+    },
+    {
+      "id": "test_002",
+      "question": "What is the purpose of an NHTSA recall campaign number?",
+      "metadata": {},
+      "status": "success",
+      "answer": "The NHTSA recall campaign number is a unique identifier assigned to each recall action. It serves to:\n\n1. **Track and manage the recall** – The number is used by manufacturers, dealers, and the NHTSA to monitor the progress of the recall, including parts distribution, repair status, and compliance.\n2. **Provide a reference for consumers** – Vehicle owners can use the number to look up the recall details, verify that a repair is covered, and confirm that the correct recall is being addressed.\n3. **Facilitate communication** – The number is used in all official correspondence, documentation, and reporting between the manufacturer, the NHTSA, and other stakeholders, ensuring everyone is referring to the same recall action.\n\nIn short, the recall campaign number is a unique, traceable code that identifies a specific recall so it can be tracked, reported, and communicated accurately.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.602016699998785,
+      "usage": {
+        "prompt_tokens": 123,
+        "completion_tokens": 237,
+        "total_tokens": 360,
+        "reasoning_tokens": 49
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-4715d656-3728-45c3-a548-c55ba4d2cb04",
+      "system_fingerprint": "fp_9b8528b477",
+      "error": null
+    }
+  ]
+}

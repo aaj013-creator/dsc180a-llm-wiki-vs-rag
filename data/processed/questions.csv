@@ -1,0 +1,11 @@
+id,task_type,question,gold_answer,source_records
+q01,lookup,"In recall 19V865000 for the 2019 Honda CR-V, what part may separate and what is the remedy?","The rear subframe may separate because its bolts may loosen. Dealers inspect the rear subframe bolts and retorque or replace them.",19V865000
+q02,lookup,"What defect does recall 19V569000 describe for the 2019 Honda CR-V?","The joint weld between the fuel tank and the vapor return line may be insufficient and fail. Dealers replace the fuel tank.",19V569000
+q03,lookup,"Why was the 2019 Honda CR-V recalled under campaign 19V694000?","The owner's guide incorrectly describes when the Passenger Airbag Off indicator should illuminate, failing FMVSS 208. Honda provides a sticker with corrected information.",19V694000
+q04,lookup,"Under recall 19V383000, what can happen to the driver's air bag in the 2019 Honda CR-V?","Burrs on the steering wheel's metal core can damage the harnesses, potentially disabling the driver's air bag or causing it to deploy without warning.",19V383000
+q05,lookup,"When were owner notification letters mailed for seat belt recall 23V158000?","April 18, 2023.",23V158000
+q06,lookup,"What problem does recall 26V332000 address in the 2019 Honda CR-V?","The front passenger seat weight sensor may crack and short circuit, which can cause the air bags to deploy unintentionally in a crash. Dealers replace the seat weight sensors.",26V332000
+q07,synthesis,"Which recalls for the 2019 Honda CR-V involve the fuel system?","19V569000 (fuel tank weld), 21V215000 (fuel pump), and 23V858000 (fuel pump).",19V569000;21V215000;23V858000
+q08,synthesis,"Which recalls for the 2019 Honda CR-V relate to air bags?","19V383000 (driver air bag harness), 19V694000 (Passenger Airbag Off indicator in owner's guide), and 26V332000 (passenger seat weight sensor).",19V383000;19V694000;26V332000
+q09,synthesis,"How did the fuel pump recall for the 2019 Honda CR-V change over time?","Recall 20V-314 was expanded by 21V-215 in 2021, then expanded again by 23V-858 in 2023 to cover 2013 to 2023 models.",21V215000;23V858000
+q10,unanswerable,"What recalls affect the 2020 Honda Pilot?","Not in the corpus. The system should say it does not know.",
