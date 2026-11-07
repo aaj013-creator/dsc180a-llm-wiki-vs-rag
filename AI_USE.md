@@ -90,5 +90,5 @@ Claude:
 - Cross checked listed information with NHTSA's provided data information file for recalls
 
 ### Where I changed the AI's suggestions
-- Rewrote the notebook’s markdown commentary where I disagreed with the AI’s interpretation or saw a bigger takeaway elsewhere, such as the high missinness of RPNO
+- Rewrote the notebook’s markdown commentary where I disagreed with the AI’s interpretation or saw a bigger takeaway elsewhere, such as the high missingness of RPNO
 - Chose the section order and heading names myself, using Claude’s suggestions as a starting point.
