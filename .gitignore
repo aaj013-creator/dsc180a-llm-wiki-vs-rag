@@ -218,9 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-data/raw/*.json
 
-# MacOS
+# MacOS 
+data/raw/*.json
 .DS_Store
 
 # Data

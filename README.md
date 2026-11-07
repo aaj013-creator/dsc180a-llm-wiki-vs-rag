@@ -1,7 +1,7 @@
 # Grounding LLMs in Vehicle Safety Data: RAG vs. an LLM-Only Baseline
 
 DSC 180A Capstone, Quarter 1 Project
-Mentor: Ryan (99P Labs)
+Mentor: Ryan Lingo (99P Labs)
 Team: Aarushi Jain, Ryan Tang, Shawn Cheng, Henry Liu
 
 ## Overview

@@ -117,7 +117,48 @@ I am on branch 'baseline' and want to merge into main. Please stage the right co
 
 ## Shawn Cheng
 
-[Add your AI usage here.]
+Tools: Claude, Codex
+
+### How I used AI
+- I used Claude to help me write the introduction section of our checkpoint report. I provided it with the project details, and it helped me draft a well-structured introduction. I also used Claude Code to analyze our code repository and provide insights for improving the introduction section. I then used Codex to refine the draft introduction section, ensuring it followed research report writing quality and addressed any gaps or issues.
+- I also used Claude Code to help me migrate the code for the RAG implementation from a Jupyter notebook to a Python script.
+
+## Prompt Log
+
+### 1. Report Introduction Draft (Claude)
+```markdown
+Could you help me draft an introduction section for my capstone project's checkpoint report? More details are attached here: https://dsc-capstone.org/2026-27/assignments/projects/q1/. Basically, as part of our first checkpoint, we have to submit our code and some sections of the report. I've been tasked with working on the introduction section. You can also look here for expections on LaTeX: https://dsc-capstone.org/2026-27/assignments/methodology/05/#introduction. You can look in the attached folder for my code progress so far; I've been tasked with coding a basic RAG implementation, which is finished. We are building off of a LaTeX template file, you can view the template file here: https://www.overleaf.com/project/6aebbf7d6d25db6076c5e1c. The current README.md is slightly outdated, but I've attached our current one.
+
+So as a summary, for our checkpoint we are comparing how LLMs perform on an LLM-only baseline vs. with RAG on NHTSA data. With all of this information, could you draft an introduction section for our LaTeX report? I don't think it needs to be too long, but it should discuss the main points of our project and what we're trying to achieve. Use the tone and language style that are often seen in research papers and scientific reports. Let me know if anything is unclear or if you have any questions whatsoever.
+```
+
+### 2. Ask Claude for a prompt to give Claude Code (Claude)
+```markdown
+Can you output what you need as a prompt to Claude Code? I'll have it look through the repo and hopefully find what you need.
+```
+
+### 3. Update the draft from Claude Code's findings (Claude)
+```markdown
+I pasted Claude Code's report, please take a look and update the draft introduction section based on what it found. The report is below.
+```
+
+### 4. Refine draft introduction section (Codex)
+```markdown
+I am writing the introduction section for my capstone project report. You can find details here: https://dsc-capstone.org/2026-27/assignments/projects/q1/. I have attached what I have so far.
+
+I've also attached feedback from my peer on some parts of the writing. Could you help polish up the wording in the report and ensure it follows research report writing quality and fix up and fix any issues and gaps in this section? Let me know if you need anything from me.
+```
+
+### 5. Migrating rag.ipynb to rag.py (Claude Code)
+```markdown
+Could you help me migrate the code from @notebooks/rag.ipynb to @src/rag.py ? I just want to move the code over from the notebook to an actual Python file, the logic and functionality should stay the same. I've already moved over most of the code, but I'm not sure it runs correctly, and probably some of the code can be better formatted / organized. If some code needs to be put into functions or rearranged for the Python script to run successfully that's fine too, just let me know what needs adjusting.
+```
+
+### Testing
+- I ran the code in `rag.py` and verified that it produces the same output as the original notebook.
+
+### Where I changed the AI's suggestions
+- I changed the docstrings in `rag.py` to be more concise and clear, while keeping the same meaning. I also removed some unnecessary comments that were not relevant to the code's functionality.
 
 ---
 
