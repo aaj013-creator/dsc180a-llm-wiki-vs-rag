@@ -1,0 +1,14 @@
+{
+  "dataset_name": "baseline_smoke_test",
+  "version": "0.1",
+  "questions": [
+    {
+      "id": "test_001",
+      "question": "What should a vehicle owner do after receiving a safety recall notice?"
+    },
+    {
+      "id": "test_002",
+      "question": "What is the purpose of an NHTSA recall campaign number?"
+    }
+  ]
+}
