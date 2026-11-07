@@ -97,3 +97,13 @@ python run.py data
 ## Status
 
 This project is in progress. Current stage: data collection, evaluation question set, and baselines.
+
+## AI Use and Contributions
+
+Generative AI tools, including Claude and OpenAI Codex, were used to assist with project planning,code generation, debugging, and documentation.
+
+**Human contributions:** Team members selected the research problem and NHTSA recall dataset, established the project scope, made implementation decisions, reviewed AI-generated code, configured the development environment, and tested the resulting implementations. Team members are responsible for validating the project's methodology, results, and conclusions.
+
+**AI contributions:** ChatGPT assisted with project planning and technical guidance. Codex assisted with repository inspection, implementation, error handling, and automated tests. AI-generated outputs were reviewed and tested rather than assumed to be correct.
+
+More detailed records of AI-assisted development, including prompts, modifications, and verification procedures, are maintained in `AI_USE.md`.
