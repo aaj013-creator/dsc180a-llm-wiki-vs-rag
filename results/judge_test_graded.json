@@ -1,0 +1,50 @@
+{
+  "source": "results/judge_test.json",
+  "judge_model": "openai/gpt-oss-120b",
+  "graded": [
+    {
+      "id": "t_correct",
+      "task_type": "lookup",
+      "correctness": 1.0,
+      "judge_reason": "The model answer includes the correct part (rear subframe), the cause (bolts may loosen), and the remedy (inspect and retorque or replace bolts) without contradictions.",
+      "abstained": false,
+      "gold_ids": [
+        "19V865000"
+      ],
+      "cited_ids": [
+        "19V865000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 1.0,
+      "total_tokens": 0
+    },
+    {
+      "id": "t_partial",
+      "task_type": "lookup",
+      "correctness": 0.5,
+      "judge_reason": "The answer identifies the part (rear subframe) but omits the remedy (inspect, retorque or replace bolts).",
+      "abstained": false,
+      "gold_ids": [
+        "19V865000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 0
+    },
+    {
+      "id": "t_wrong",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "The model answer mentions the wrong part and remedy, contradicting the reference answer.",
+      "abstained": false,
+      "gold_ids": [
+        "19V865000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 0
+    }
+  ]
+}

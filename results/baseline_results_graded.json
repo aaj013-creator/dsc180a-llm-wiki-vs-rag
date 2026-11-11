@@ -1,0 +1,149 @@
+{
+  "source": "results/baseline_results.json",
+  "judge_model": "openai/gpt-oss-120b",
+  "graded": [
+    {
+      "id": "q01",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V865000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 202
+    },
+    {
+      "id": "q02",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V569000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 193
+    },
+    {
+      "id": "q03",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V694000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 188
+    },
+    {
+      "id": "q04",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 196
+    },
+    {
+      "id": "q05",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "23V158000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 150
+    },
+    {
+      "id": "q06",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "26V332000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 218
+    },
+    {
+      "id": "q07",
+      "task_type": "synthesis",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V569000",
+        "21V215000",
+        "23V858000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 173
+    },
+    {
+      "id": "q08",
+      "task_type": "synthesis",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000",
+        "19V694000",
+        "26V332000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 204
+    },
+    {
+      "id": "q09",
+      "task_type": "synthesis",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "21V215000",
+        "23V858000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 272
+    },
+    {
+      "id": "q10",
+      "task_type": "unanswerable",
+      "correctness": 1.0,
+      "judge_reason": "Correctly abstained",
+      "abstained": true,
+      "gold_ids": [],
+      "cited_ids": [],
+      "citation_recall": null,
+      "citation_precision": null,
+      "total_tokens": 164
+    }
+  ]
+}
