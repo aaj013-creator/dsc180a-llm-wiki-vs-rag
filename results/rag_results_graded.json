@@ -1,0 +1,209 @@
+{
+  "source": "results/rag_results.json",
+  "judge_model": "openai/gpt-oss-120b",
+  "graded": [
+    {
+      "id": "q01",
+      "task_type": "lookup",
+      "correctness": 1.0,
+      "judge_reason": "The model answer includes the correct part (rear subframe) and the correct remedy (inspect, retorque or replace bolts) without contradictions.",
+      "abstained": false,
+      "gold_ids": [
+        "19V865000"
+      ],
+      "cited_ids": [
+        "17V305000",
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "19V865000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.2,
+      "total_tokens": 1221
+    },
+    {
+      "id": "q02",
+      "task_type": "lookup",
+      "correctness": 1.0,
+      "judge_reason": "The model answer correctly states the insufficient joint weld between the fuel tank and vapor return line as the defect, matching the reference without contradictions.",
+      "abstained": false,
+      "gold_ids": [
+        "19V569000"
+      ],
+      "cited_ids": [
+        "17V305000",
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "19V865000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.2,
+      "total_tokens": 1196
+    },
+    {
+      "id": "q03",
+      "task_type": "lookup",
+      "correctness": 1.0,
+      "judge_reason": "The model answer correctly states the owner's guide error and FMVSS 208 failure, matching the reference without contradictions.",
+      "abstained": false,
+      "gold_ids": [
+        "19V694000"
+      ],
+      "cited_ids": [
+        "12V501000",
+        "17V305000",
+        "19V569000",
+        "19V694000",
+        "19V865000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.2,
+      "total_tokens": 1221
+    },
+    {
+      "id": "q04",
+      "task_type": "lookup",
+      "correctness": 1.0,
+      "judge_reason": "The model answer includes all key facts from the reference answer and adds no contradictory information.",
+      "abstained": false,
+      "gold_ids": [
+        "19V383000"
+      ],
+      "cited_ids": [
+        "15V714000",
+        "17V417000",
+        "19V383000",
+        "19V569000",
+        "19V694000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.2,
+      "total_tokens": 1305
+    },
+    {
+      "id": "q05",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "23V158000"
+      ],
+      "cited_ids": [
+        "22V689000",
+        "22V953000",
+        "23V130000",
+        "25V489000",
+        "26V579000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1277
+    },
+    {
+      "id": "q06",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "26V332000"
+      ],
+      "cited_ids": [
+        "17V305000",
+        "19V569000",
+        "19V694000",
+        "19V865000",
+        "22V380000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1097
+    },
+    {
+      "id": "q07",
+      "task_type": "synthesis",
+      "correctness": 0.5,
+      "judge_reason": "The answer mentions only recall 19V569000 and omits the other two fuel\u2011system recalls (21V215000 and 23V858000).",
+      "abstained": false,
+      "gold_ids": [
+        "19V569000",
+        "21V215000",
+        "23V858000"
+      ],
+      "cited_ids": [
+        "17V442000",
+        "19V569000",
+        "20V797000",
+        "22V380000",
+        "25V858000"
+      ],
+      "citation_recall": 0.3333333333333333,
+      "citation_precision": 0.2,
+      "total_tokens": 1302
+    },
+    {
+      "id": "q08",
+      "task_type": "synthesis",
+      "correctness": 0.5,
+      "judge_reason": "The answer lists two of the three relevant recalls but omits recall 26V332000, which the reference includes as an air\u2011bag\u2011related recall.",
+      "abstained": false,
+      "gold_ids": [
+        "19V383000",
+        "19V694000",
+        "26V332000"
+      ],
+      "cited_ids": [
+        "15V714000",
+        "17V417000",
+        "19V383000",
+        "19V694000",
+        "24V064000"
+      ],
+      "citation_recall": 0.6666666666666666,
+      "citation_precision": 0.4,
+      "total_tokens": 1773
+    },
+    {
+      "id": "q09",
+      "task_type": "synthesis",
+      "correctness": 0.5,
+      "judge_reason": "The answer mentions the 2021 expansion but omits the 2023 expansion and uses incorrect recall identifiers, missing key facts from the reference.",
+      "abstained": false,
+      "gold_ids": [
+        "21V215000",
+        "23V858000"
+      ],
+      "cited_ids": [
+        "19V053000",
+        "19V569000",
+        "20V314000",
+        "21V215000",
+        "22V380000"
+      ],
+      "citation_recall": 0.5,
+      "citation_precision": 0.2,
+      "total_tokens": 1708
+    },
+    {
+      "id": "q10",
+      "task_type": "unanswerable",
+      "correctness": 1.0,
+      "judge_reason": "Correctly abstained",
+      "abstained": true,
+      "gold_ids": [],
+      "cited_ids": [
+        "18V916000",
+        "19V838000",
+        "21V331000",
+        "22V695000",
+        "24V384000"
+      ],
+      "citation_recall": null,
+      "citation_precision": 0.0,
+      "total_tokens": 1492
+    }
+  ]
+}
