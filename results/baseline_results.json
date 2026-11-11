@@ -1,0 +1,281 @@
+{
+  "run": {
+    "system": "llm_only_baseline",
+    "started_at_utc": "2026-11-11T07:34:05.845726Z",
+    "completed_at_utc": "2026-11-11T07:34:09.451844Z",
+    "questions_file": "data/evaluation/questions.json",
+    "question_count": 10,
+    "success_count": 10,
+    "failure_count": 0,
+    "generation_settings": {
+      "model": "openai/gpt-oss-20b",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_completion_tokens": 4096,
+      "reasoning_effort": "low",
+      "seed": 42,
+      "stream": false,
+      "n": 1
+    },
+    "prompt_template": "Answer this automotive safety recall question without external documents or retrieved context.\nUse only your existing knowledge. If you do not know, say \"I don't know\" rather than inventing information.\n\nQuestion: {question}",
+    "dataset_metadata": {
+      "dataset_name": "nhtsa_recall_eval",
+      "version": "0.1"
+    }
+  },
+  "results": [
+    {
+      "id": "q01",
+      "question": "In recall 19V865000 for the 2019 Honda CR-V, what part may separate and what is the remedy?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "The rear subframe may separate because its bolts may loosen. Dealers inspect the rear subframe bolts and retorque or replace them.",
+        "source_records": [
+          "19V865000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don’t know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.8475270409835503,
+      "usage": {
+        "prompt_tokens": 136,
+        "completion_tokens": 66,
+        "total_tokens": 202,
+        "reasoning_tokens": 52
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-cb4575f7-cd18-469c-b32b-ddcd7362cd29",
+      "system_fingerprint": "fp_8d13edce1d",
+      "error": null
+    },
+    {
+      "id": "q02",
+      "question": "What defect does recall 19V569000 describe for the 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "The joint weld between the fuel tank and the vapor return line may be insufficient and fail. Dealers replace the fuel tank.",
+        "source_records": [
+          "19V569000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.2985556249623187,
+      "usage": {
+        "prompt_tokens": 129,
+        "completion_tokens": 64,
+        "total_tokens": 193,
+        "reasoning_tokens": 51
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-57905923-56f6-4d81-8373-ba4be9fea20e",
+      "system_fingerprint": "fp_a8c584dda7",
+      "error": null
+    },
+    {
+      "id": "q03",
+      "question": "Why was the 2019 Honda CR-V recalled under campaign 19V694000?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "The owner's guide incorrectly describes when the Passenger Airbag Off indicator should illuminate, failing FMVSS 208. Honda provides a sticker with corrected information.",
+        "source_records": [
+          "19V694000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.2957599579822272,
+      "usage": {
+        "prompt_tokens": 128,
+        "completion_tokens": 60,
+        "total_tokens": 188,
+        "reasoning_tokens": 47
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-c8eb1fcd-3ff3-402a-8ca7-45c487a4b23d",
+      "system_fingerprint": "fp_a8c584dda7",
+      "error": null
+    },
+    {
+      "id": "q04",
+      "question": "Under recall 19V383000, what can happen to the driver's air bag in the 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "Burrs on the steering wheel's metal core can damage the harnesses, potentially disabling the driver's air bag or causing it to deploy without warning.",
+        "source_records": [
+          "19V383000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don’t know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.24870158301200718,
+      "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 61,
+        "total_tokens": 196,
+        "reasoning_tokens": 47
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-9ccf1585-861b-4361-b6c7-fc08b1585384",
+      "system_fingerprint": "fp_816fc87d18",
+      "error": null
+    },
+    {
+      "id": "q05",
+      "question": "When were owner notification letters mailed for seat belt recall 23V158000?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "April 18, 2023.",
+        "source_records": [
+          "23V158000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.20867925003403798,
+      "usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 24,
+        "total_tokens": 150,
+        "reasoning_tokens": 11
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-0d53e8b0-f919-48ac-9941-c7933484bacb",
+      "system_fingerprint": "fp_f102a3179c",
+      "error": null
+    },
+    {
+      "id": "q06",
+      "question": "What problem does recall 26V332000 address in the 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "The front passenger seat weight sensor may crack and short circuit, which can cause the air bags to deploy unintentionally in a crash. Dealers replace the seat weight sensors.",
+        "source_records": [
+          "26V332000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don’t know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.2737087919958867,
+      "usage": {
+        "prompt_tokens": 129,
+        "completion_tokens": 89,
+        "total_tokens": 218,
+        "reasoning_tokens": 75
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-f50980e6-64a4-458d-b3b2-3153874df155",
+      "system_fingerprint": "fp_5979a0e1b7",
+      "error": null
+    },
+    {
+      "id": "q07",
+      "question": "Which recalls for the 2019 Honda CR-V involve the fuel system?",
+      "metadata": {
+        "task_type": "synthesis",
+        "gold_answer": "19V569000 (fuel tank weld), 21V215000 (fuel pump), and 23V858000 (fuel pump).",
+        "source_records": [
+          "19V569000",
+          "21V215000",
+          "23V858000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.3414506249828264,
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 48,
+        "total_tokens": 173,
+        "reasoning_tokens": 35
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-7616cdcb-9956-42ac-a605-9e365d63a83a",
+      "system_fingerprint": "fp_c5a89987dc",
+      "error": null
+    },
+    {
+      "id": "q08",
+      "question": "Which recalls for the 2019 Honda CR-V relate to air bags?",
+      "metadata": {
+        "task_type": "synthesis",
+        "gold_answer": "19V383000 (driver air bag harness), 19V694000 (Passenger Airbag Off indicator in owner's guide), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "19V383000",
+          "19V694000",
+          "26V332000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don’t know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.3801001659594476,
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 79,
+        "total_tokens": 204,
+        "reasoning_tokens": 65
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-1a399a57-d89e-47c6-be34-08f264f66652",
+      "system_fingerprint": "fp_e99e93f2ac",
+      "error": null
+    },
+    {
+      "id": "q09",
+      "question": "How did the fuel pump recall for the 2019 Honda CR-V change over time?",
+      "metadata": {
+        "task_type": "synthesis",
+        "gold_answer": "Recall 20V-314 was expanded by 21V-215 in 2021, then expanded again by 23V-858 in 2023 to cover 2013 to 2023 models.",
+        "source_records": [
+          "21V215000",
+          "23V858000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don’t know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.43871429102728143,
+      "usage": {
+        "prompt_tokens": 128,
+        "completion_tokens": 144,
+        "total_tokens": 272,
+        "reasoning_tokens": 130
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-70a8d0cc-fd7b-4ad9-9777-2b992b6cb27f",
+      "system_fingerprint": "fp_75c733514d",
+      "error": null
+    },
+    {
+      "id": "q10",
+      "question": "What is the remedy for NHTSA recall campaign 99V999000?",
+      "metadata": {
+        "task_type": "unanswerable",
+        "gold_answer": "Not in the corpus, which only covers campaigns from 2010 onward. The system should say it does not know.",
+        "source_records": []
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.27221583301434293,
+      "usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 38,
+        "total_tokens": 164,
+        "reasoning_tokens": 25
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-d91c8063-f9f8-4fdb-ad7b-3b8f58bde6e1",
+      "system_fingerprint": "fp_a8c584dda7",
+      "error": null
+    }
+  ]
+}

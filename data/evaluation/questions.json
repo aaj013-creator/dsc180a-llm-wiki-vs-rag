@@ -1,0 +1,99 @@
+{
+  "dataset_name": "nhtsa_recall_eval",
+  "version": "0.1",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "In recall 19V865000 for the 2019 Honda CR-V, what part may separate and what is the remedy?",
+      "task_type": "lookup",
+      "gold_answer": "The rear subframe may separate because its bolts may loosen. Dealers inspect the rear subframe bolts and retorque or replace them.",
+      "source_records": [
+        "19V865000"
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "What defect does recall 19V569000 describe for the 2019 Honda CR-V?",
+      "task_type": "lookup",
+      "gold_answer": "The joint weld between the fuel tank and the vapor return line may be insufficient and fail. Dealers replace the fuel tank.",
+      "source_records": [
+        "19V569000"
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "Why was the 2019 Honda CR-V recalled under campaign 19V694000?",
+      "task_type": "lookup",
+      "gold_answer": "The owner's guide incorrectly describes when the Passenger Airbag Off indicator should illuminate, failing FMVSS 208. Honda provides a sticker with corrected information.",
+      "source_records": [
+        "19V694000"
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "Under recall 19V383000, what can happen to the driver's air bag in the 2019 Honda CR-V?",
+      "task_type": "lookup",
+      "gold_answer": "Burrs on the steering wheel's metal core can damage the harnesses, potentially disabling the driver's air bag or causing it to deploy without warning.",
+      "source_records": [
+        "19V383000"
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "When were owner notification letters mailed for seat belt recall 23V158000?",
+      "task_type": "lookup",
+      "gold_answer": "April 18, 2023.",
+      "source_records": [
+        "23V158000"
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "What problem does recall 26V332000 address in the 2019 Honda CR-V?",
+      "task_type": "lookup",
+      "gold_answer": "The front passenger seat weight sensor may crack and short circuit, which can cause the air bags to deploy unintentionally in a crash. Dealers replace the seat weight sensors.",
+      "source_records": [
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "Which recalls for the 2019 Honda CR-V involve the fuel system?",
+      "task_type": "synthesis",
+      "gold_answer": "19V569000 (fuel tank weld), 21V215000 (fuel pump), and 23V858000 (fuel pump).",
+      "source_records": [
+        "19V569000",
+        "21V215000",
+        "23V858000"
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "Which recalls for the 2019 Honda CR-V relate to air bags?",
+      "task_type": "synthesis",
+      "gold_answer": "19V383000 (driver air bag harness), 19V694000 (Passenger Airbag Off indicator in owner's guide), and 26V332000 (passenger seat weight sensor).",
+      "source_records": [
+        "19V383000",
+        "19V694000",
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "How did the fuel pump recall for the 2019 Honda CR-V change over time?",
+      "task_type": "synthesis",
+      "gold_answer": "Recall 20V-314 was expanded by 21V-215 in 2021, then expanded again by 23V-858 in 2023 to cover 2013 to 2023 models.",
+      "source_records": [
+        "21V215000",
+        "23V858000"
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "What is the remedy for NHTSA recall campaign 99V999000?",
+      "task_type": "unanswerable",
+      "gold_answer": "Not in the corpus, which only covers campaigns from 2010 onward. The system should say it does not know.",
+      "source_records": []
+    }
+  ]
+}

@@ -8,4 +8,4 @@ q06,lookup,"What problem does recall 26V332000 address in the 2019 Honda CR-V?",
 q07,synthesis,"Which recalls for the 2019 Honda CR-V involve the fuel system?","19V569000 (fuel tank weld), 21V215000 (fuel pump), and 23V858000 (fuel pump).",19V569000;21V215000;23V858000
 q08,synthesis,"Which recalls for the 2019 Honda CR-V relate to air bags?","19V383000 (driver air bag harness), 19V694000 (Passenger Airbag Off indicator in owner's guide), and 26V332000 (passenger seat weight sensor).",19V383000;19V694000;26V332000
 q09,synthesis,"How did the fuel pump recall for the 2019 Honda CR-V change over time?","Recall 20V-314 was expanded by 21V-215 in 2021, then expanded again by 23V-858 in 2023 to cover 2013 to 2023 models.",21V215000;23V858000
-q10,unanswerable,"What recalls affect the 2020 Honda Pilot?","Not in the corpus. The system should say it does not know.",
+q10,unanswerable,"What is the remedy for NHTSA recall campaign 99V999000?","Not in the corpus, which only covers campaigns from 2010 onward. The system should say it does not know.",
