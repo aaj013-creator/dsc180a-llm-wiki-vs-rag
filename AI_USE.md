@@ -34,6 +34,28 @@ I used Claude as a coding assistant while setting up the repository and data pip
 - I switched the dataset from the AI's suggestion (99P Labs blog posts) to NHTSA recall data.
 - The AI's first abstract described a three-system project that did not match our team's plan, so I had it revised to match our literature review.
 
+
+### Update: November 10 to 12, 2026
+
+I used Claude as a coding assistant to run our experiments. I ran every script myself, checked the output at each step, and fixed issues before committing.
+
+- scripts/convert_questions.py: converts our question CSV into the JSON format the baseline expects, keeping gold answers and source records for grading
+- scripts/show_results.py: prints model answers next to gold answers so I could check results by hand
+- scripts/grade.py: grades results on correctness (using an LLM judge), abstention, retrieved recall IDs compared to gold IDs, and token cost. I tested the judge on answers with known scores (correct, partial, wrong) before using it.
+- scripts/run_rag.py: runs Shawn's RAG code on every question in one batch and saves which recall IDs were retrieved. It reuses his functions without changing them, and uses the same model and settings as the baseline so the comparison is fair.
+- data/processed/questions.csv: replaced q10 after realizing it became answerable once we moved to the full recall corpus. Added q11 to q27 covering new question types (lookup without an ID, two-hop, comparison, filtered list, counting, unanswerable), based on our mentor's feedback and the MuSiQue paper he shared. Answers were taken from recall records I printed from our data, and I checked the dates and counts against the full NHTSA data file with pandas.
+
+Prompts:
+1. "ok lets do the next steps"
+2. "Lets write the grader"
+3. "ill just do it" (writing the batch RAG runner)
+4. "yes write a new set of questions"
+5. "ok lets do my part"
+
+Where I checked or changed the AI's work:
+- I hand-checked RAG answers. For q09, I confirmed the judge's partial score was right: the model mixed a fuel tank recall into the fuel pump recall's history.
+- I verified the answer key for q21, q23, q24, and q25 against the full data file before running experiments.
+
 ---
 
 ## Ryan Tang
