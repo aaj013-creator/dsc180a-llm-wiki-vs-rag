@@ -257,6 +257,129 @@
       "task_type": "unanswerable",
       "gold_answer": "Not in the corpus. The system should say it does not know.",
       "source_records": []
+    },
+    {
+      "id": "q28",
+      "question": "When was the original recall that 21V215000 expanded reported to NHTSA?",
+      "task_type": "two_hop",
+      "gold_answer": "21V215000 expanded recall 20V314000, which was reported to NHTSA on May 28, 2020.",
+      "source_records": [
+        "21V215000",
+        "20V314000"
+      ]
+    },
+    {
+      "id": "q29",
+      "question": "What component is involved in the original recall that both 21V215000 and 23V858000 expanded?",
+      "task_type": "two_hop",
+      "gold_answer": "Both expanded recall 20V314000, which involves the fuel pump (fuel system, gasoline delivery).",
+      "source_records": [
+        "20V314000"
+      ]
+    },
+    {
+      "id": "q30",
+      "question": "How many recall campaigns cover the 2019 Honda Civic?",
+      "task_type": "aggregate",
+      "gold_answer": "4 campaigns.",
+      "source_records": [
+        "20V314000",
+        "21V215000",
+        "23V858000",
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q31",
+      "question": "How many recall campaigns cover the 2019 Honda Accord?",
+      "task_type": "aggregate",
+      "gold_answer": "6 campaigns.",
+      "source_records": [
+        "20V314000",
+        "20V771000",
+        "21V215000",
+        "23V158000",
+        "23V858000",
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q32",
+      "question": "How many recall campaigns covering Honda-brand vehicles were reported to NHTSA in 2023?",
+      "task_type": "aggregate",
+      "gold_answer": "19 campaigns.",
+      "source_records": []
+    },
+    {
+      "id": "q33",
+      "question": "Among the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR-V, which has the most recall campaigns?",
+      "task_type": "aggregate",
+      "gold_answer": "The 2019 Honda CR-V, with 8 campaigns, compared with 6 for the 2019 Accord and 4 for the 2019 Civic.",
+      "source_records": []
+    },
+    {
+      "id": "q34",
+      "question": "Which recalls cover the 2019 Honda Civic?",
+      "task_type": "filtered_list",
+      "gold_answer": "20V314000 (fuel pump), 21V215000 (fuel pump), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+      "source_records": [
+        "20V314000",
+        "21V215000",
+        "23V858000",
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q35",
+      "question": "Which 2019 Honda Accord recalls involve the fuel system?",
+      "task_type": "filtered_list",
+      "gold_answer": "20V314000, 21V215000, and 23V858000, all involving the fuel pump.",
+      "source_records": [
+        "20V314000",
+        "21V215000",
+        "23V858000"
+      ]
+    },
+    {
+      "id": "q36",
+      "question": "Which recalls cover all three of the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR-V?",
+      "task_type": "filtered_list",
+      "gold_answer": "21V215000 (fuel pump), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+      "source_records": [
+        "21V215000",
+        "23V858000",
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q37",
+      "question": "Which was reported to NHTSA first: the 2019 Honda Accord body control module software recall or the 2019 Honda Accord seat belt buckle recall?",
+      "task_type": "comparison",
+      "gold_answer": "The body control module software recall (20V771000, reported December 10, 2020) came before the seat belt buckle recall (23V158000, reported March 9, 2023).",
+      "source_records": [
+        "20V771000",
+        "23V158000"
+      ]
+    },
+    {
+      "id": "q38",
+      "question": "Which was reported to NHTSA first: the 2019 Honda CR-V fuel tank weld recall or the original fuel pump recall 20V314000?",
+      "task_type": "comparison",
+      "gold_answer": "The fuel tank weld recall (19V569000, reported August 1, 2019) came before the fuel pump recall (20V314000, reported May 28, 2020).",
+      "source_records": [
+        "19V569000",
+        "20V314000"
+      ]
+    },
+    {
+      "id": "q39",
+      "question": "Which was reported to NHTSA first: recall 20V314000 or the 2019 Honda Accord body control module software recall?",
+      "task_type": "comparison",
+      "gold_answer": "20V314000 (reported May 28, 2020) came before the body control module software recall (20V771000, reported December 10, 2020).",
+      "source_records": [
+        "20V314000",
+        "20V771000"
+      ]
     }
   ]
 }

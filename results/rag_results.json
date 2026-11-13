@@ -12,7 +12,7 @@
     },
     "prompt_template": "Answer the question using ONLY the context below.\nIf the answer isn't in the context, say \"I don't know.\"\n\nContext:\n{context}\n\nQuestion: {question}",
     "questions_file": "data/evaluation/questions.json",
-    "created_at": "2026-11-13T00:23:41.848928+00:00"
+    "created_at": "2026-11-13T00:41:19.136072+00:00"
   },
   "results": [
     {
@@ -35,19 +35,19 @@
       "status": "success",
       "answer": "In recall 19V865000 for the 2019 Honda CR‑V, the **rear subframe** may separate. The remedy is for dealers to **inspect the rear subframe bolts and either retorque them or replace them as needed, free of charge**.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.554,
+      "latency_seconds": 0.478,
       "usage": {
         "completion_tokens": 91,
         "prompt_tokens": 1130,
         "total_tokens": 1221,
-        "completion_time": 0.098751032,
+        "completion_time": 0.112221855,
         "completion_tokens_details": {
           "reasoning_tokens": 26
         },
-        "prompt_time": 0.081098659,
+        "prompt_time": 0.062248031,
         "prompt_tokens_details": null,
-        "queue_time": 0.168312272,
-        "total_time": 0.179849691
+        "queue_time": 0.140777299,
+        "total_time": 0.174469886
       },
       "error": null
     },
@@ -71,19 +71,19 @@
       "status": "success",
       "answer": "The defect is that the joint weld between the fuel tank and the vapor return line may have been insufficiently welded, causing the weld to fail.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.673,
+      "latency_seconds": 0.51,
       "usage": {
         "completion_tokens": 73,
         "prompt_tokens": 1123,
         "total_tokens": 1196,
-        "completion_time": 0.096536843,
+        "completion_time": 0.077677623,
         "completion_tokens_details": {
           "reasoning_tokens": 35
         },
-        "prompt_time": 0.384535175,
+        "prompt_time": 0.094797705,
         "prompt_tokens_details": null,
-        "queue_time": 0.131891081,
-        "total_time": 0.481072018
+        "queue_time": 0.25067961,
+        "total_time": 0.172475328
       },
       "error": null
     },
@@ -107,19 +107,19 @@
       "status": "success",
       "answer": "The 2019 Honda CR‑V was recalled under campaign 19V694000 because the owner’s guide incorrectly described when the “Passenger Airbag Off” indicator should illuminate, causing the vehicle to fail to meet FMVSS 208 requirements for occupant crash protection.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.495,
+      "latency_seconds": 0.421,
       "usage": {
         "completion_tokens": 98,
         "prompt_tokens": 1113,
         "total_tokens": 1211,
-        "completion_time": 0.118505329,
+        "completion_time": 0.109281045,
         "completion_tokens_details": {
           "reasoning_tokens": 34
         },
-        "prompt_time": 0.061210416,
+        "prompt_time": 0.063989047,
         "prompt_tokens_details": null,
-        "queue_time": 0.210215481,
-        "total_time": 0.179715745
+        "queue_time": 0.189358308,
+        "total_time": 0.173270092
       },
       "error": null
     },
@@ -143,19 +143,19 @@
       "status": "success",
       "answer": "Under recall 19V383000, the metal core of the steering wheel may have burrs that can damage the harnesses routed within, potentially **disabling the driver’s air‑bag** or causing it to **deploy without warning**.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.564,
+      "latency_seconds": 0.501,
       "usage": {
         "completion_tokens": 93,
         "prompt_tokens": 1212,
         "total_tokens": 1305,
-        "completion_time": 0.10323127,
+        "completion_time": 0.124065211,
         "completion_tokens_details": {
           "reasoning_tokens": 35
         },
-        "prompt_time": 0.158039611,
+        "prompt_time": 0.124950255,
         "prompt_tokens_details": null,
-        "queue_time": 0.228239681,
-        "total_time": 0.261270881
+        "queue_time": 0.127615979,
+        "total_time": 0.249015466
       },
       "error": null
     },
@@ -179,19 +179,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.444,
+      "latency_seconds": 0.558,
       "usage": {
         "completion_tokens": 23,
         "prompt_tokens": 1254,
         "total_tokens": 1277,
-        "completion_time": 0.026875697,
+        "completion_time": 0.025836937,
         "completion_tokens_details": {
           "reasoning_tokens": 10
         },
-        "prompt_time": 0.069840672,
+        "prompt_time": 0.230394166,
         "prompt_tokens_details": null,
-        "queue_time": 0.21930312,
-        "total_time": 0.096716369
+        "queue_time": 0.19101645,
+        "total_time": 0.256231103
       },
       "error": null
     },
@@ -215,19 +215,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.676,
+      "latency_seconds": 0.264,
       "usage": {
         "completion_tokens": 17,
         "prompt_tokens": 1080,
         "total_tokens": 1097,
-        "completion_time": 0.021356914,
+        "completion_time": 0.0312081,
         "completion_tokens_details": {
           "reasoning_tokens": 4
         },
-        "prompt_time": 0.062384901,
+        "prompt_time": 0.055104585,
         "prompt_tokens_details": null,
-        "queue_time": 0.526416643,
-        "total_time": 0.083741815
+        "queue_time": 0.117931672,
+        "total_time": 0.086312685
       },
       "error": null
     },
@@ -253,19 +253,19 @@
       "status": "success",
       "answer": "The 2019 Honda CR‑V recall that involves the fuel system is:\n\n- **Recall campaign 19V569000** – “Joint weld between the fuel tank and the vapor return line may have been insufficiently welded, causing the weld to fail.”",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.57,
+      "latency_seconds": 20.584,
       "usage": {
         "completion_tokens": 125,
         "prompt_tokens": 1177,
         "total_tokens": 1302,
-        "completion_time": 0.15526174,
+        "completion_time": 0.144521419,
         "completion_tokens_details": {
           "reasoning_tokens": 63
         },
-        "prompt_time": 0.07052398,
+        "prompt_time": 0.058281531,
         "prompt_tokens_details": null,
-        "queue_time": 0.243194352,
-        "total_time": 0.22578572
+        "queue_time": 0.141110561,
+        "total_time": 0.20280295
       },
       "error": null
     },
@@ -289,21 +289,21 @@
         "24V064000"
       ],
       "status": "success",
-      "answer": "The 2019 Honda CR‑V recalls that involve air‑bag components are:\n\n- **Recall campaign 19V383000** – issues with the driver‑side clockspring and harness that can affect the driver’s air‑bag.\n- **Recall campaign 19V694000** – issues with the owner’s guide description of the “Passenger Airbag Off” indicator, which relates to passenger‑side air‑bag operation.",
+      "answer": "The 2019 Honda CR‑V recalls that involve air‑bag components are:\n\n- **Recall campaign 19V383000** – issues with the driver‑side clockspring and harness that can affect the driver’s air‑bag.\n- **Recall campaign 19V694000** – the owner’s guide incorrectly describes the “Passenger Airbag Off” indicator, which relates to passenger‑side air‑bag operation.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.642,
+      "latency_seconds": 10.662,
       "usage": {
-        "completion_tokens": 194,
+        "completion_tokens": 192,
         "prompt_tokens": 1595,
-        "total_tokens": 1789,
-        "completion_time": 0.236455721,
+        "total_tokens": 1787,
+        "completion_time": 0.207686361,
         "completion_tokens_details": {
           "reasoning_tokens": 97
         },
-        "prompt_time": 0.103056837,
+        "prompt_time": 0.092899328,
         "prompt_tokens_details": null,
-        "queue_time": 0.241808973,
-        "total_time": 0.339512558
+        "queue_time": 0.171708473,
+        "total_time": 0.300585689
       },
       "error": null
     },
@@ -326,21 +326,21 @@
         "19V053000"
       ],
       "status": "success",
-      "answer": "The 2019 Honda CR‑V’s fuel‑system recall evolved from a **tank‑assembly weld issue** to a **low‑pressure fuel‑pump failure**:\n\n1. **Initial recall (19V569000, September 2019)** – Honda recalled 2019 CR‑Vs because the joint weld between the fuel tank and the vapor‑return line could be insufficiently welded, potentially allowing a fuel leak and fire risk.\n\n2. **Later recall (21V215000, May 2021)** – The recall was expanded to include a low‑pressure fuel pump inside the tank that could fail, causing an engine stall and increasing crash risk. Dealers replaced the fuel‑pump assembly free of charge.\n\nThus, the recall shifted from addressing a weld defect to addressing a fuel‑pump failure.",
+      "answer": "The 2019 Honda CR‑V was first recalled in 2019 for a possible insufficient weld between the fuel tank and the vapor‑return line (Recall 19V569000).  In 2021 the recall was expanded (Recall 21V215000) to cover a low‑pressure fuel pump inside the tank that could fail, adding a new remedy to replace the fuel‑pump assembly free of charge.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 9.646,
+      "latency_seconds": 10.496,
       "usage": {
-        "completion_tokens": 242,
+        "completion_tokens": 144,
         "prompt_tokens": 1465,
-        "total_tokens": 1707,
-        "completion_time": 0.277517336,
+        "total_tokens": 1609,
+        "completion_time": 0.160189844,
         "completion_tokens_details": {
-          "reasoning_tokens": 68
+          "reasoning_tokens": 49
         },
-        "prompt_time": 0.07339222,
+        "prompt_time": 0.087056816,
         "prompt_tokens_details": null,
-        "queue_time": 0.140587607,
-        "total_time": 0.350909556
+        "queue_time": 0.090433209,
+        "total_time": 0.24724666
       },
       "error": null
     },
@@ -362,19 +362,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 10.567,
+      "latency_seconds": 0.544,
       "usage": {
         "completion_tokens": 17,
         "prompt_tokens": 1475,
         "total_tokens": 1492,
-        "completion_time": 0.017488001,
+        "completion_time": 0.035388158,
         "completion_tokens_details": {
           "reasoning_tokens": 4
         },
-        "prompt_time": 0.103363912,
+        "prompt_time": 0.078087302,
         "prompt_tokens_details": null,
-        "queue_time": 0.30068693,
-        "total_time": 0.120851913
+        "queue_time": 0.284406242,
+        "total_time": 0.11347546
       },
       "error": null
     },
@@ -398,19 +398,19 @@
       "status": "success",
       "answer": "The 2019 Honda CR‑V recall that addresses rear subframe bolts that may loosen is **Recall campaign 19V865000**.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 9.797,
+      "latency_seconds": 3.381,
       "usage": {
         "completion_tokens": 71,
         "prompt_tokens": 1583,
         "total_tokens": 1654,
-        "completion_time": 0.076344191,
+        "completion_time": 0.095841444,
         "completion_tokens_details": {
           "reasoning_tokens": 32
         },
-        "prompt_time": 0.087175444,
+        "prompt_time": 0.100713283,
         "prompt_tokens_details": null,
-        "queue_time": 0.117963499,
-        "total_time": 0.163519635
+        "queue_time": 0.062419186,
+        "total_time": 0.196554727
       },
       "error": null
     },
@@ -432,21 +432,23 @@
         "19V865000"
       ],
       "status": "success",
-      "answer": "The recall is **Recall campaign 19V383000**.",
+      "answer": "The recall is **19V383000**.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 8.503,
+      "latency_seconds": 6.461,
       "usage": {
-        "completion_tokens": 33,
+        "completion_tokens": 44,
         "prompt_tokens": 1182,
-        "total_tokens": 1215,
-        "completion_time": 0.038983247,
+        "total_tokens": 1226,
+        "completion_time": 0.048701233,
         "completion_tokens_details": {
-          "reasoning_tokens": 11
+          "reasoning_tokens": 25
         },
-        "prompt_time": 0.06925007,
-        "prompt_tokens_details": null,
-        "queue_time": 0.169057252,
-        "total_time": 0.108233317
+        "prompt_time": 0.049840577,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "queue_time": 0.177893615,
+        "total_time": 0.09854181
       },
       "error": null
     },
@@ -470,19 +472,19 @@
       "status": "success",
       "answer": "The 2019 Honda CR‑V recall that was caused by an error in the owner’s guide was Recall campaign 19V694000. The owner’s guide incorrectly described when the “Passenger Airbag Off” indicator should illuminate, which caused the vehicles to fail to meet FMVSS 208 requirements.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 5.426,
+      "latency_seconds": 2.446,
       "usage": {
         "completion_tokens": 84,
         "prompt_tokens": 1108,
         "total_tokens": 1192,
-        "completion_time": 0.088077306,
+        "completion_time": 0.094521148,
         "completion_tokens_details": {
           "reasoning_tokens": 11
         },
-        "prompt_time": 0.060955782,
+        "prompt_time": 0.065185348,
         "prompt_tokens_details": null,
-        "queue_time": 0.118019914,
-        "total_time": 0.149033088
+        "queue_time": 0.166922544,
+        "total_time": 0.159706496
       },
       "error": null
     },
@@ -506,19 +508,19 @@
       "status": "success",
       "answer": "The recall that covers front seat belt buckles on the 2019 Honda CR‑V that may not latch is **Recall campaign 23V158000**.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 10.588,
+      "latency_seconds": 26.565,
       "usage": {
-        "completion_tokens": 72,
+        "completion_tokens": 73,
         "prompt_tokens": 1446,
-        "total_tokens": 1518,
-        "completion_time": 0.092000627,
+        "total_tokens": 1519,
+        "completion_time": 0.07838034,
         "completion_tokens_details": {
-          "reasoning_tokens": 30
+          "reasoning_tokens": 31
         },
-        "prompt_time": 0.074144805,
+        "prompt_time": 0.085592475,
         "prompt_tokens_details": null,
-        "queue_time": 0.170997248,
-        "total_time": 0.166145432
+        "queue_time": 0.170762346,
+        "total_time": 0.163972815
       },
       "error": null
     },
@@ -542,19 +544,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 12.488,
+      "latency_seconds": 0.39,
       "usage": {
-        "completion_tokens": 59,
+        "completion_tokens": 46,
         "prompt_tokens": 1600,
-        "total_tokens": 1659,
-        "completion_time": 0.065687521,
+        "total_tokens": 1646,
+        "completion_time": 0.048475251,
         "completion_tokens_details": {
-          "reasoning_tokens": 46
+          "reasoning_tokens": 33
         },
-        "prompt_time": 0.081119965,
+        "prompt_time": 0.136960862,
         "prompt_tokens_details": null,
-        "queue_time": 0.118249117,
-        "total_time": 0.146807486
+        "queue_time": 0.14525139,
+        "total_time": 0.185436113
       },
       "error": null
     },
@@ -578,19 +580,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 5.625,
+      "latency_seconds": 1.453,
       "usage": {
-        "completion_tokens": 17,
+        "completion_tokens": 36,
         "prompt_tokens": 1248,
-        "total_tokens": 1265,
-        "completion_time": 0.01766308,
+        "total_tokens": 1284,
+        "completion_time": 0.041266945,
         "completion_tokens_details": {
-          "reasoning_tokens": 4
+          "reasoning_tokens": 23
         },
-        "prompt_time": 0.083215528,
+        "prompt_time": 0.075245491,
         "prompt_tokens_details": null,
-        "queue_time": 0.249564397,
-        "total_time": 0.100878608
+        "queue_time": 0.222775122,
+        "total_time": 0.116512436
       },
       "error": null
     },
@@ -614,19 +616,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 6.382,
+      "latency_seconds": 6.355,
       "usage": {
         "completion_tokens": 17,
         "prompt_tokens": 1197,
         "total_tokens": 1214,
-        "completion_time": 0.017437238,
+        "completion_time": 0.01852928,
         "completion_tokens_details": {
           "reasoning_tokens": 4
         },
-        "prompt_time": 0.066362712,
+        "prompt_time": 0.07772656,
         "prompt_tokens_details": null,
-        "queue_time": 0.134377871,
-        "total_time": 0.08379995
+        "queue_time": 0.118112746,
+        "total_time": 0.09625584
       },
       "error": null
     },
@@ -650,19 +652,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 7.559,
+      "latency_seconds": 8.382,
       "usage": {
         "completion_tokens": 41,
         "prompt_tokens": 1374,
         "total_tokens": 1415,
-        "completion_time": 0.051182406,
+        "completion_time": 0.0415327,
         "completion_tokens_details": {
           "reasoning_tokens": 28
         },
-        "prompt_time": 0.085760927,
+        "prompt_time": 0.067847369,
         "prompt_tokens_details": null,
-        "queue_time": 0.244133904,
-        "total_time": 0.136943333
+        "queue_time": 0.11420495,
+        "total_time": 0.109380069
       },
       "error": null
     },
@@ -686,19 +688,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 8.58,
+      "latency_seconds": 8.579,
       "usage": {
         "completion_tokens": 31,
         "prompt_tokens": 1201,
         "total_tokens": 1232,
-        "completion_time": 0.0345342,
+        "completion_time": 0.032100186,
         "completion_tokens_details": {
           "reasoning_tokens": 18
         },
-        "prompt_time": 0.080265958,
+        "prompt_time": 0.084191537,
         "prompt_tokens_details": null,
-        "queue_time": 0.250407088,
-        "total_time": 0.114800158
+        "queue_time": 0.114029952,
+        "total_time": 0.116291723
       },
       "error": null
     },
@@ -722,19 +724,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 7.473,
+      "latency_seconds": 7.427,
       "usage": {
-        "completion_tokens": 35,
+        "completion_tokens": 31,
         "prompt_tokens": 1253,
-        "total_tokens": 1288,
-        "completion_time": 0.038766667,
+        "total_tokens": 1284,
+        "completion_time": 0.033291916,
         "completion_tokens_details": {
-          "reasoning_tokens": 22
+          "reasoning_tokens": 18
         },
-        "prompt_time": 0.129561251,
+        "prompt_time": 0.069097361,
         "prompt_tokens_details": null,
-        "queue_time": 0.140643899,
-        "total_time": 0.168327918
+        "queue_time": 0.167814271,
+        "total_time": 0.102389277
       },
       "error": null
     },
@@ -759,19 +761,19 @@
       "status": "success",
       "answer": "The 2019 Honda CR‑V driver air‑bag clockspring recall was reported to NHTSA first.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 5.564,
+      "latency_seconds": 6.446,
       "usage": {
         "completion_tokens": 80,
         "prompt_tokens": 1233,
         "total_tokens": 1313,
-        "completion_time": 0.126200899,
+        "completion_time": 0.090554721,
         "completion_tokens_details": {
           "reasoning_tokens": 47
         },
-        "prompt_time": 0.066172378,
+        "prompt_time": 0.062623616,
         "prompt_tokens_details": null,
-        "queue_time": 0.207103577,
-        "total_time": 0.192373277
+        "queue_time": 0.140827552,
+        "total_time": 0.153178337
       },
       "error": null
     },
@@ -796,19 +798,19 @@
       "status": "success",
       "answer": "The fuel tank weld recall (started September 16, 2019) began before the Passenger Airbag Off owner’s guide recall (started November 14, 2019).",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 11.585,
+      "latency_seconds": 7.446,
       "usage": {
         "completion_tokens": 83,
         "prompt_tokens": 1155,
         "total_tokens": 1238,
-        "completion_time": 0.089541067,
+        "completion_time": 0.119022797,
         "completion_tokens_details": {
           "reasoning_tokens": 38
         },
-        "prompt_time": 0.089980207,
+        "prompt_time": 0.10511237,
         "prompt_tokens_details": null,
-        "queue_time": 0.114641788,
-        "total_time": 0.179521274
+        "queue_time": 0.060502539,
+        "total_time": 0.224135167
       },
       "error": null
     },
@@ -835,19 +837,19 @@
       "status": "success",
       "answer": "The recalls for the 2019 Honda CR‑V that were reported to NHTSA in 2019 are:\n\n1. **Recall campaign 19V694000** – Owner’s guide incorrectly describes the “Passenger Airbag Off” indicator.  \n2. **Recall campaign 19V569000** – Possible insufficient weld between the fuel tank and vapor return line.  \n3. **Recall campaign 19V383000** – Burrs on the steering‑wheel metal core that could damage the driver’s air‑bag harness.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 7.526,
+      "latency_seconds": 7.595,
       "usage": {
         "completion_tokens": 183,
         "prompt_tokens": 1226,
         "total_tokens": 1409,
-        "completion_time": 0.201295077,
+        "completion_time": 0.200947723,
         "completion_tokens_details": {
           "reasoning_tokens": 65
         },
-        "prompt_time": 0.096750006,
+        "prompt_time": 0.070477414,
         "prompt_tokens_details": null,
-        "queue_time": 0.0831888,
-        "total_time": 0.298045083
+        "queue_time": 0.166931728,
+        "total_time": 0.271425137
       },
       "error": null
     },
@@ -873,19 +875,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 7.444,
+      "latency_seconds": 9.478,
       "usage": {
         "completion_tokens": 82,
         "prompt_tokens": 1219,
         "total_tokens": 1301,
-        "completion_time": 0.088162836,
+        "completion_time": 0.085370625,
         "completion_tokens_details": {
           "reasoning_tokens": 69
         },
-        "prompt_time": 0.064802556,
+        "prompt_time": 0.060390065,
         "prompt_tokens_details": null,
-        "queue_time": 0.117837758,
-        "total_time": 0.152965392
+        "queue_time": 0.064569267,
+        "total_time": 0.14576069
       },
       "error": null
     },
@@ -916,19 +918,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 5.83,
+      "latency_seconds": 7.428,
       "usage": {
         "completion_tokens": 54,
         "prompt_tokens": 1229,
         "total_tokens": 1283,
-        "completion_time": 0.062420909,
+        "completion_time": 0.074544082,
         "completion_tokens_details": {
           "reasoning_tokens": 41
         },
-        "prompt_time": 0.197275025,
+        "prompt_time": 0.082492507,
         "prompt_tokens_details": null,
-        "queue_time": 0.106573861,
-        "total_time": 0.259695934
+        "queue_time": 0.114786144,
+        "total_time": 0.157036589
       },
       "error": null
     },
@@ -950,19 +952,19 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 7.523,
+      "latency_seconds": 6.367,
       "usage": {
         "completion_tokens": 17,
         "prompt_tokens": 1174,
         "total_tokens": 1191,
-        "completion_time": 0.018704272,
+        "completion_time": 0.017260817,
         "completion_tokens_details": {
           "reasoning_tokens": 4
         },
-        "prompt_time": 0.078472799,
+        "prompt_time": 0.058237346,
         "prompt_tokens_details": null,
-        "queue_time": 0.118189059,
-        "total_time": 0.097177071
+        "queue_time": 0.140799343,
+        "total_time": 0.075498163
       },
       "error": null
     },
@@ -984,19 +986,468 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 5.539,
+      "latency_seconds": 7.414,
       "usage": {
         "completion_tokens": 22,
         "prompt_tokens": 1178,
         "total_tokens": 1200,
-        "completion_time": 0.03609164,
+        "completion_time": 0.028887381,
         "completion_tokens_details": {
           "reasoning_tokens": 9
         },
-        "prompt_time": 0.121908748,
+        "prompt_time": 0.069527843,
         "prompt_tokens_details": null,
-        "queue_time": 0.118362207,
-        "total_time": 0.158000388
+        "queue_time": 0.096919616,
+        "total_time": 0.098415224
+      },
+      "error": null
+    },
+    {
+      "id": "q28",
+      "question": "When was the original recall that 21V215000 expanded reported to NHTSA?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "21V215000 expanded recall 20V314000, which was reported to NHTSA on May 28, 2020.",
+        "source_records": [
+          "21V215000",
+          "20V314000"
+        ]
+      },
+      "retrieved_ids": [
+        "26V103000",
+        "26V459000",
+        "26V630000",
+        "26V030000",
+        "19E078000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 7.613,
+      "usage": {
+        "completion_tokens": 31,
+        "prompt_tokens": 1287,
+        "total_tokens": 1318,
+        "completion_time": 0.037886126,
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_time": 0.064749326,
+        "prompt_tokens_details": null,
+        "queue_time": 0.245376819,
+        "total_time": 0.102635452
+      },
+      "error": null
+    },
+    {
+      "id": "q29",
+      "question": "What component is involved in the original recall that both 21V215000 and 23V858000 expanded?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "Both expanded recall 20V314000, which involves the fuel pump (fuel system, gasoline delivery).",
+        "source_records": [
+          "20V314000"
+        ]
+      },
+      "retrieved_ids": [
+        "18E093000",
+        "23V361000",
+        "19E078000",
+        "26V459000",
+        "21V748000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 9.392,
+      "usage": {
+        "completion_tokens": 37,
+        "prompt_tokens": 1552,
+        "total_tokens": 1589,
+        "completion_time": 0.041328941,
+        "completion_tokens_details": {
+          "reasoning_tokens": 24
+        },
+        "prompt_time": 0.105630745,
+        "prompt_tokens_details": null,
+        "queue_time": 0.096362691,
+        "total_time": 0.146959686
+      },
+      "error": null
+    },
+    {
+      "id": "q30",
+      "question": "How many recall campaigns cover the 2019 Honda Civic?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "4 campaigns.",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "18V421000",
+        "18V817000",
+        "21V215000",
+        "20V440000",
+        "19V694000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 10.532,
+      "usage": {
+        "completion_tokens": 79,
+        "prompt_tokens": 1511,
+        "total_tokens": 1590,
+        "completion_time": 0.083835003,
+        "completion_tokens_details": {
+          "reasoning_tokens": 66
+        },
+        "prompt_time": 0.075165271,
+        "prompt_tokens_details": null,
+        "queue_time": 0.223532638,
+        "total_time": 0.159000274
+      },
+      "error": null
+    },
+    {
+      "id": "q31",
+      "question": "How many recall campaigns cover the 2019 Honda Accord?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "6 campaigns.",
+        "source_records": [
+          "20V314000",
+          "20V771000",
+          "21V215000",
+          "23V158000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "20V771000",
+        "18V629000",
+        "19V060000",
+        "21V215000",
+        "20V769000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 11.53,
+      "usage": {
+        "completion_tokens": 83,
+        "prompt_tokens": 1799,
+        "total_tokens": 1882,
+        "completion_time": 0.093109182,
+        "completion_tokens_details": {
+          "reasoning_tokens": 70
+        },
+        "prompt_time": 0.168922829,
+        "prompt_tokens_details": null,
+        "queue_time": 0.1192179,
+        "total_time": 0.262032011
+      },
+      "error": null
+    },
+    {
+      "id": "q32",
+      "question": "How many recall campaigns covering Honda-brand vehicles were reported to NHTSA in 2023?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "19 campaigns.",
+        "source_records": []
+      },
+      "retrieved_ids": [
+        "26V365000",
+        "24V384000",
+        "15V472000",
+        "20V067000",
+        "18V421000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 10.556,
+      "usage": {
+        "completion_tokens": 99,
+        "prompt_tokens": 1622,
+        "total_tokens": 1721,
+        "completion_time": 0.108989986,
+        "completion_tokens_details": {
+          "reasoning_tokens": 86
+        },
+        "prompt_time": 0.129972502,
+        "prompt_tokens_details": null,
+        "queue_time": 0.173472178,
+        "total_time": 0.238962488
+      },
+      "error": null
+    },
+    {
+      "id": "q33",
+      "question": "Among the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR-V, which has the most recall campaigns?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "The 2019 Honda CR-V, with 8 campaigns, compared with 6 for the 2019 Accord and 4 for the 2019 Civic.",
+        "source_records": []
+      },
+      "retrieved_ids": [
+        "19V694000",
+        "21V215000",
+        "24V744000",
+        "26V332000",
+        "20V314000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 20.835,
+      "usage": {
+        "completion_tokens": 170,
+        "prompt_tokens": 2860,
+        "total_tokens": 3030,
+        "completion_time": 0.179885487,
+        "completion_tokens_details": {
+          "reasoning_tokens": 157
+        },
+        "prompt_time": 0.248697208,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "queue_time": 0.171299882,
+        "total_time": 0.428582695
+      },
+      "error": null
+    },
+    {
+      "id": "q34",
+      "question": "Which recalls cover the 2019 Honda Civic?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "20V314000 (fuel pump), 21V215000 (fuel pump), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "18V817000",
+        "20V440000",
+        "18V421000",
+        "19V694000",
+        "23V431000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 7.442,
+      "usage": {
+        "completion_tokens": 60,
+        "prompt_tokens": 1419,
+        "total_tokens": 1479,
+        "completion_time": 0.061760102,
+        "completion_tokens_details": {
+          "reasoning_tokens": 47
+        },
+        "prompt_time": 0.071226227,
+        "prompt_tokens_details": null,
+        "queue_time": 0.140901286,
+        "total_time": 0.132986329
+      },
+      "error": null
+    },
+    {
+      "id": "q35",
+      "question": "Which 2019 Honda Accord recalls involve the fuel system?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "20V314000, 21V215000, and 23V858000, all involving the fuel pump.",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V060000",
+        "20V314000",
+        "21V215000",
+        "13V297000",
+        "19V569000"
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda Accord is covered by two fuel‑system recalls:\n\n1. **Recall campaign 20V314000** – the low‑pressure fuel pump inside the fuel tank may fail.  \n2. **Recall campaign 21V215000** – the low‑pressure fuel pump inside the fuel tank may fail (this recall expands the earlier 20V314000).",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 10.741,
+      "usage": {
+        "completion_tokens": 178,
+        "prompt_tokens": 1577,
+        "total_tokens": 1755,
+        "completion_time": 0.225515456,
+        "completion_tokens_details": {
+          "reasoning_tokens": 92
+        },
+        "prompt_time": 0.11356303,
+        "prompt_tokens_details": null,
+        "queue_time": 0.140608251,
+        "total_time": 0.339078486
+      },
+      "error": null
+    },
+    {
+      "id": "q36",
+      "question": "Which recalls cover all three of the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "21V215000 (fuel pump), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V694000",
+        "19V383000",
+        "18V629000",
+        "20V771000",
+        "20V440000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 9.517,
+      "usage": {
+        "completion_tokens": 120,
+        "prompt_tokens": 1485,
+        "total_tokens": 1605,
+        "completion_time": 0.166173564,
+        "completion_tokens_details": {
+          "reasoning_tokens": 107
+        },
+        "prompt_time": 0.083459963,
+        "prompt_tokens_details": null,
+        "queue_time": 0.115059972,
+        "total_time": 0.249633527
+      },
+      "error": null
+    },
+    {
+      "id": "q37",
+      "question": "Which was reported to NHTSA first: the 2019 Honda Accord body control module software recall or the 2019 Honda Accord seat belt buckle recall?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "The body control module software recall (20V771000, reported December 10, 2020) came before the seat belt buckle recall (23V158000, reported March 9, 2023).",
+        "source_records": [
+          "20V771000",
+          "23V158000"
+        ]
+      },
+      "retrieved_ids": [
+        "23V158000",
+        "20V771000",
+        "20V326000",
+        "11V468000",
+        "19V298000"
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda Accord body‑control‑module software recall (campaign 20V771000) was reported to NHTSA first.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 11.676,
+      "usage": {
+        "completion_tokens": 128,
+        "prompt_tokens": 1741,
+        "total_tokens": 1869,
+        "completion_time": 0.139981611,
+        "completion_tokens_details": {
+          "reasoning_tokens": 90
+        },
+        "prompt_time": 0.089449256,
+        "prompt_tokens_details": null,
+        "queue_time": 0.221071206,
+        "total_time": 0.229430867
+      },
+      "error": null
+    },
+    {
+      "id": "q38",
+      "question": "Which was reported to NHTSA first: the 2019 Honda CR-V fuel tank weld recall or the original fuel pump recall 20V314000?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "The fuel tank weld recall (19V569000, reported August 1, 2019) came before the fuel pump recall (20V314000, reported May 28, 2020).",
+        "source_records": [
+          "19V569000",
+          "20V314000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V569000",
+        "22V380000",
+        "20V797000",
+        "21V215000",
+        "17V805000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 9.49,
+      "usage": {
+        "completion_tokens": 101,
+        "prompt_tokens": 1411,
+        "total_tokens": 1512,
+        "completion_time": 0.115311645,
+        "completion_tokens_details": {
+          "reasoning_tokens": 88
+        },
+        "prompt_time": 0.082151106,
+        "prompt_tokens_details": null,
+        "queue_time": 0.118272844,
+        "total_time": 0.197462751
+      },
+      "error": null
+    },
+    {
+      "id": "q39",
+      "question": "Which was reported to NHTSA first: recall 20V314000 or the 2019 Honda Accord body control module software recall?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "20V314000 (reported May 28, 2020) came before the body control module software recall (20V771000, reported December 10, 2020).",
+        "source_records": [
+          "20V314000",
+          "20V771000"
+        ]
+      },
+      "retrieved_ids": [
+        "20V771000",
+        "20V440000",
+        "20V798000",
+        "20V439000",
+        "25V785000"
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 11.531,
+      "usage": {
+        "completion_tokens": 38,
+        "prompt_tokens": 1619,
+        "total_tokens": 1657,
+        "completion_time": 0.040652484,
+        "completion_tokens_details": {
+          "reasoning_tokens": 25
+        },
+        "prompt_time": 0.099926438,
+        "prompt_tokens_details": null,
+        "queue_time": 0.21233645,
+        "total_time": 0.140578922
       },
       "error": null
     }

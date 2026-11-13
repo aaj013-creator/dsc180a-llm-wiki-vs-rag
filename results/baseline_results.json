@@ -1,11 +1,11 @@
 {
   "run": {
     "system": "llm_only_baseline",
-    "started_at_utc": "2026-11-13T00:18:28.559254Z",
-    "completed_at_utc": "2026-11-13T00:18:40.149842Z",
+    "started_at_utc": "2026-11-13T00:34:13.383681Z",
+    "completed_at_utc": "2026-11-13T00:34:46.104573Z",
     "questions_file": "data/evaluation/questions.json",
-    "question_count": 27,
-    "success_count": 27,
+    "question_count": 39,
+    "success_count": 39,
     "failure_count": 0,
     "generation_settings": {
       "model": "openai/gpt-oss-20b",
@@ -37,7 +37,7 @@
       "status": "success",
       "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.7929042920004576,
+      "latency_seconds": 0.731087916999968,
       "usage": {
         "prompt_tokens": 136,
         "completion_tokens": 66,
@@ -45,8 +45,8 @@
         "reasoning_tokens": 52
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-919c4a28-56b1-45a5-8e8c-f41144cdf7ed",
-      "system_fingerprint": "fp_565badff47",
+      "response_id": "chatcmpl-ff177edf-0e22-4b35-8f49-b7e1cf27bb6b",
+      "system_fingerprint": "fp_a4315eb300",
       "error": null
     },
     {
@@ -62,7 +62,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.3876503750016127,
+      "latency_seconds": 0.3478143749998708,
       "usage": {
         "prompt_tokens": 129,
         "completion_tokens": 64,
@@ -70,8 +70,8 @@
         "reasoning_tokens": 51
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-f380afc9-4517-42e1-aa15-7b0ad7e2a0f8",
-      "system_fingerprint": "fp_c5a89987dc",
+      "response_id": "chatcmpl-cdcd9c80-7ed2-45d0-95d0-af800372f651",
+      "system_fingerprint": "fp_f102a3179c",
       "error": null
     },
     {
@@ -85,18 +85,18 @@
         ]
       },
       "status": "success",
-      "answer": "I don’t know.",
+      "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.34706104199904075,
+      "latency_seconds": 0.2742857909997838,
       "usage": {
         "prompt_tokens": 128,
-        "completion_tokens": 70,
-        "total_tokens": 198,
-        "reasoning_tokens": 56
+        "completion_tokens": 60,
+        "total_tokens": 188,
+        "reasoning_tokens": 47
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-e6328aea-da81-4a34-9b77-822b1fde30aa",
-      "system_fingerprint": "fp_a12402de73",
+      "response_id": "chatcmpl-6cbec908-0688-4495-a787-a44a17403a79",
+      "system_fingerprint": "fp_ce54c53bd5",
       "error": null
     },
     {
@@ -112,7 +112,7 @@
       "status": "success",
       "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.2318070000001171,
+      "latency_seconds": 0.3024756659997365,
       "usage": {
         "prompt_tokens": 135,
         "completion_tokens": 61,
@@ -120,8 +120,8 @@
         "reasoning_tokens": 47
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-36683a36-ca99-49c4-87d8-292cc87dee59",
-      "system_fingerprint": "fp_63473661d7",
+      "response_id": "chatcmpl-6d1ea461-a619-4535-bed0-9fde58d10f94",
+      "system_fingerprint": "fp_a12402de73",
       "error": null
     },
     {
@@ -137,7 +137,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.19081287500011967,
+      "latency_seconds": 0.21368599999914295,
       "usage": {
         "prompt_tokens": 126,
         "completion_tokens": 24,
@@ -145,8 +145,8 @@
         "reasoning_tokens": 11
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-913da51f-59da-4603-be0f-165b97eca637",
-      "system_fingerprint": "fp_d6de37e6be",
+      "response_id": "chatcmpl-566f0568-b013-4643-bb62-3ec6f457cb7d",
+      "system_fingerprint": "fp_816fc87d18",
       "error": null
     },
     {
@@ -162,7 +162,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 1.092810374999317,
+      "latency_seconds": 0.29993479199947615,
       "usage": {
         "prompt_tokens": 129,
         "completion_tokens": 48,
@@ -170,8 +170,8 @@
         "reasoning_tokens": 35
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-a7137c48-8439-472c-bcbc-9039c8453417",
-      "system_fingerprint": "fp_e189667b30",
+      "response_id": "chatcmpl-3ef9169d-cee0-41c4-9094-d13cccc9e933",
+      "system_fingerprint": "fp_8b41efc9a3",
       "error": null
     },
     {
@@ -189,7 +189,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.33727941600045597,
+      "latency_seconds": 0.34825191700110736,
       "usage": {
         "prompt_tokens": 125,
         "completion_tokens": 48,
@@ -197,8 +197,8 @@
         "reasoning_tokens": 35
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-2d398ad3-6426-4bf4-a53b-48c1399d0627",
-      "system_fingerprint": "fp_e189667b30",
+      "response_id": "chatcmpl-a899a01a-940e-412a-9f22-5e99ad26cb19",
+      "system_fingerprint": "fp_c5a89987dc",
       "error": null
     },
     {
@@ -216,7 +216,7 @@
       "status": "success",
       "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.43683408299875737,
+      "latency_seconds": 0.45923179099918343,
       "usage": {
         "prompt_tokens": 125,
         "completion_tokens": 149,
@@ -224,8 +224,8 @@
         "reasoning_tokens": 135
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-37ab9db2-a283-440b-bb34-f9f2127c25de",
-      "system_fingerprint": "fp_8b41efc9a3",
+      "response_id": "chatcmpl-4111b894-e39f-4533-8108-00f854a788c6",
+      "system_fingerprint": "fp_e23fc997ca",
       "error": null
     },
     {
@@ -242,7 +242,7 @@
       "status": "success",
       "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.5119568330010225,
+      "latency_seconds": 0.3956170830006158,
       "usage": {
         "prompt_tokens": 128,
         "completion_tokens": 144,
@@ -250,8 +250,8 @@
         "reasoning_tokens": 130
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-057370d6-41bb-4f8a-9f5f-f3e0d8348921",
-      "system_fingerprint": "fp_a8c584dda7",
+      "response_id": "chatcmpl-634c81fb-fc09-43a7-9ff0-f990a273bfa5",
+      "system_fingerprint": "fp_8d13edce1d",
       "error": null
     },
     {
@@ -265,7 +265,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.21773629099880054,
+      "latency_seconds": 0.4680427499988582,
       "usage": {
         "prompt_tokens": 126,
         "completion_tokens": 38,
@@ -273,8 +273,8 @@
         "reasoning_tokens": 25
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-4005a994-ab57-4374-a15e-020be7aa1be2",
-      "system_fingerprint": "fp_bb6a356524",
+      "response_id": "chatcmpl-b19b3c6e-6b02-40b9-859a-78fb77792fc5",
+      "system_fingerprint": "fp_84bb35977d",
       "error": null
     },
     {
@@ -290,7 +290,7 @@
       "status": "success",
       "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.39605804100028763,
+      "latency_seconds": 0.3084809159990982,
       "usage": {
         "prompt_tokens": 137,
         "completion_tokens": 55,
@@ -298,8 +298,8 @@
         "reasoning_tokens": 41
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-d11a3960-4e55-4f87-859e-a11c1e7ca9a4",
-      "system_fingerprint": "fp_565badff47",
+      "response_id": "chatcmpl-1907eee7-c17c-44d9-a0bc-9b1c10a93eae",
+      "system_fingerprint": "fp_ce54c53bd5",
       "error": null
     },
     {
@@ -315,7 +315,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.32293366699923354,
+      "latency_seconds": 0.2223479580006824,
       "usage": {
         "prompt_tokens": 133,
         "completion_tokens": 36,
@@ -323,8 +323,8 @@
         "reasoning_tokens": 23
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-d99c8c29-738c-480e-afb9-3737e594cce2",
-      "system_fingerprint": "fp_9b8528b477",
+      "response_id": "chatcmpl-78ac7fb0-256b-442f-904a-4c0ef68c6e0d",
+      "system_fingerprint": "fp_816fc87d18",
       "error": null
     },
     {
@@ -340,7 +340,7 @@
       "status": "success",
       "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.4258984589996544,
+      "latency_seconds": 0.3916959999987739,
       "usage": {
         "prompt_tokens": 133,
         "completion_tokens": 92,
@@ -348,8 +348,8 @@
         "reasoning_tokens": 78
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-dd060168-d36b-46f0-9eb5-8a58f3c61f31",
-      "system_fingerprint": "fp_ef00694abe",
+      "response_id": "chatcmpl-3db0f7b8-21ef-42fc-bb63-59c621b1b02b",
+      "system_fingerprint": "fp_8b41efc9a3",
       "error": null
     },
     {
@@ -365,7 +365,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.33663816599982965,
+      "latency_seconds": 0.3056810000016412,
       "usage": {
         "prompt_tokens": 131,
         "completion_tokens": 38,
@@ -373,8 +373,8 @@
         "reasoning_tokens": 25
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-7b661d11-fab5-48a6-8720-a3cec3101bfc",
-      "system_fingerprint": "fp_feb9b278f1",
+      "response_id": "chatcmpl-6ed0b0a1-992a-4252-81df-3cdbe7518f67",
+      "system_fingerprint": "fp_e11c8bbf69",
       "error": null
     },
     {
@@ -390,7 +390,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.24403787499977625,
+      "latency_seconds": 0.4101832910000667,
       "usage": {
         "prompt_tokens": 131,
         "completion_tokens": 40,
@@ -398,8 +398,8 @@
         "reasoning_tokens": 27
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-df0e325f-c765-4d9f-b200-91916d23a3dc",
-      "system_fingerprint": "fp_5979a0e1b7",
+      "response_id": "chatcmpl-77e1c079-b9a0-4740-919a-74ebf6291b52",
+      "system_fingerprint": "fp_a4315eb300",
       "error": null
     },
     {
@@ -415,7 +415,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.5335779160013772,
+      "latency_seconds": 0.2893361669994192,
       "usage": {
         "prompt_tokens": 128,
         "completion_tokens": 97,
@@ -423,8 +423,8 @@
         "reasoning_tokens": 84
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-00566265-25f5-4292-a85d-6adcb7a64e0b",
-      "system_fingerprint": "fp_c5a89987dc",
+      "response_id": "chatcmpl-c988ef11-1be1-468e-948a-e95c37be34c7",
+      "system_fingerprint": "fp_f102a3179c",
       "error": null
     },
     {
@@ -440,16 +440,16 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.5237675419994048,
+      "latency_seconds": 0.23545970799932547,
       "usage": {
         "prompt_tokens": 123,
-        "completion_tokens": 41,
-        "total_tokens": 164,
-        "reasoning_tokens": 28
+        "completion_tokens": 46,
+        "total_tokens": 169,
+        "reasoning_tokens": 33
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-e6af2c35-5a76-46f4-a8c2-c9c10420da64",
-      "system_fingerprint": "fp_84bb35977d",
+      "response_id": "chatcmpl-03e06e6d-9887-495a-8f99-932fecde07e6",
+      "system_fingerprint": "fp_8b41efc9a3",
       "error": null
     },
     {
@@ -465,16 +465,16 @@
       "status": "success",
       "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.5114675829991029,
+      "latency_seconds": 0.27051454200045555,
       "usage": {
         "prompt_tokens": 127,
-        "completion_tokens": 156,
-        "total_tokens": 283,
-        "reasoning_tokens": 142
+        "completion_tokens": 70,
+        "total_tokens": 197,
+        "reasoning_tokens": 56
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-47fc7ca7-b6be-4035-943c-bd2d213ef735",
-      "system_fingerprint": "fp_565badff47",
+      "response_id": "chatcmpl-0eb0afc8-543f-4b33-9199-12ad8615129e",
+      "system_fingerprint": "fp_8b41efc9a3",
       "error": null
     },
     {
@@ -490,7 +490,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.5209309159999975,
+      "latency_seconds": 0.3308899999992718,
       "usage": {
         "prompt_tokens": 134,
         "completion_tokens": 34,
@@ -498,8 +498,8 @@
         "reasoning_tokens": 21
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-6d0a0cf9-97bf-4920-bc23-f9500e09ca0a",
-      "system_fingerprint": "fp_ce54c53bd5",
+      "response_id": "chatcmpl-ff7edd5b-1a45-45d5-a641-42308b0cc078",
+      "system_fingerprint": "fp_e189667b30",
       "error": null
     },
     {
@@ -515,16 +515,16 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 1.055426292001357,
+      "latency_seconds": 0.42034345799947914,
       "usage": {
         "prompt_tokens": 131,
-        "completion_tokens": 84,
-        "total_tokens": 215,
-        "reasoning_tokens": 71
+        "completion_tokens": 158,
+        "total_tokens": 289,
+        "reasoning_tokens": 145
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-7ed68279-8c7f-4976-9076-db2150c70fbc",
-      "system_fingerprint": "fp_3023a70d60",
+      "response_id": "chatcmpl-afbed0ad-126b-4754-bf0d-936842a919aa",
+      "system_fingerprint": "fp_a4315eb300",
       "error": null
     },
     {
@@ -541,7 +541,7 @@
       "status": "success",
       "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.32537904099990556,
+      "latency_seconds": 0.31597445800071,
       "usage": {
         "prompt_tokens": 145,
         "completion_tokens": 62,
@@ -549,8 +549,8 @@
         "reasoning_tokens": 48
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-b15ec95b-1a5d-4f3b-976b-617ddc191759",
-      "system_fingerprint": "fp_816fc87d18",
+      "response_id": "chatcmpl-8557a7d0-a5c9-4f1b-89c8-da46aa6886fe",
+      "system_fingerprint": "fp_9b8528b477",
       "error": null
     },
     {
@@ -565,18 +565,18 @@
         ]
       },
       "status": "success",
-      "answer": "I don't know.",
+      "answer": "I don’t know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.5242082919994573,
+      "latency_seconds": 0.39496783400136337,
       "usage": {
         "prompt_tokens": 139,
-        "completion_tokens": 78,
-        "total_tokens": 217,
-        "reasoning_tokens": 65
+        "completion_tokens": 89,
+        "total_tokens": 228,
+        "reasoning_tokens": 75
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-f6733c28-4f1c-4b2f-9289-c18f75cd9930",
-      "system_fingerprint": "fp_ce54c53bd5",
+      "response_id": "chatcmpl-5522a341-e280-4db6-b64d-045fe9115a09",
+      "system_fingerprint": "fp_feb9b278f1",
       "error": null
     },
     {
@@ -595,7 +595,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.35035249999964435,
+      "latency_seconds": 0.2996822080003767,
       "usage": {
         "prompt_tokens": 131,
         "completion_tokens": 80,
@@ -603,8 +603,8 @@
         "reasoning_tokens": 67
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-8bfebeb0-0a6c-4426-8b63-c228ab72a920",
-      "system_fingerprint": "fp_feb9b278f1",
+      "response_id": "chatcmpl-de459b18-919c-4f1e-927b-00622b302baf",
+      "system_fingerprint": "fp_ed70b23331",
       "error": null
     },
     {
@@ -622,7 +622,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.2162545829996816,
+      "latency_seconds": 0.30787995799983037,
       "usage": {
         "prompt_tokens": 133,
         "completion_tokens": 47,
@@ -630,8 +630,8 @@
         "reasoning_tokens": 34
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-a1e49684-b7e9-4db4-81a1-cc4870356323",
-      "system_fingerprint": "fp_63473661d7",
+      "response_id": "chatcmpl-9d102b44-9583-41ef-8dfb-c7ad8c033929",
+      "system_fingerprint": "fp_816fc87d18",
       "error": null
     },
     {
@@ -654,7 +654,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.2848209580006369,
+      "latency_seconds": 0.3082405839995772,
       "usage": {
         "prompt_tokens": 129,
         "completion_tokens": 48,
@@ -662,8 +662,8 @@
         "reasoning_tokens": 35
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-e73c7830-9de5-44d0-88fa-ce2bbddc2d54",
-      "system_fingerprint": "fp_75c733514d",
+      "response_id": "chatcmpl-4ceeff84-ed38-448b-bcee-6781b4affc49",
+      "system_fingerprint": "fp_ce54c53bd5",
       "error": null
     },
     {
@@ -677,7 +677,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.2729988750015764,
+      "latency_seconds": 0.29085133300031885,
       "usage": {
         "prompt_tokens": 126,
         "completion_tokens": 37,
@@ -685,8 +685,8 @@
         "reasoning_tokens": 24
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-fa146ac5-3faf-479f-9679-ed482ff19165",
-      "system_fingerprint": "fp_f102a3179c",
+      "response_id": "chatcmpl-93bdae1c-c6c0-454a-84c6-ec4932ae5055",
+      "system_fingerprint": "fp_a4315eb300",
       "error": null
     },
     {
@@ -700,7 +700,7 @@
       "status": "success",
       "answer": "I don't know.",
       "model": "openai/gpt-oss-20b",
-      "latency_seconds": 0.19635895899955358,
+      "latency_seconds": 0.42540691700014577,
       "usage": {
         "prompt_tokens": 122,
         "completion_tokens": 29,
@@ -708,8 +708,323 @@
         "reasoning_tokens": 16
       },
       "finish_reason": "stop",
-      "response_id": "chatcmpl-0a316b40-e0ce-480b-a4a1-7bd7e3be5ea0",
-      "system_fingerprint": "fp_34cb00738d",
+      "response_id": "chatcmpl-cb33beac-9d01-4414-a1e7-2a5db0047265",
+      "system_fingerprint": "fp_c5a89987dc",
+      "error": null
+    },
+    {
+      "id": "q28",
+      "question": "When was the original recall that 21V215000 expanded reported to NHTSA?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "21V215000 expanded recall 20V314000, which was reported to NHTSA on May 28, 2020.",
+        "source_records": [
+          "21V215000",
+          "20V314000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.2084675000005518,
+      "usage": {
+        "prompt_tokens": 128,
+        "completion_tokens": 26,
+        "total_tokens": 154,
+        "reasoning_tokens": 13
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-50bb9925-5f50-4b88-a473-28f8e1034def",
+      "system_fingerprint": "fp_8b41efc9a3",
+      "error": null
+    },
+    {
+      "id": "q29",
+      "question": "What component is involved in the original recall that both 21V215000 and 23V858000 expanded?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "Both expanded recall 20V314000, which involves the fuel pump (fuel system, gasoline delivery).",
+        "source_records": [
+          "20V314000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.3047170840000035,
+      "usage": {
+        "prompt_tokens": 133,
+        "completion_tokens": 28,
+        "total_tokens": 161,
+        "reasoning_tokens": 15
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-3b9aadbb-44b5-4700-8c67-9addb8c622ca",
+      "system_fingerprint": "fp_feb9b278f1",
+      "error": null
+    },
+    {
+      "id": "q30",
+      "question": "How many recall campaigns cover the 2019 Honda Civic?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "4 campaigns.",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.20846158300082607,
+      "usage": {
+        "prompt_tokens": 122,
+        "completion_tokens": 24,
+        "total_tokens": 146,
+        "reasoning_tokens": 11
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-ac6a28e3-6bb9-4380-afad-43139830b67b",
+      "system_fingerprint": "fp_e11c8bbf69",
+      "error": null
+    },
+    {
+      "id": "q31",
+      "question": "How many recall campaigns cover the 2019 Honda Accord?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "6 campaigns.",
+        "source_records": [
+          "20V314000",
+          "20V771000",
+          "21V215000",
+          "23V158000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.350283457999467,
+      "usage": {
+        "prompt_tokens": 122,
+        "completion_tokens": 24,
+        "total_tokens": 146,
+        "reasoning_tokens": 11
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-d74c077f-bb5d-4cca-a646-252b0ed8c471",
+      "system_fingerprint": "fp_9340e7d14d",
+      "error": null
+    },
+    {
+      "id": "q32",
+      "question": "How many recall campaigns covering Honda-brand vehicles were reported to NHTSA in 2023?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "19 campaigns.",
+        "source_records": []
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.367942207998567,
+      "usage": {
+        "prompt_tokens": 129,
+        "completion_tokens": 43,
+        "total_tokens": 172,
+        "reasoning_tokens": 30
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-abbe716b-82de-45ba-a291-aa3fc996d6b1",
+      "system_fingerprint": "fp_feb9b278f1",
+      "error": null
+    },
+    {
+      "id": "q33",
+      "question": "Among the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR-V, which has the most recall campaigns?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "The 2019 Honda CR-V, with 8 campaigns, compared with 6 for the 2019 Accord and 4 for the 2019 Civic.",
+        "source_records": []
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.3492871670005115,
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 40,
+        "total_tokens": 179,
+        "reasoning_tokens": 27
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-2444e55e-871a-480d-bbbd-e3cfd7e39582",
+      "system_fingerprint": "fp_9b8528b477",
+      "error": null
+    },
+    {
+      "id": "q34",
+      "question": "Which recalls cover the 2019 Honda Civic?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "20V314000 (fuel pump), 21V215000 (fuel pump), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.5571892499992828,
+      "usage": {
+        "prompt_tokens": 120,
+        "completion_tokens": 141,
+        "total_tokens": 261,
+        "reasoning_tokens": 128
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-009b4208-5c2e-4434-a89b-ec40b3e0abd6",
+      "system_fingerprint": "fp_e189667b30",
+      "error": null
+    },
+    {
+      "id": "q35",
+      "question": "Which 2019 Honda Accord recalls involve the fuel system?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "20V314000, 21V215000, and 23V858000, all involving the fuel pump.",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don’t know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 3.2041171250002662,
+      "usage": {
+        "prompt_tokens": 122,
+        "completion_tokens": 98,
+        "total_tokens": 220,
+        "reasoning_tokens": 84
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-fe29954f-c582-41bb-a3da-01b40de75a8a",
+      "system_fingerprint": "fp_d6de37e6be",
+      "error": null
+    },
+    {
+      "id": "q36",
+      "question": "Which recalls cover all three of the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "21V215000 (fuel pump), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "status": "success",
+      "answer": "I’m not aware of any recall that simultaneously covers the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR‑V. If you have a specific recall number or issue in mind, let me know and I can check that for you.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.491657832999408,
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 164,
+        "total_tokens": 301,
+        "reasoning_tokens": 100
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-0c484e80-170a-4699-9528-963c20ff4b66",
+      "system_fingerprint": "fp_75c733514d",
+      "error": null
+    },
+    {
+      "id": "q37",
+      "question": "Which was reported to NHTSA first: the 2019 Honda Accord body control module software recall or the 2019 Honda Accord seat belt buckle recall?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "The body control module software recall (20V771000, reported December 10, 2020) came before the seat belt buckle recall (23V158000, reported March 9, 2023).",
+        "source_records": [
+          "20V771000",
+          "23V158000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don’t know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.381857709000542,
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 77,
+        "total_tokens": 219,
+        "reasoning_tokens": 63
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-1697bbe3-11fc-4b72-9afb-e87cc9a1ad53",
+      "system_fingerprint": "fp_75c733514d",
+      "error": null
+    },
+    {
+      "id": "q38",
+      "question": "Which was reported to NHTSA first: the 2019 Honda CR-V fuel tank weld recall or the original fuel pump recall 20V314000?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "The fuel tank weld recall (19V569000, reported August 1, 2019) came before the fuel pump recall (20V314000, reported May 28, 2020).",
+        "source_records": [
+          "19V569000",
+          "20V314000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don’t know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.378880249998474,
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 73,
+        "total_tokens": 215,
+        "reasoning_tokens": 59
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-5f0c80e7-31be-4fb1-9349-0dbe17b250e2",
+      "system_fingerprint": "fp_e23fc997ca",
+      "error": null
+    },
+    {
+      "id": "q39",
+      "question": "Which was reported to NHTSA first: recall 20V314000 or the 2019 Honda Accord body control module software recall?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "20V314000 (reported May 28, 2020) came before the body control module software recall (20V771000, reported December 10, 2020).",
+        "source_records": [
+          "20V314000",
+          "20V771000"
+        ]
+      },
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 2.5458163330004027,
+      "usage": {
+        "prompt_tokens": 138,
+        "completion_tokens": 108,
+        "total_tokens": 246,
+        "reasoning_tokens": 95
+      },
+      "finish_reason": "stop",
+      "response_id": "chatcmpl-505b2bb5-7cbc-4dae-86cb-75d1f6aa6db4",
+      "system_fingerprint": "fp_d3e146e1a5",
       "error": null
     }
   ]

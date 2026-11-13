@@ -6,7 +6,7 @@
       "id": "q01",
       "task_type": "lookup",
       "correctness": 1.0,
-      "judge_reason": "The model answer includes the part (rear subframe) and the remedy (inspect, retorque or replace bolts) matching the reference without contradictions.",
+      "judge_reason": "The model answer includes the correct part (rear subframe) and the correct remedy (inspect, retorque or replace bolts) without contradictions.",
       "abstained": false,
       "gold_ids": [
         "19V865000"
@@ -25,8 +25,8 @@
     {
       "id": "q02",
       "task_type": "lookup",
-      "correctness": 1.0,
-      "judge_reason": "The model answer correctly states the insufficient joint weld defect without any contradictions, covering the essential fact from the reference.",
+      "correctness": 0.5,
+      "judge_reason": "The model answer correctly states the insufficient joint weld defect but omits the reference detail that dealers replace the fuel tank.",
       "abstained": false,
       "gold_ids": [
         "19V569000"
@@ -46,7 +46,7 @@
       "id": "q03",
       "task_type": "lookup",
       "correctness": 1.0,
-      "judge_reason": "The model answer correctly states the owner's guide error and FMVSS 208 non\u2011compliance, matching the reference without contradictions.",
+      "judge_reason": "The model answer correctly states that the recall was due to the owner's guide misdescribing the Passenger Airbag Off indicator, violating FMVSS 208, matching the reference.",
       "abstained": false,
       "gold_ids": [
         "19V694000"
@@ -126,7 +126,7 @@
       "id": "q07",
       "task_type": "synthesis",
       "correctness": 0.5,
-      "judge_reason": "The model answer mentions only recall 19V569000 and omits the other two fuel\u2011system recalls (21V215000 and 23V858000).",
+      "judge_reason": "The answer mentions only one of the three fuel\u2011system recalls (19V569000) and omits the other two (21V215000 and 23V858000).",
       "abstained": false,
       "gold_ids": [
         "19V569000",
@@ -148,7 +148,7 @@
       "id": "q08",
       "task_type": "synthesis",
       "correctness": 0.5,
-      "judge_reason": "The answer includes two of the three referenced recalls but omits the 26V332000 recall, making it only partially correct.",
+      "judge_reason": "The answer includes two of the three relevant recalls but omits the 26V332000 recall related to the passenger seat weight sensor.",
       "abstained": false,
       "gold_ids": [
         "19V383000",
@@ -164,13 +164,13 @@
       ],
       "citation_recall": 0.6666666666666666,
       "citation_precision": 0.4,
-      "total_tokens": 1789
+      "total_tokens": 1787
     },
     {
       "id": "q09",
       "task_type": "synthesis",
       "correctness": 0.5,
-      "judge_reason": "The answer mentions the 2021 expansion (21V-215) but omits the 2023 expansion (23V-858) and uses an incorrect initial recall number, so it is only partially correct.",
+      "judge_reason": "The answer correctly notes the 2021 expansion (Recall\u202f21V215) but omits the 2023 expansion and provides an incorrect earlier recall, making it only partially correct.",
       "abstained": false,
       "gold_ids": [
         "21V215000",
@@ -185,7 +185,7 @@
       ],
       "citation_recall": 0.5,
       "citation_precision": 0.2,
-      "total_tokens": 1707
+      "total_tokens": 1609
     },
     {
       "id": "q10",
@@ -209,7 +209,7 @@
       "id": "q11",
       "task_type": "lookup_no_id",
       "correctness": 1.0,
-      "judge_reason": "The model answer correctly identifies the recall and provides the exact NHTSA campaign number without contradictions.",
+      "judge_reason": "The model answer correctly identifies the recall and provides the correct NHTSA campaign number without contradictions.",
       "abstained": false,
       "gold_ids": [
         "19V865000"
@@ -228,8 +228,8 @@
     {
       "id": "q12",
       "task_type": "lookup_no_id",
-      "correctness": 0.5,
-      "judge_reason": "Provides the correct recall campaign number but omits the supporting details about burrs and repair actions.",
+      "correctness": 1.0,
+      "judge_reason": "The model answer correctly provides the recall identifier 19V383000, matching the key fact without contradiction.",
       "abstained": false,
       "gold_ids": [
         "19V383000"
@@ -243,7 +243,7 @@
       ],
       "citation_recall": 1.0,
       "citation_precision": 0.2,
-      "total_tokens": 1215
+      "total_tokens": 1226
     },
     {
       "id": "q13",
@@ -283,7 +283,7 @@
       ],
       "citation_recall": 1.0,
       "citation_precision": 0.2,
-      "total_tokens": 1518
+      "total_tokens": 1519
     },
     {
       "id": "q15",
@@ -303,7 +303,7 @@
       ],
       "citation_recall": 0.0,
       "citation_precision": 0.0,
-      "total_tokens": 1659
+      "total_tokens": 1646
     },
     {
       "id": "q16",
@@ -323,7 +323,7 @@
       ],
       "citation_recall": 0.0,
       "citation_precision": 0.0,
-      "total_tokens": 1265
+      "total_tokens": 1284
     },
     {
       "id": "q17",
@@ -403,13 +403,13 @@
       ],
       "citation_recall": 0.0,
       "citation_precision": 0.0,
-      "total_tokens": 1288
+      "total_tokens": 1284
     },
     {
       "id": "q21",
       "task_type": "comparison",
       "correctness": 1.0,
-      "judge_reason": "The model answer correctly states that the driver air\u2011bag clockspring recall was reported first, matching the reference and containing no contradictions.",
+      "judge_reason": "The model answer correctly states that the driver air\u2011bag clockspring recall was reported first, matching the reference without contradictions.",
       "abstained": false,
       "gold_ids": [
         "19V383000",
@@ -554,6 +554,261 @@
       "citation_recall": null,
       "citation_precision": 0.0,
       "total_tokens": 1200
+    },
+    {
+      "id": "q28",
+      "task_type": "two_hop",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "20V314000",
+        "21V215000"
+      ],
+      "cited_ids": [
+        "19E078000",
+        "26V030000",
+        "26V103000",
+        "26V459000",
+        "26V630000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1318
+    },
+    {
+      "id": "q29",
+      "task_type": "two_hop",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "20V314000"
+      ],
+      "cited_ids": [
+        "18E093000",
+        "19E078000",
+        "21V748000",
+        "23V361000",
+        "26V459000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1589
+    },
+    {
+      "id": "q30",
+      "task_type": "aggregate",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "20V314000",
+        "21V215000",
+        "23V858000",
+        "26V332000"
+      ],
+      "cited_ids": [
+        "18V421000",
+        "18V817000",
+        "19V694000",
+        "20V440000",
+        "21V215000"
+      ],
+      "citation_recall": 0.25,
+      "citation_precision": 0.2,
+      "total_tokens": 1590
+    },
+    {
+      "id": "q31",
+      "task_type": "aggregate",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "20V314000",
+        "20V771000",
+        "21V215000",
+        "23V158000",
+        "23V858000",
+        "26V332000"
+      ],
+      "cited_ids": [
+        "18V629000",
+        "19V060000",
+        "20V769000",
+        "20V771000",
+        "21V215000"
+      ],
+      "citation_recall": 0.3333333333333333,
+      "citation_precision": 0.4,
+      "total_tokens": 1882
+    },
+    {
+      "id": "q32",
+      "task_type": "aggregate",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [],
+      "cited_ids": [
+        "15V472000",
+        "18V421000",
+        "20V067000",
+        "24V384000",
+        "26V365000"
+      ],
+      "citation_recall": null,
+      "citation_precision": 0.0,
+      "total_tokens": 1721
+    },
+    {
+      "id": "q33",
+      "task_type": "aggregate",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [],
+      "cited_ids": [
+        "19V694000",
+        "20V314000",
+        "21V215000",
+        "24V744000",
+        "26V332000"
+      ],
+      "citation_recall": null,
+      "citation_precision": 0.0,
+      "total_tokens": 3030
+    },
+    {
+      "id": "q34",
+      "task_type": "filtered_list",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "20V314000",
+        "21V215000",
+        "23V858000",
+        "26V332000"
+      ],
+      "cited_ids": [
+        "18V421000",
+        "18V817000",
+        "19V694000",
+        "20V440000",
+        "23V431000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1479
+    },
+    {
+      "id": "q35",
+      "task_type": "filtered_list",
+      "correctness": 0.5,
+      "judge_reason": "The model answer lists two of the three fuel\u2011system recalls but omits the third (23V858000), making it partially correct.",
+      "abstained": false,
+      "gold_ids": [
+        "20V314000",
+        "21V215000",
+        "23V858000"
+      ],
+      "cited_ids": [
+        "13V297000",
+        "19V060000",
+        "19V569000",
+        "20V314000",
+        "21V215000"
+      ],
+      "citation_recall": 0.6666666666666666,
+      "citation_precision": 0.4,
+      "total_tokens": 1755
+    },
+    {
+      "id": "q36",
+      "task_type": "filtered_list",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "21V215000",
+        "23V858000",
+        "26V332000"
+      ],
+      "cited_ids": [
+        "18V629000",
+        "19V383000",
+        "19V694000",
+        "20V440000",
+        "20V771000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1605
+    },
+    {
+      "id": "q37",
+      "task_type": "comparison",
+      "correctness": 1.0,
+      "judge_reason": "The model answer correctly states that the body control module software recall was reported first and does not contradict the reference.",
+      "abstained": false,
+      "gold_ids": [
+        "20V771000",
+        "23V158000"
+      ],
+      "cited_ids": [
+        "11V468000",
+        "19V298000",
+        "20V326000",
+        "20V771000",
+        "23V158000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.4,
+      "total_tokens": 1869
+    },
+    {
+      "id": "q38",
+      "task_type": "comparison",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V569000",
+        "20V314000"
+      ],
+      "cited_ids": [
+        "17V805000",
+        "19V569000",
+        "20V797000",
+        "21V215000",
+        "22V380000"
+      ],
+      "citation_recall": 0.5,
+      "citation_precision": 0.2,
+      "total_tokens": 1512
+    },
+    {
+      "id": "q39",
+      "task_type": "comparison",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "20V314000",
+        "20V771000"
+      ],
+      "cited_ids": [
+        "20V439000",
+        "20V440000",
+        "20V771000",
+        "20V798000",
+        "25V785000"
+      ],
+      "citation_recall": 0.5,
+      "citation_precision": 0.2,
+      "total_tokens": 1657
     }
   ]
 }
