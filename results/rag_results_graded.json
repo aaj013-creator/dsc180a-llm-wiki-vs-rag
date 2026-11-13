@@ -6,7 +6,7 @@
       "id": "q01",
       "task_type": "lookup",
       "correctness": 1.0,
-      "judge_reason": "The model answer includes the correct part (rear subframe) and the correct remedy (inspect, retorque or replace bolts) without contradictions.",
+      "judge_reason": "The model answer includes the part (rear subframe) and the remedy (inspect, retorque or replace bolts) matching the reference without contradictions.",
       "abstained": false,
       "gold_ids": [
         "19V865000"
@@ -26,7 +26,7 @@
       "id": "q02",
       "task_type": "lookup",
       "correctness": 1.0,
-      "judge_reason": "The model answer correctly states the insufficient joint weld between the fuel tank and vapor return line as the defect, matching the reference without contradictions.",
+      "judge_reason": "The model answer correctly states the insufficient joint weld defect without any contradictions, covering the essential fact from the reference.",
       "abstained": false,
       "gold_ids": [
         "19V569000"
@@ -46,7 +46,7 @@
       "id": "q03",
       "task_type": "lookup",
       "correctness": 1.0,
-      "judge_reason": "The model answer correctly states the owner's guide error and FMVSS 208 failure, matching the reference without contradictions.",
+      "judge_reason": "The model answer correctly states the owner's guide error and FMVSS 208 non\u2011compliance, matching the reference without contradictions.",
       "abstained": false,
       "gold_ids": [
         "19V694000"
@@ -60,7 +60,7 @@
       ],
       "citation_recall": 1.0,
       "citation_precision": 0.2,
-      "total_tokens": 1221
+      "total_tokens": 1211
     },
     {
       "id": "q04",
@@ -126,7 +126,7 @@
       "id": "q07",
       "task_type": "synthesis",
       "correctness": 0.5,
-      "judge_reason": "The answer mentions only recall 19V569000 and omits the other two fuel\u2011system recalls (21V215000 and 23V858000).",
+      "judge_reason": "The model answer mentions only recall 19V569000 and omits the other two fuel\u2011system recalls (21V215000 and 23V858000).",
       "abstained": false,
       "gold_ids": [
         "19V569000",
@@ -148,7 +148,7 @@
       "id": "q08",
       "task_type": "synthesis",
       "correctness": 0.5,
-      "judge_reason": "The answer lists two of the three relevant recalls but omits recall 26V332000, which the reference includes as an air\u2011bag\u2011related recall.",
+      "judge_reason": "The answer includes two of the three referenced recalls but omits the 26V332000 recall, making it only partially correct.",
       "abstained": false,
       "gold_ids": [
         "19V383000",
@@ -164,13 +164,13 @@
       ],
       "citation_recall": 0.6666666666666666,
       "citation_precision": 0.4,
-      "total_tokens": 1773
+      "total_tokens": 1789
     },
     {
       "id": "q09",
       "task_type": "synthesis",
       "correctness": 0.5,
-      "judge_reason": "The answer mentions the 2021 expansion but omits the 2023 expansion and uses incorrect recall identifiers, missing key facts from the reference.",
+      "judge_reason": "The answer mentions the 2021 expansion (21V-215) but omits the 2023 expansion (23V-858) and uses an incorrect initial recall number, so it is only partially correct.",
       "abstained": false,
       "gold_ids": [
         "21V215000",
@@ -185,7 +185,7 @@
       ],
       "citation_recall": 0.5,
       "citation_precision": 0.2,
-      "total_tokens": 1708
+      "total_tokens": 1707
     },
     {
       "id": "q10",
@@ -204,6 +204,356 @@
       "citation_recall": null,
       "citation_precision": 0.0,
       "total_tokens": 1492
+    },
+    {
+      "id": "q11",
+      "task_type": "lookup_no_id",
+      "correctness": 1.0,
+      "judge_reason": "The model answer correctly identifies the recall and provides the exact NHTSA campaign number without contradictions.",
+      "abstained": false,
+      "gold_ids": [
+        "19V865000"
+      ],
+      "cited_ids": [
+        "19V694000",
+        "19V865000",
+        "23V228000",
+        "26V365000",
+        "26V424000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.2,
+      "total_tokens": 1654
+    },
+    {
+      "id": "q12",
+      "task_type": "lookup_no_id",
+      "correctness": 0.5,
+      "judge_reason": "Provides the correct recall campaign number but omits the supporting details about burrs and repair actions.",
+      "abstained": false,
+      "gold_ids": [
+        "19V383000"
+      ],
+      "cited_ids": [
+        "18V663000",
+        "19V383000",
+        "19V694000",
+        "19V703000",
+        "19V865000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.2,
+      "total_tokens": 1215
+    },
+    {
+      "id": "q13",
+      "task_type": "lookup_no_id",
+      "correctness": 1.0,
+      "judge_reason": "The answer includes the correct recall campaign number and accurately describes the owner's guide error about the Passenger Airbag Off indicator and FMVSS 208, matching the reference.",
+      "abstained": false,
+      "gold_ids": [
+        "19V694000"
+      ],
+      "cited_ids": [
+        "12V501000",
+        "17V305000",
+        "19V569000",
+        "19V694000",
+        "22V380000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.2,
+      "total_tokens": 1192
+    },
+    {
+      "id": "q14",
+      "task_type": "lookup_no_id",
+      "correctness": 0.5,
+      "judge_reason": "The answer correctly identifies the recall campaign number but omits the details about the buckle channel issue and dealer repair actions.",
+      "abstained": false,
+      "gold_ids": [
+        "23V158000"
+      ],
+      "cited_ids": [
+        "19V383000",
+        "20V326000",
+        "23V092000",
+        "23V158000",
+        "23V782000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.2,
+      "total_tokens": 1518
+    },
+    {
+      "id": "q15",
+      "task_type": "lookup_no_id",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "26V332000"
+      ],
+      "cited_ids": [
+        "19V383000",
+        "19V694000",
+        "20V326000",
+        "23V092000",
+        "24V064000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1659
+    },
+    {
+      "id": "q16",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V569000"
+      ],
+      "cited_ids": [
+        "18V421000",
+        "18V817000",
+        "19V694000",
+        "20V067000",
+        "24V384000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1265
+    },
+    {
+      "id": "q17",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000"
+      ],
+      "cited_ids": [
+        "15V668000",
+        "17V305000",
+        "18V421000",
+        "19V569000",
+        "19V694000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1214
+    },
+    {
+      "id": "q18",
+      "task_type": "two_hop",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "26V332000"
+      ],
+      "cited_ids": [
+        "22V695000",
+        "24V054000",
+        "24V617000",
+        "26V288000",
+        "26V651000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1415
+    },
+    {
+      "id": "q19",
+      "task_type": "two_hop",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "23V858000"
+      ],
+      "cited_ids": [
+        "10V241000",
+        "15V570000",
+        "19V224000",
+        "20V677000",
+        "22V331000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1232
+    },
+    {
+      "id": "q20",
+      "task_type": "two_hop",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "21V215000"
+      ],
+      "cited_ids": [
+        "10V241000",
+        "19V224000",
+        "23V448000",
+        "23V663000",
+        "23V867000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1288
+    },
+    {
+      "id": "q21",
+      "task_type": "comparison",
+      "correctness": 1.0,
+      "judge_reason": "The model answer correctly states that the driver air\u2011bag clockspring recall was reported first, matching the reference and containing no contradictions.",
+      "abstained": false,
+      "gold_ids": [
+        "19V383000",
+        "19V865000"
+      ],
+      "cited_ids": [
+        "15V714000",
+        "17V417000",
+        "19V383000",
+        "19V694000",
+        "19V865000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.4,
+      "total_tokens": 1313
+    },
+    {
+      "id": "q22",
+      "task_type": "comparison",
+      "correctness": 1.0,
+      "judge_reason": "The model answer correctly states both recall start dates and the correct order, matching the reference answer.",
+      "abstained": false,
+      "gold_ids": [
+        "19V569000",
+        "19V694000"
+      ],
+      "cited_ids": [
+        "15V714000",
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "22V380000"
+      ],
+      "citation_recall": 1.0,
+      "citation_precision": 0.4,
+      "total_tokens": 1238
+    },
+    {
+      "id": "q23",
+      "task_type": "filtered_list",
+      "correctness": 0.5,
+      "judge_reason": "The answer lists three of the four recalls, omitting the 19V865000 rear subframe recall.",
+      "abstained": false,
+      "gold_ids": [
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "19V865000"
+      ],
+      "cited_ids": [
+        "17V305000",
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "24V384000"
+      ],
+      "citation_recall": 0.75,
+      "citation_precision": 0.6,
+      "total_tokens": 1409
+    },
+    {
+      "id": "q24",
+      "task_type": "filtered_list",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "23V158000",
+        "23V858000",
+        "26V332000"
+      ],
+      "cited_ids": [
+        "12V501000",
+        "17V305000",
+        "19V569000",
+        "19V694000",
+        "24V384000"
+      ],
+      "citation_recall": 0.0,
+      "citation_precision": 0.0,
+      "total_tokens": 1301
+    },
+    {
+      "id": "q25",
+      "task_type": "aggregate",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "19V865000",
+        "21V215000",
+        "23V158000",
+        "23V858000",
+        "26V332000"
+      ],
+      "cited_ids": [
+        "17V256000",
+        "17V305000",
+        "19V569000",
+        "19V694000",
+        "24V384000"
+      ],
+      "citation_recall": 0.25,
+      "citation_precision": 0.4,
+      "total_tokens": 1283
+    },
+    {
+      "id": "q26",
+      "task_type": "unanswerable",
+      "correctness": 1.0,
+      "judge_reason": "Correctly abstained",
+      "abstained": true,
+      "gold_ids": [],
+      "cited_ids": [
+        "19V099000",
+        "19V419000",
+        "19V484000",
+        "19V493000",
+        "19V569000"
+      ],
+      "citation_recall": null,
+      "citation_precision": 0.0,
+      "total_tokens": 1191
+    },
+    {
+      "id": "q27",
+      "task_type": "unanswerable",
+      "correctness": 1.0,
+      "judge_reason": "Correctly abstained",
+      "abstained": true,
+      "gold_ids": [],
+      "cited_ids": [
+        "12V486000",
+        "12V501000",
+        "17V305000",
+        "19V865000",
+        "23V524000"
+      ],
+      "citation_recall": null,
+      "citation_precision": 0.0,
+      "total_tokens": 1200
     }
   ]
 }

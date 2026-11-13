@@ -94,6 +94,169 @@
       "task_type": "unanswerable",
       "gold_answer": "Not in the corpus, which only covers campaigns from 2010 onward. The system should say it does not know.",
       "source_records": []
+    },
+    {
+      "id": "q11",
+      "question": "Which 2019 Honda CR-V recall addresses rear subframe bolts that may loosen, and what is its NHTSA campaign number?",
+      "task_type": "lookup_no_id",
+      "gold_answer": "Campaign 19V865000. The rear subframe bolts may loosen and the subframe could separate. Dealers inspect the bolts and retorque or replace them.",
+      "source_records": [
+        "19V865000"
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "Which 2019 Honda CR-V recall involves burrs on the steering wheel's metal core damaging wiring harnesses?",
+      "task_type": "lookup_no_id",
+      "gold_answer": "Campaign 19V383000. The burrs can damage the harnesses, disabling the driver's air bag or deploying it without warning. Dealers add a protective cover and replace the clockspring and harnesses.",
+      "source_records": [
+        "19V383000"
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "Which 2019 Honda CR-V recall was caused by an error in the owner's guide, and what was wrong?",
+      "task_type": "lookup_no_id",
+      "gold_answer": "Campaign 19V694000. The owner's guide incorrectly describes when the Passenger Airbag Off indicator should illuminate, failing FMVSS 208.",
+      "source_records": [
+        "19V694000"
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "Which recall covers front seat belt buckles on the 2019 Honda CR-V that may not latch?",
+      "task_type": "lookup_no_id",
+      "gold_answer": "Campaign 23V158000. The buckle channel may interfere with the release button, preventing the buckle from latching. Dealers replace the release buttons or buckle assemblies.",
+      "source_records": [
+        "23V158000"
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "Which recall addresses a front passenger seat weight sensor that may crack on the 2019 Honda CR-V?",
+      "task_type": "lookup_no_id",
+      "gold_answer": "Campaign 26V332000. The sensor may crack and short circuit, which can cause the air bags to deploy unintentionally in a crash. Dealers replace the seat weight sensors.",
+      "source_records": [
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "What is Honda's own recall number for NHTSA campaign 19V569000?",
+      "task_type": "lookup",
+      "gold_answer": "A5I.",
+      "source_records": [
+        "19V569000"
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "On what date did Honda begin recall 19V383000?",
+      "task_type": "lookup",
+      "gold_answer": "July 8, 2019.",
+      "source_records": [
+        "19V383000"
+      ]
+    },
+    {
+      "id": "q18",
+      "question": "What problem does the recall that expanded NHTSA recall 24V064 address?",
+      "task_type": "two_hop",
+      "gold_answer": "That recall is 26V332000. The front passenger seat weight sensor may crack and short circuit, which can cause the air bags to deploy unintentionally in a crash.",
+      "source_records": [
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q19",
+      "question": "When were owner notification letters mailed for the recall that expanded both 21V-215 and 20V-314?",
+      "task_type": "two_hop",
+      "gold_answer": "That recall is 23V858000. Owner letters were mailed September 6, 2024.",
+      "source_records": [
+        "23V858000"
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "Which recall expanded 20V-314 in 2021, and when were its owner letters mailed?",
+      "task_type": "two_hop",
+      "gold_answer": "Recall 21V215000 expanded 20V-314. Owner letters were mailed May 18, 2021.",
+      "source_records": [
+        "21V215000"
+      ]
+    },
+    {
+      "id": "q21",
+      "question": "Which was reported to NHTSA first: the 2019 Honda CR-V rear subframe recall or the 2019 Honda CR-V driver air bag clockspring recall?",
+      "task_type": "comparison",
+      "gold_answer": "The driver air bag clockspring recall (19V383000, reported May 21, 2019) came before the rear subframe recall (19V865000, reported December 5, 2019).",
+      "source_records": [
+        "19V383000",
+        "19V865000"
+      ]
+    },
+    {
+      "id": "q22",
+      "question": "For the 2019 Honda CR-V, which recall began first: the fuel tank weld recall or the Passenger Airbag Off owner's guide recall?",
+      "task_type": "comparison",
+      "gold_answer": "The fuel tank weld recall (19V569000) began September 16, 2019, before the owner's guide recall (19V694000), which began November 14, 2019.",
+      "source_records": [
+        "19V569000",
+        "19V694000"
+      ]
+    },
+    {
+      "id": "q23",
+      "question": "Which recalls for the 2019 Honda CR-V were reported to NHTSA in 2019?",
+      "task_type": "filtered_list",
+      "gold_answer": "19V383000 (driver air bag harness), 19V569000 (fuel tank weld), 19V694000 (owner's guide), and 19V865000 (rear subframe).",
+      "source_records": [
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "19V865000"
+      ]
+    },
+    {
+      "id": "q24",
+      "question": "Which recalls for the 2019 Honda CR-V were reported to NHTSA in 2023 or later?",
+      "task_type": "filtered_list",
+      "gold_answer": "23V158000 (seat belt buckles), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+      "source_records": [
+        "23V158000",
+        "23V858000",
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q25",
+      "question": "How many recall campaigns in the NHTSA data cover the 2019 Honda CR-V?",
+      "task_type": "aggregate",
+      "gold_answer": "8 campaigns.",
+      "source_records": [
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "19V865000",
+        "21V215000",
+        "23V158000",
+        "23V858000",
+        "26V332000"
+      ]
+    },
+    {
+      "id": "q26",
+      "question": "How many people were injured by the defect in recall 19V865000?",
+      "task_type": "unanswerable",
+      "gold_answer": "Not in the corpus. Recall records do not include injury counts, so the system should say it does not know.",
+      "source_records": []
+    },
+    {
+      "id": "q27",
+      "question": "What recalls will affect the 2030 Honda CR-V?",
+      "task_type": "unanswerable",
+      "gold_answer": "Not in the corpus. The system should say it does not know.",
+      "source_records": []
     }
   ]
 }

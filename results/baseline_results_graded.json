@@ -42,7 +42,7 @@
       "cited_ids": [],
       "citation_recall": 0.0,
       "citation_precision": null,
-      "total_tokens": 188
+      "total_tokens": 198
     },
     {
       "id": "q04",
@@ -84,7 +84,7 @@
       "cited_ids": [],
       "citation_recall": 0.0,
       "citation_precision": null,
-      "total_tokens": 218
+      "total_tokens": 177
     },
     {
       "id": "q07",
@@ -116,7 +116,7 @@
       "cited_ids": [],
       "citation_recall": 0.0,
       "citation_precision": null,
-      "total_tokens": 204
+      "total_tokens": 274
     },
     {
       "id": "q09",
@@ -144,6 +144,254 @@
       "citation_recall": null,
       "citation_precision": null,
       "total_tokens": 164
+    },
+    {
+      "id": "q11",
+      "task_type": "lookup_no_id",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V865000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 192
+    },
+    {
+      "id": "q12",
+      "task_type": "lookup_no_id",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 169
+    },
+    {
+      "id": "q13",
+      "task_type": "lookup_no_id",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V694000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 225
+    },
+    {
+      "id": "q14",
+      "task_type": "lookup_no_id",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "23V158000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 169
+    },
+    {
+      "id": "q15",
+      "task_type": "lookup_no_id",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "26V332000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 171
+    },
+    {
+      "id": "q16",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V569000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 225
+    },
+    {
+      "id": "q17",
+      "task_type": "lookup",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 164
+    },
+    {
+      "id": "q18",
+      "task_type": "two_hop",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "26V332000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 283
+    },
+    {
+      "id": "q19",
+      "task_type": "two_hop",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "23V858000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 168
+    },
+    {
+      "id": "q20",
+      "task_type": "two_hop",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "21V215000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 215
+    },
+    {
+      "id": "q21",
+      "task_type": "comparison",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000",
+        "19V865000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 207
+    },
+    {
+      "id": "q22",
+      "task_type": "comparison",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V569000",
+        "19V694000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 217
+    },
+    {
+      "id": "q23",
+      "task_type": "filtered_list",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "19V865000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 211
+    },
+    {
+      "id": "q24",
+      "task_type": "filtered_list",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "23V158000",
+        "23V858000",
+        "26V332000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 180
+    },
+    {
+      "id": "q25",
+      "task_type": "aggregate",
+      "correctness": 0.0,
+      "judge_reason": "Abstained on an answerable question",
+      "abstained": true,
+      "gold_ids": [
+        "19V383000",
+        "19V569000",
+        "19V694000",
+        "19V865000",
+        "21V215000",
+        "23V158000",
+        "23V858000",
+        "26V332000"
+      ],
+      "cited_ids": [],
+      "citation_recall": 0.0,
+      "citation_precision": null,
+      "total_tokens": 177
+    },
+    {
+      "id": "q26",
+      "task_type": "unanswerable",
+      "correctness": 1.0,
+      "judge_reason": "Correctly abstained",
+      "abstained": true,
+      "gold_ids": [],
+      "cited_ids": [],
+      "citation_recall": null,
+      "citation_precision": null,
+      "total_tokens": 163
+    },
+    {
+      "id": "q27",
+      "task_type": "unanswerable",
+      "correctness": 1.0,
+      "judge_reason": "Correctly abstained",
+      "abstained": true,
+      "gold_ids": [],
+      "cited_ids": [],
+      "citation_recall": null,
+      "citation_precision": null,
+      "total_tokens": 151
     }
   ]
 }
