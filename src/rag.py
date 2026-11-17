@@ -7,6 +7,7 @@ Requirements:
 
 # Imports
 import csv
+import re
 from pathlib import Path
 
 import numpy as np
@@ -14,6 +15,7 @@ import pandas as pd
 import requests
 from dotenv import load_dotenv
 from groq import Groq
+from rank_bm25 import BM25Okapi
 
 # Load GROQ_API_KEY from the .env file
 load_dotenv()
@@ -29,6 +31,21 @@ OLLAMA = "http://localhost:11434"
 # Models
 EMBED_MODEL = "nomic-embed-text"
 CHAT_MODEL = "openai/gpt-oss-20b"
+
+# Retrieval configuration
+DOCUMENT_PREFIX = "search_document: "
+BM25_K1 = 1.5
+BM25_B = 0.75
+BM25_EPSILON = 0.25
+BM25_TOKENIZER = "casefold_alphanumeric_with_campaign_id_normalization"
+
+# Normalize full, abbreviated, and hyphenated campaign IDs to the representation
+# used in the recall documents (for example, 20V-314 -> 20v314000).
+CAMPAIGN_ID_RE = re.compile(
+    r"\b(?P<year>\d{2})v-?(?P<number>\d{3})(?P<suffix>\d{3})?\b",
+    re.IGNORECASE,
+)
+TOKEN_RE = re.compile(r"[a-z0-9]+")
 
 COLUMNS = [
     "RECORD_ID", "CAMPNO", "MAKETXT", "MODELTXT", "YEARTXT", "MFGCAMPNO",
@@ -103,13 +120,51 @@ def build_docs(df):
 
 
 # Indexing
+def tokenize_bm25(text):
+    """Tokenize text deterministically for BM25 retrieval.
+
+    Campaign IDs are case-normalized, de-hyphenated, and expanded from their
+    common three-digit abbreviation. All remaining tokens are lowercase ASCII
+    alphanumeric runs. No stopword removal or stemming is applied.
+    """
+    normalized = text.casefold()
+
+    def normalize_campaign_id(match):
+        suffix = match.group("suffix") or "000"
+        return f"{match.group('year')}v{match.group('number')}{suffix}"
+
+    normalized = CAMPAIGN_ID_RE.sub(normalize_campaign_id, normalized)
+    return TOKEN_RE.findall(normalized)
+
+
+def build_bm25_index(
+    docs,
+    k1=BM25_K1,
+    b=BM25_B,
+    epsilon=BM25_EPSILON,
+):
+    """Build an in-memory BM25 index over the same text used by dense RAG."""
+    if not docs:
+        raise ValueError("cannot build a BM25 index from an empty document list")
+
+    texts = [DOCUMENT_PREFIX + doc["text"] for doc in docs]
+    tokenized_corpus = [tokenize_bm25(text) for text in texts]
+    index = BM25Okapi(
+        tokenized_corpus,
+        k1=k1,
+        b=b,
+        epsilon=epsilon,
+    )
+    return texts, index
+
+
 def build_index(docs, batch_size=64):
     """Embed each doc's `text`, returns (texts, vectors)
 
     EMBEDDINGS_PATH is used to cache the vectors re-embedding isn't required on every run,
     delete the file to force re-embedding or if data changes
     """
-    texts = ["search_document: " + doc["text"] for doc in docs]
+    texts = [DOCUMENT_PREFIX + doc["text"] for doc in docs]
 
     if EMBEDDINGS_PATH.is_file():
         vectors = np.load(EMBEDDINGS_PATH)
@@ -125,6 +180,27 @@ def build_index(docs, batch_size=64):
 
 
 # Retrieval & generation
+def retrieve_bm25(query, index, k=5):
+    """Return ``(document_index, score)`` pairs in deterministic rank order.
+
+    Scores are sorted descending, with original document order used to break
+    ties. A query with no matching terms therefore returns the first
+    ``min(k, corpus_size)`` documents, each with score 0.0.
+    """
+    if k < 0:
+        raise ValueError("k must be non-negative")
+
+    scores = np.asarray(index.get_scores(tokenize_bm25(query)), dtype=float)
+    limit = min(k, len(scores))
+    if limit == 0:
+        return []
+
+    # np.lexsort uses the final key as primary: descending score first, then
+    # ascending source index for deterministic ties.
+    ranked_indices = np.lexsort((np.arange(len(scores)), -scores))[:limit]
+    return [(int(i), float(scores[i])) for i in ranked_indices]
+
+
 def retrieve(query, texts, vectors, k=5):
     """Return the top k texts most similar via cosine similarity to the query"""
     q = embed([query])[0]
