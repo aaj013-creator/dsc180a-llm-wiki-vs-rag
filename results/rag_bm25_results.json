@@ -1,0 +1,2830 @@
+{
+  "run": {
+    "system": "rag",
+    "model": "openai/gpt-oss-20b",
+    "top_k": 5,
+    "retrieval": {
+      "method": "bm25",
+      "implementation": "rank_bm25.BM25Okapi",
+      "top_k": 5,
+      "document_prefix": "search_document: ",
+      "k1": 1.5,
+      "b": 0.75,
+      "epsilon": 0.25,
+      "tokenizer": "casefold_alphanumeric_with_campaign_id_normalization",
+      "tie_breaker": "ascending_document_index",
+      "no_match_behavior": "return first min(top_k, corpus_size) documents in source order with score 0.0"
+    },
+    "generation_settings": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_completion_tokens": 4096,
+      "reasoning_effort": "low",
+      "seed": 42
+    },
+    "prompt_template": "Answer the question using ONLY the context below.\nIf the answer isn't in the context, say \"I don't know.\"\n\nContext:\n{context}\n\nQuestion: {question}",
+    "questions_file": "data\\evaluation\\questions.json",
+    "created_at": "2026-11-19T03:41:00.563716+00:00"
+  },
+  "results": [
+    {
+      "id": "q01",
+      "question": "In recall 19V865000 for the 2019 Honda CR-V, what part may separate and what is the remedy?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "The rear subframe may separate because its bolts may loosen. Dealers inspect the rear subframe bolts and retorque or replace them.",
+        "source_records": [
+          "19V865000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V865000",
+        "19V569000",
+        "17V417000",
+        "20V768000",
+        "17V305000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        69.37209672967705,
+        57.0182836071832,
+        56.87785324327693,
+        56.479132550156635,
+        56.177594827733046
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V865000",
+          "score": 69.37209672967705
+        },
+        {
+          "rank": 2,
+          "campaign_id": "19V569000",
+          "score": 57.0182836071832
+        },
+        {
+          "rank": 3,
+          "campaign_id": "17V417000",
+          "score": 56.87785324327693
+        },
+        {
+          "rank": 4,
+          "campaign_id": "20V768000",
+          "score": 56.479132550156635
+        },
+        {
+          "rank": 5,
+          "campaign_id": "17V305000",
+          "score": 56.177594827733046
+        }
+      ],
+      "status": "success",
+      "answer": "In recall 19V865000 for the 2019 Honda CR‑V, the rear subframe may separate. The remedy is that dealers will inspect the rear subframe bolts and either retorque them or replace them, free of charge.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.848,
+      "usage": {
+        "completion_tokens": 89,
+        "prompt_tokens": 1138,
+        "total_tokens": 1227,
+        "completion_time": 0.099235829,
+        "completion_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "prompt_time": 0.104325944,
+        "prompt_tokens_details": null,
+        "queue_time": 0.118069783,
+        "total_time": 0.203561773
+      },
+      "error": null
+    },
+    {
+      "id": "q02",
+      "question": "What defect does recall 19V569000 describe for the 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "The joint weld between the fuel tank and the vapor return line may be insufficient and fail. Dealers replace the fuel tank.",
+        "source_records": [
+          "19V569000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V569000",
+        "20V768000",
+        "19V865000",
+        "19V694000",
+        "23V158000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        49.6963811981967,
+        41.599635416208606,
+        40.4793101555827,
+        40.35142145824447,
+        40.26264328306655
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V569000",
+          "score": 49.6963811981967
+        },
+        {
+          "rank": 2,
+          "campaign_id": "20V768000",
+          "score": 41.599635416208606
+        },
+        {
+          "rank": 3,
+          "campaign_id": "19V865000",
+          "score": 40.4793101555827
+        },
+        {
+          "rank": 4,
+          "campaign_id": "19V694000",
+          "score": 40.35142145824447
+        },
+        {
+          "rank": 5,
+          "campaign_id": "23V158000",
+          "score": 40.26264328306655
+        }
+      ],
+      "status": "success",
+      "answer": "The defect is that the joint weld between the fuel tank and the vapor return line may have been insufficiently welded, causing the weld to fail.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.339,
+      "usage": {
+        "completion_tokens": 69,
+        "prompt_tokens": 1305,
+        "total_tokens": 1374,
+        "completion_time": 0.072779919,
+        "completion_tokens_details": {
+          "reasoning_tokens": 31
+        },
+        "prompt_time": 0.08200647,
+        "prompt_tokens_details": null,
+        "queue_time": 0.118076011,
+        "total_time": 0.154786389
+      },
+      "error": null
+    },
+    {
+      "id": "q03",
+      "question": "Why was the 2019 Honda CR-V recalled under campaign 19V694000?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "The owner's guide incorrectly describes when the Passenger Airbag Off indicator should illuminate, failing FMVSS 208. Honda provides a sticker with corrected information.",
+        "source_records": [
+          "19V694000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V694000",
+        "12V136000",
+        "26V663000",
+        "23V158000",
+        "23V858000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        40.935011462473874,
+        37.05146207202225,
+        36.6922600465796,
+        35.4176027685588,
+        34.89749092660371
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V694000",
+          "score": 40.935011462473874
+        },
+        {
+          "rank": 2,
+          "campaign_id": "12V136000",
+          "score": 37.05146207202225
+        },
+        {
+          "rank": 3,
+          "campaign_id": "26V663000",
+          "score": 36.6922600465796
+        },
+        {
+          "rank": 4,
+          "campaign_id": "23V158000",
+          "score": 35.4176027685588
+        },
+        {
+          "rank": 5,
+          "campaign_id": "23V858000",
+          "score": 34.89749092660371
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V was recalled because the owner’s guide incorrectly explained when the “Passenger Airbag Off” indicator should light, which caused the vehicle to fail to meet FMVSS 208 requirements for occupant crash protection.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.476,
+      "usage": {
+        "completion_tokens": 106,
+        "prompt_tokens": 2799,
+        "total_tokens": 2905,
+        "completion_time": 0.115174931,
+        "completion_tokens_details": {
+          "reasoning_tokens": 48
+        },
+        "prompt_time": 0.141004153,
+        "prompt_tokens_details": null,
+        "queue_time": 0.140716222,
+        "total_time": 0.256179084
+      },
+      "error": null
+    },
+    {
+      "id": "q04",
+      "question": "Under recall 19V383000, what can happen to the driver's air bag in the 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "Burrs on the steering wheel's metal core can damage the harnesses, potentially disabling the driver's air bag or causing it to deploy without warning.",
+        "source_records": [
+          "19V383000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V383000",
+        "15V714000",
+        "15V320000",
+        "20V027000",
+        "17V417000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        66.8923759285348,
+        56.50432517049128,
+        54.27352992751971,
+        53.14846673551625,
+        52.988579032137935
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V383000",
+          "score": 66.8923759285348
+        },
+        {
+          "rank": 2,
+          "campaign_id": "15V714000",
+          "score": 56.50432517049128
+        },
+        {
+          "rank": 3,
+          "campaign_id": "15V320000",
+          "score": 54.27352992751971
+        },
+        {
+          "rank": 4,
+          "campaign_id": "20V027000",
+          "score": 53.14846673551625
+        },
+        {
+          "rank": 5,
+          "campaign_id": "17V417000",
+          "score": 52.988579032137935
+        }
+      ],
+      "status": "success",
+      "answer": "Under recall 19V383000, the metal core of the steering wheel may have burrs that can damage the wiring harnesses routed inside it, which can either **disable the driver’s air‑bag** or cause it to **deploy unexpectedly**.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.457,
+      "usage": {
+        "completion_tokens": 98,
+        "prompt_tokens": 2164,
+        "total_tokens": 2262,
+        "completion_time": 0.10635761,
+        "completion_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "prompt_time": 0.134187928,
+        "prompt_tokens_details": null,
+        "queue_time": 0.141011676,
+        "total_time": 0.240545538
+      },
+      "error": null
+    },
+    {
+      "id": "q05",
+      "question": "When were owner notification letters mailed for seat belt recall 23V158000?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "April 18, 2023.",
+        "source_records": [
+          "23V158000"
+        ]
+      },
+      "retrieved_ids": [
+        "23V158000",
+        "21V889000",
+        "25V797000",
+        "25V338000",
+        "23V557000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        25.377696455445864,
+        20.04209070740169,
+        19.773487973172077,
+        19.77144746864266,
+        19.626226026351727
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "23V158000",
+          "score": 25.377696455445864
+        },
+        {
+          "rank": 2,
+          "campaign_id": "21V889000",
+          "score": 20.04209070740169
+        },
+        {
+          "rank": 3,
+          "campaign_id": "25V797000",
+          "score": 19.773487973172077
+        },
+        {
+          "rank": 4,
+          "campaign_id": "25V338000",
+          "score": 19.77144746864266
+        },
+        {
+          "rank": 5,
+          "campaign_id": "23V557000",
+          "score": 19.626226026351727
+        }
+      ],
+      "status": "success",
+      "answer": "Owner notification letters for seat belt recall 23V158000 were mailed on **April 18, 2023**.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 0.353,
+      "usage": {
+        "completion_tokens": 52,
+        "prompt_tokens": 1451,
+        "total_tokens": 1503,
+        "completion_time": 0.05870175,
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_time": 0.114778128,
+        "prompt_tokens_details": null,
+        "queue_time": 0.122152054,
+        "total_time": 0.173479878
+      },
+      "error": null
+    },
+    {
+      "id": "q06",
+      "question": "What problem does recall 26V332000 address in the 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "The front passenger seat weight sensor may crack and short circuit, which can cause the air bags to deploy unintentionally in a crash. Dealers replace the seat weight sensors.",
+        "source_records": [
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "26V332000",
+        "23V858000",
+        "19V694000",
+        "26V366000",
+        "12V486000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        41.380485742056635,
+        38.37418972038584,
+        38.10500759876032,
+        37.963083614022175,
+        37.572663327962665
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "26V332000",
+          "score": 41.380485742056635
+        },
+        {
+          "rank": 2,
+          "campaign_id": "23V858000",
+          "score": 38.37418972038584
+        },
+        {
+          "rank": 3,
+          "campaign_id": "19V694000",
+          "score": 38.10500759876032
+        },
+        {
+          "rank": 4,
+          "campaign_id": "26V366000",
+          "score": 37.963083614022175
+        },
+        {
+          "rank": 5,
+          "campaign_id": "12V486000",
+          "score": 37.572663327962665
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 24.644,
+      "usage": {
+        "completion_tokens": 45,
+        "prompt_tokens": 3374,
+        "total_tokens": 3419,
+        "completion_time": 0.04978069,
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        },
+        "prompt_time": 0.187594315,
+        "prompt_tokens_details": null,
+        "queue_time": 0.221228126,
+        "total_time": 0.237375005
+      },
+      "error": null
+    },
+    {
+      "id": "q07",
+      "question": "Which recalls for the 2019 Honda CR-V involve the fuel system?",
+      "metadata": {
+        "task_type": "synthesis",
+        "gold_answer": "19V569000 (fuel tank weld), 21V215000 (fuel pump), and 23V858000 (fuel pump).",
+        "source_records": [
+          "19V569000",
+          "21V215000",
+          "23V858000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V569000",
+        "22V380000",
+        "24V763000",
+        "26V366000",
+        "23V858000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        43.76569288663353,
+        43.293293411612,
+        42.41373033423637,
+        42.17856914716562,
+        42.13487105000883
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V569000",
+          "score": 43.76569288663353
+        },
+        {
+          "rank": 2,
+          "campaign_id": "22V380000",
+          "score": 43.293293411612
+        },
+        {
+          "rank": 3,
+          "campaign_id": "24V763000",
+          "score": 42.41373033423637
+        },
+        {
+          "rank": 4,
+          "campaign_id": "26V366000",
+          "score": 42.17856914716562
+        },
+        {
+          "rank": 5,
+          "campaign_id": "23V858000",
+          "score": 42.13487105000883
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V is covered by two fuel‑system recalls:\n\n| Recall campaign | Component | Defect | Remedy |\n|-----------------|-----------|--------|--------|\n| **19V569000** | Fuel system – gasoline: storage: tank assembly | The joint weld between the fuel tank and the vapor‑return line may be insufficiently welded, potentially causing a leak | Dealers will replace the fuel tank free of charge |\n| **23V858000** | Fuel system – gasoline: delivery: fuel pump | The fuel pump inside the fuel tank may fail | Dealers will replace the fuel‑pump module free of charge |\n\nThese are the only recalls in the provided context that involve the fuel system for the 2019 Honda CR‑V.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 15.907,
+      "usage": {
+        "completion_tokens": 222,
+        "prompt_tokens": 2307,
+        "total_tokens": 2529,
+        "completion_time": 0.26567082,
+        "completion_tokens_details": {
+          "reasoning_tokens": 58
+        },
+        "prompt_time": 0.16412059,
+        "prompt_tokens_details": null,
+        "queue_time": 0.244975157,
+        "total_time": 0.42979141
+      },
+      "error": null
+    },
+    {
+      "id": "q08",
+      "question": "Which recalls for the 2019 Honda CR-V relate to air bags?",
+      "metadata": {
+        "task_type": "synthesis",
+        "gold_answer": "19V383000 (driver air bag harness), 19V694000 (Passenger Airbag Off indicator in owner's guide), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "19V383000",
+          "19V694000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "17V417000",
+        "24V064000",
+        "19V383000",
+        "26V332000",
+        "15V370000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        41.80473588720829,
+        41.37355072498586,
+        41.24222741425939,
+        40.50801360028774,
+        39.32971061503083
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "17V417000",
+          "score": 41.80473588720829
+        },
+        {
+          "rank": 2,
+          "campaign_id": "24V064000",
+          "score": 41.37355072498586
+        },
+        {
+          "rank": 3,
+          "campaign_id": "19V383000",
+          "score": 41.24222741425939
+        },
+        {
+          "rank": 4,
+          "campaign_id": "26V332000",
+          "score": 40.50801360028774
+        },
+        {
+          "rank": 5,
+          "campaign_id": "15V370000",
+          "score": 39.32971061503083
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V is covered by two air‑bag recalls:\n\n1. **Recall campaign 19V383000** – “AIR BAGS: FRONTAL: DRIVER CLOCKSPRING/SPIRAL CASSETTE” (driver’s air‑bag issue).  \n2. **Recall campaign 26V332000** – “AIR BAGS: SENSOR: OCCUPANT CLASSIFICATION: FRONT PASSENGER” (front‑passenger seat‑weight sensor issue).",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 22.742,
+      "usage": {
+        "completion_tokens": 226,
+        "prompt_tokens": 3198,
+        "total_tokens": 3424,
+        "completion_time": 0.247793333,
+        "completion_tokens_details": {
+          "reasoning_tokens": 103
+        },
+        "prompt_time": 0.189540853,
+        "prompt_tokens_details": null,
+        "queue_time": 0.097289018,
+        "total_time": 0.437334186
+      },
+      "error": null
+    },
+    {
+      "id": "q09",
+      "question": "How did the fuel pump recall for the 2019 Honda CR-V change over time?",
+      "metadata": {
+        "task_type": "synthesis",
+        "gold_answer": "Recall 20V-314 was expanded by 21V-215 in 2021, then expanded again by 23V-858 in 2023 to cover 2013 to 2023 models.",
+        "source_records": [
+          "21V215000",
+          "23V858000"
+        ]
+      },
+      "retrieved_ids": [
+        "24V763000",
+        "21V215000",
+        "23V858000",
+        "19V569000",
+        "26V366000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        50.36206298091191,
+        48.78460920132124,
+        48.72376486130455,
+        46.53944181289765,
+        45.53205285375023
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "24V763000",
+          "score": 50.36206298091191
+        },
+        {
+          "rank": 2,
+          "campaign_id": "21V215000",
+          "score": 48.78460920132124
+        },
+        {
+          "rank": 3,
+          "campaign_id": "23V858000",
+          "score": 48.72376486130455
+        },
+        {
+          "rank": 4,
+          "campaign_id": "19V569000",
+          "score": 46.53944181289765
+        },
+        {
+          "rank": 5,
+          "campaign_id": "26V366000",
+          "score": 45.53205285375023
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V was first covered by the **21V215000** recall, which addressed a **low‑pressure fuel‑pump failure** that could cause an engine stall and a crash risk.  \nLater, the recall was **expanded** under **23V858000** (an expansion of 21V‑215 and 20V‑314). This newer recall broadened the scope to include the **fuel‑pump inside the tank** for 2019‑2023 CR‑Vs, again warning of a pump failure that could stall the engine and increase crash risk. Thus, the recall evolved from a low‑pressure pump issue to a broader fuel‑pump‑in‑tank failure covering a wider range of CR‑V models.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 25.014,
+      "usage": {
+        "completion_tokens": 320,
+        "prompt_tokens": 2583,
+        "total_tokens": 2903,
+        "completion_time": 0.345316141,
+        "completion_tokens_details": {
+          "reasoning_tokens": 156
+        },
+        "prompt_time": 0.129622509,
+        "prompt_tokens_details": null,
+        "queue_time": 0.220933175,
+        "total_time": 0.47493865
+      },
+      "error": null
+    },
+    {
+      "id": "q10",
+      "question": "What is the remedy for NHTSA recall campaign 99V999000?",
+      "metadata": {
+        "task_type": "unanswerable",
+        "gold_answer": "Not in the corpus, which only covers campaigns from 2010 onward. The system should say it does not know.",
+        "source_records": []
+      },
+      "retrieved_ids": [
+        "25V615000",
+        "18V345000",
+        "24V188000",
+        "25V887000",
+        "25V369000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        28.988593119364307,
+        28.214585840607054,
+        28.029197569350835,
+        27.370787686723574,
+        27.031624295159567
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "25V615000",
+          "score": 28.988593119364307
+        },
+        {
+          "rank": 2,
+          "campaign_id": "18V345000",
+          "score": 28.214585840607054
+        },
+        {
+          "rank": 3,
+          "campaign_id": "24V188000",
+          "score": 28.029197569350835
+        },
+        {
+          "rank": 4,
+          "campaign_id": "25V887000",
+          "score": 27.370787686723574
+        },
+        {
+          "rank": 5,
+          "campaign_id": "25V369000",
+          "score": 27.031624295159567
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 6.565,
+      "usage": {
+        "completion_tokens": 17,
+        "prompt_tokens": 1393,
+        "total_tokens": 1410,
+        "completion_time": 0.019713417,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4
+        },
+        "prompt_time": 0.083217769,
+        "prompt_tokens_details": null,
+        "queue_time": 0.257084892,
+        "total_time": 0.102931186
+      },
+      "error": null
+    },
+    {
+      "id": "q11",
+      "question": "Which 2019 Honda CR-V recall addresses rear subframe bolts that may loosen, and what is its NHTSA campaign number?",
+      "metadata": {
+        "task_type": "lookup_no_id",
+        "gold_answer": "Campaign 19V865000. The rear subframe bolts may loosen and the subframe could separate. Dealers inspect the bolts and retorque or replace them.",
+        "source_records": [
+          "19V865000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V865000",
+        "26V424000",
+        "26V663000",
+        "23V228000",
+        "17V417000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        71.05296610518074,
+        50.950647353938784,
+        48.83546620847236,
+        48.01110965237877,
+        47.04801611771203
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V865000",
+          "score": 71.05296610518074
+        },
+        {
+          "rank": 2,
+          "campaign_id": "26V424000",
+          "score": 50.950647353938784
+        },
+        {
+          "rank": 3,
+          "campaign_id": "26V663000",
+          "score": 48.83546620847236
+        },
+        {
+          "rank": 4,
+          "campaign_id": "23V228000",
+          "score": 48.01110965237877
+        },
+        {
+          "rank": 5,
+          "campaign_id": "17V417000",
+          "score": 47.04801611771203
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V recall that addresses rear subframe bolts that may loosen is **Recall campaign 19V865000**.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 7.565,
+      "usage": {
+        "completion_tokens": 71,
+        "prompt_tokens": 1403,
+        "total_tokens": 1474,
+        "completion_time": 0.07250849,
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        },
+        "prompt_time": 0.08190953,
+        "prompt_tokens_details": null,
+        "queue_time": 0.22126521,
+        "total_time": 0.15441802
+      },
+      "error": null
+    },
+    {
+      "id": "q12",
+      "question": "Which 2019 Honda CR-V recall involves burrs on the steering wheel's metal core damaging wiring harnesses?",
+      "metadata": {
+        "task_type": "lookup_no_id",
+        "gold_answer": "Campaign 19V383000. The burrs can damage the harnesses, disabling the driver's air bag or deploying it without warning. Dealers add a protective cover and replace the clockspring and harnesses.",
+        "source_records": [
+          "19V383000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V383000",
+        "24V744000",
+        "20V768000",
+        "17V417000",
+        "11V004000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        78.31950433071238,
+        43.379522403492345,
+        41.38481712200127,
+        41.23859599130829,
+        40.037334306953866
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V383000",
+          "score": 78.31950433071238
+        },
+        {
+          "rank": 2,
+          "campaign_id": "24V744000",
+          "score": 43.379522403492345
+        },
+        {
+          "rank": 3,
+          "campaign_id": "20V768000",
+          "score": 41.38481712200127
+        },
+        {
+          "rank": 4,
+          "campaign_id": "17V417000",
+          "score": 41.23859599130829
+        },
+        {
+          "rank": 5,
+          "campaign_id": "11V004000",
+          "score": 40.037334306953866
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V recall that involves burrs on the steering wheel’s metal core damaging wiring harnesses is Recall campaign **19V383000**.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 9.576,
+      "usage": {
+        "completion_tokens": 57,
+        "prompt_tokens": 1498,
+        "total_tokens": 1555,
+        "completion_time": 0.06551408,
+        "completion_tokens_details": {
+          "reasoning_tokens": 13
+        },
+        "prompt_time": 0.082159762,
+        "prompt_tokens_details": null,
+        "queue_time": 0.248448451,
+        "total_time": 0.147673842
+      },
+      "error": null
+    },
+    {
+      "id": "q13",
+      "question": "Which 2019 Honda CR-V recall was caused by an error in the owner's guide, and what was wrong?",
+      "metadata": {
+        "task_type": "lookup_no_id",
+        "gold_answer": "Campaign 19V694000. The owner's guide incorrectly describes when the Passenger Airbag Off indicator should illuminate, failing FMVSS 208.",
+        "source_records": [
+          "19V694000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V694000",
+        "17V305000",
+        "22V380000",
+        "17V417000",
+        "12V136000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        50.77290959914927,
+        48.522877469699054,
+        48.50100865751697,
+        47.041975016523025,
+        46.56115909223429
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V694000",
+          "score": 50.77290959914927
+        },
+        {
+          "rank": 2,
+          "campaign_id": "17V305000",
+          "score": 48.522877469699054
+        },
+        {
+          "rank": 3,
+          "campaign_id": "22V380000",
+          "score": 48.50100865751697
+        },
+        {
+          "rank": 4,
+          "campaign_id": "17V417000",
+          "score": 47.041975016523025
+        },
+        {
+          "rank": 5,
+          "campaign_id": "12V136000",
+          "score": 46.56115909223429
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V recall was the **19V694000** campaign. It was caused by an error in the owner’s guide that incorrectly described when the “Passenger Airbag Off” indicator should illuminate.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 9.621,
+      "usage": {
+        "completion_tokens": 81,
+        "prompt_tokens": 1479,
+        "total_tokens": 1560,
+        "completion_time": 0.085439559,
+        "completion_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "prompt_time": 0.132313084,
+        "prompt_tokens_details": null,
+        "queue_time": 0.22485647,
+        "total_time": 0.217752643
+      },
+      "error": null
+    },
+    {
+      "id": "q14",
+      "question": "Which recall covers front seat belt buckles on the 2019 Honda CR-V that may not latch?",
+      "metadata": {
+        "task_type": "lookup_no_id",
+        "gold_answer": "Campaign 23V158000. The buckle channel may interfere with the release button, preventing the buckle from latching. Dealers replace the release buttons or buckle assemblies.",
+        "source_records": [
+          "23V158000"
+        ]
+      },
+      "retrieved_ids": [
+        "23V158000",
+        "21V900000",
+        "12V338000",
+        "23V092000",
+        "26V332000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        52.11335521098359,
+        46.818601912285814,
+        45.51228869414894,
+        43.93955048028345,
+        43.796956598675195
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "23V158000",
+          "score": 52.11335521098359
+        },
+        {
+          "rank": 2,
+          "campaign_id": "21V900000",
+          "score": 46.818601912285814
+        },
+        {
+          "rank": 3,
+          "campaign_id": "12V338000",
+          "score": 45.51228869414894
+        },
+        {
+          "rank": 4,
+          "campaign_id": "23V092000",
+          "score": 43.93955048028345
+        },
+        {
+          "rank": 5,
+          "campaign_id": "26V332000",
+          "score": 43.796956598675195
+        }
+      ],
+      "status": "success",
+      "answer": "The recall that covers front seat belt buckles on the 2019 Honda CR‑V that may not latch is **Recall campaign 23V158000**.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 17.526,
+      "usage": {
+        "completion_tokens": 52,
+        "prompt_tokens": 2503,
+        "total_tokens": 2555,
+        "completion_time": 0.05471486,
+        "completion_tokens_details": {
+          "reasoning_tokens": 9
+        },
+        "prompt_time": 0.178495661,
+        "prompt_tokens_details": null,
+        "queue_time": 0.064824865,
+        "total_time": 0.233210521
+      },
+      "error": null
+    },
+    {
+      "id": "q15",
+      "question": "Which recall addresses a front passenger seat weight sensor that may crack on the 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "lookup_no_id",
+        "gold_answer": "Campaign 26V332000. The sensor may crack and short circuit, which can cause the air bags to deploy unintentionally in a crash. Dealers replace the seat weight sensors.",
+        "source_records": [
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "24V064000",
+        "26V332000",
+        "23V158000",
+        "23V092000",
+        "17V417000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        57.43132930740533,
+        55.48610644751935,
+        52.11527356801623,
+        50.22526440169341,
+        48.918919415184384
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "24V064000",
+          "score": 57.43132930740533
+        },
+        {
+          "rank": 2,
+          "campaign_id": "26V332000",
+          "score": 55.48610644751935
+        },
+        {
+          "rank": 3,
+          "campaign_id": "23V158000",
+          "score": 52.11527356801623
+        },
+        {
+          "rank": 4,
+          "campaign_id": "23V092000",
+          "score": 50.22526440169341
+        },
+        {
+          "rank": 5,
+          "campaign_id": "17V417000",
+          "score": 48.918919415184384
+        }
+      ],
+      "status": "success",
+      "answer": "Recall campaign **26V332000** addresses a front passenger seat weight sensor that may crack on the 2019 Honda CR‑V.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 18.596,
+      "usage": {
+        "completion_tokens": 131,
+        "prompt_tokens": 2786,
+        "total_tokens": 2917,
+        "completion_time": 0.13658724,
+        "completion_tokens_details": {
+          "reasoning_tokens": 93
+        },
+        "prompt_time": 0.150581424,
+        "prompt_tokens_details": null,
+        "queue_time": 0.118448794,
+        "total_time": 0.287168664
+      },
+      "error": null
+    },
+    {
+      "id": "q16",
+      "question": "What is Honda's own recall number for NHTSA campaign 19V569000?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "A5I.",
+        "source_records": [
+          "19V569000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V569000",
+        "20V440000",
+        "26V423000",
+        "20V438000",
+        "18V629000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        36.00922780681327,
+        31.650109636212697,
+        31.23833625116848,
+        31.085961492014565,
+        30.616105868930507
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V569000",
+          "score": 36.00922780681327
+        },
+        {
+          "rank": 2,
+          "campaign_id": "20V440000",
+          "score": 31.650109636212697
+        },
+        {
+          "rank": 3,
+          "campaign_id": "26V423000",
+          "score": 31.23833625116848
+        },
+        {
+          "rank": 4,
+          "campaign_id": "20V438000",
+          "score": 31.085961492014565
+        },
+        {
+          "rank": 5,
+          "campaign_id": "18V629000",
+          "score": 30.616105868930507
+        }
+      ],
+      "status": "success",
+      "answer": "Honda's own recall number for NHTSA campaign 19V569000 is **A5I**.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 8.424,
+      "usage": {
+        "completion_tokens": 65,
+        "prompt_tokens": 1368,
+        "total_tokens": 1433,
+        "completion_time": 0.083722293,
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "prompt_time": 0.095941804,
+        "prompt_tokens_details": null,
+        "queue_time": 0.095694942,
+        "total_time": 0.179664097
+      },
+      "error": null
+    },
+    {
+      "id": "q17",
+      "question": "On what date did Honda begin recall 19V383000?",
+      "metadata": {
+        "task_type": "lookup",
+        "gold_answer": "July 8, 2019.",
+        "source_records": [
+          "19V383000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V383000",
+        "12V063000",
+        "24V508000",
+        "14V613000",
+        "15V472000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        23.56270843775554,
+        19.676563243142446,
+        19.324599294322635,
+        18.665661390101988,
+        18.63511437051809
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V383000",
+          "score": 23.56270843775554
+        },
+        {
+          "rank": 2,
+          "campaign_id": "12V063000",
+          "score": 19.676563243142446
+        },
+        {
+          "rank": 3,
+          "campaign_id": "24V508000",
+          "score": 19.324599294322635
+        },
+        {
+          "rank": 4,
+          "campaign_id": "14V613000",
+          "score": 18.665661390101988
+        },
+        {
+          "rank": 5,
+          "campaign_id": "15V472000",
+          "score": 18.63511437051809
+        }
+      ],
+      "status": "success",
+      "answer": "Honda began recall 19V383000 on **July 8, 2019**.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 9.453,
+      "usage": {
+        "completion_tokens": 47,
+        "prompt_tokens": 1278,
+        "total_tokens": 1325,
+        "completion_time": 0.049337751,
+        "completion_tokens_details": {
+          "reasoning_tokens": 19
+        },
+        "prompt_time": 0.068282181,
+        "prompt_tokens_details": null,
+        "queue_time": 0.11823277,
+        "total_time": 0.117619932
+      },
+      "error": null
+    },
+    {
+      "id": "q18",
+      "question": "What problem does the recall that expanded NHTSA recall 24V064 address?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "That recall is 26V332000. The front passenger seat weight sensor may crack and short circuit, which can cause the air bags to deploy unintentionally in a crash.",
+        "source_records": [
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "17V132000",
+        "25V615000",
+        "25V887000",
+        "25V369000",
+        "24E016000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        28.8279538114193,
+        25.31149180062197,
+        24.82280135287166,
+        24.05186191423819,
+        23.856380458567923
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "17V132000",
+          "score": 28.8279538114193
+        },
+        {
+          "rank": 2,
+          "campaign_id": "25V615000",
+          "score": 25.31149180062197
+        },
+        {
+          "rank": 3,
+          "campaign_id": "25V887000",
+          "score": 24.82280135287166
+        },
+        {
+          "rank": 4,
+          "campaign_id": "25V369000",
+          "score": 24.05186191423819
+        },
+        {
+          "rank": 5,
+          "campaign_id": "24E016000",
+          "score": 23.856380458567923
+        }
+      ],
+      "status": "success",
+      "answer": "The recall that expanded NHTSA recall 24V064 addresses a defect in certain AEIL weight‑sensor assemblies that can crack and short‑circuit, which may cause an air‑bag to deploy unintentionally or fail to deploy as intended.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 7.605,
+      "usage": {
+        "completion_tokens": 185,
+        "prompt_tokens": 1344,
+        "total_tokens": 1529,
+        "completion_time": 0.2037044,
+        "completion_tokens_details": {
+          "reasoning_tokens": 126
+        },
+        "prompt_time": 0.091303496,
+        "prompt_tokens_details": null,
+        "queue_time": 0.141014491,
+        "total_time": 0.295007896
+      },
+      "error": null
+    },
+    {
+      "id": "q19",
+      "question": "When were owner notification letters mailed for the recall that expanded both 21V-215 and 20V-314?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "That recall is 23V858000. Owner letters were mailed September 6, 2024.",
+        "source_records": [
+          "23V858000"
+        ]
+      },
+      "retrieved_ids": [
+        "21V215000",
+        "15V227000",
+        "16V596000",
+        "23V446000",
+        "14V254000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        26.53980813769629,
+        23.602928118053264,
+        23.206552274181675,
+        22.7929131416753,
+        22.783440082107052
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "21V215000",
+          "score": 26.53980813769629
+        },
+        {
+          "rank": 2,
+          "campaign_id": "15V227000",
+          "score": 23.602928118053264
+        },
+        {
+          "rank": 3,
+          "campaign_id": "16V596000",
+          "score": 23.206552274181675
+        },
+        {
+          "rank": 4,
+          "campaign_id": "23V446000",
+          "score": 22.7929131416753
+        },
+        {
+          "rank": 5,
+          "campaign_id": "14V254000",
+          "score": 22.783440082107052
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 12.612,
+      "usage": {
+        "completion_tokens": 53,
+        "prompt_tokens": 1678,
+        "total_tokens": 1731,
+        "completion_time": 0.057931162,
+        "completion_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "prompt_time": 0.106483251,
+        "prompt_tokens_details": null,
+        "queue_time": 0.189003516,
+        "total_time": 0.164414413
+      },
+      "error": null
+    },
+    {
+      "id": "q20",
+      "question": "Which recall expanded 20V-314 in 2021, and when were its owner letters mailed?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "Recall 21V215000 expanded 20V-314. Owner letters were mailed May 18, 2021.",
+        "source_records": [
+          "21V215000"
+        ]
+      },
+      "retrieved_ids": [
+        "14V078000",
+        "14V134000",
+        "14V254000",
+        "14V196000",
+        "24V867000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        19.727825705592103,
+        19.488238847950868,
+        19.112235974410027,
+        19.061054135658164,
+        18.96958816213604
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "14V078000",
+          "score": 19.727825705592103
+        },
+        {
+          "rank": 2,
+          "campaign_id": "14V134000",
+          "score": 19.488238847950868
+        },
+        {
+          "rank": 3,
+          "campaign_id": "14V254000",
+          "score": 19.112235974410027
+        },
+        {
+          "rank": 4,
+          "campaign_id": "14V196000",
+          "score": 19.061054135658164
+        },
+        {
+          "rank": 5,
+          "campaign_id": "24V867000",
+          "score": 18.96958816213604
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 12.52,
+      "usage": {
+        "completion_tokens": 47,
+        "prompt_tokens": 1907,
+        "total_tokens": 1954,
+        "completion_time": 0.049630348,
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "prompt_time": 0.146814184,
+        "prompt_tokens_details": null,
+        "queue_time": 0.140796669,
+        "total_time": 0.196444532
+      },
+      "error": null
+    },
+    {
+      "id": "q21",
+      "question": "Which was reported to NHTSA first: the 2019 Honda CR-V rear subframe recall or the 2019 Honda CR-V driver air bag clockspring recall?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "The driver air bag clockspring recall (19V383000, reported May 21, 2019) came before the rear subframe recall (19V865000, reported December 5, 2019).",
+        "source_records": [
+          "19V383000",
+          "19V865000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V383000",
+        "19V865000",
+        "17V417000",
+        "19V500000",
+        "26V663000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        90.410056464924,
+        89.57711349170758,
+        80.90045558139516,
+        79.45579366993249,
+        77.41889160402418
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V383000",
+          "score": 90.410056464924
+        },
+        {
+          "rank": 2,
+          "campaign_id": "19V865000",
+          "score": 89.57711349170758
+        },
+        {
+          "rank": 3,
+          "campaign_id": "17V417000",
+          "score": 80.90045558139516
+        },
+        {
+          "rank": 4,
+          "campaign_id": "19V500000",
+          "score": 79.45579366993249
+        },
+        {
+          "rank": 5,
+          "campaign_id": "26V663000",
+          "score": 77.41889160402418
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V driver air‑bag clockspring recall was reported to NHTSA first.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 11.623,
+      "usage": {
+        "completion_tokens": 77,
+        "prompt_tokens": 1779,
+        "total_tokens": 1856,
+        "completion_time": 0.086766279,
+        "completion_tokens_details": {
+          "reasoning_tokens": 44
+        },
+        "prompt_time": 0.142682727,
+        "prompt_tokens_details": null,
+        "queue_time": 0.229697544,
+        "total_time": 0.229449006
+      },
+      "error": null
+    },
+    {
+      "id": "q22",
+      "question": "For the 2019 Honda CR-V, which recall began first: the fuel tank weld recall or the Passenger Airbag Off owner's guide recall?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "The fuel tank weld recall (19V569000) began September 16, 2019, before the owner's guide recall (19V694000), which began November 14, 2019.",
+        "source_records": [
+          "19V569000",
+          "19V694000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V694000",
+        "19V569000",
+        "22V380000",
+        "17V417000",
+        "20V768000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        81.35840505002757,
+        77.24738939343932,
+        66.02908055349444,
+        63.86375087111302,
+        60.87326105857646
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V694000",
+          "score": 81.35840505002757
+        },
+        {
+          "rank": 2,
+          "campaign_id": "19V569000",
+          "score": 77.24738939343932
+        },
+        {
+          "rank": 3,
+          "campaign_id": "22V380000",
+          "score": 66.02908055349444
+        },
+        {
+          "rank": 4,
+          "campaign_id": "17V417000",
+          "score": 63.86375087111302
+        },
+        {
+          "rank": 5,
+          "campaign_id": "20V768000",
+          "score": 60.87326105857646
+        }
+      ],
+      "status": "success",
+      "answer": "The fuel tank weld recall (started September 16, 2019) began before the Passenger Airbag Off owner’s guide recall (started November 14, 2019).",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 6.453,
+      "usage": {
+        "completion_tokens": 86,
+        "prompt_tokens": 1170,
+        "total_tokens": 1256,
+        "completion_time": 0.089877277,
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        },
+        "prompt_time": 0.072595781,
+        "prompt_tokens_details": null,
+        "queue_time": 0.118315665,
+        "total_time": 0.162473058
+      },
+      "error": null
+    },
+    {
+      "id": "q23",
+      "question": "Which recalls for the 2019 Honda CR-V were reported to NHTSA in 2019?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "19V383000 (driver air bag harness), 19V569000 (fuel tank weld), 19V694000 (owner's guide), and 19V865000 (rear subframe).",
+        "source_records": [
+          "19V383000",
+          "19V569000",
+          "19V694000",
+          "19V865000"
+        ]
+      },
+      "retrieved_ids": [
+        "26V332000",
+        "26V663000",
+        "23V858000",
+        "19V569000",
+        "26V366000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        42.45756921882288,
+        42.42488067131564,
+        41.76421611057544,
+        41.489617891314005,
+        41.337411216531514
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "26V332000",
+          "score": 42.45756921882288
+        },
+        {
+          "rank": 2,
+          "campaign_id": "26V663000",
+          "score": 42.42488067131564
+        },
+        {
+          "rank": 3,
+          "campaign_id": "23V858000",
+          "score": 41.76421611057544
+        },
+        {
+          "rank": 4,
+          "campaign_id": "19V569000",
+          "score": 41.489617891314005
+        },
+        {
+          "rank": 5,
+          "campaign_id": "26V366000",
+          "score": 41.337411216531514
+        }
+      ],
+      "status": "success",
+      "answer": "Recall campaign **19V569000** was reported to NHTSA in 2019 for the 2019 Honda CR‑V.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 24.694,
+      "usage": {
+        "completion_tokens": 121,
+        "prompt_tokens": 3454,
+        "total_tokens": 3575,
+        "completion_time": 0.125424295,
+        "completion_tokens_details": {
+          "reasoning_tokens": 83
+        },
+        "prompt_time": 0.258896983,
+        "prompt_tokens_details": null,
+        "queue_time": 0.118110654,
+        "total_time": 0.384321278
+      },
+      "error": null
+    },
+    {
+      "id": "q24",
+      "question": "Which recalls for the 2019 Honda CR-V were reported to NHTSA in 2023 or later?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "23V158000 (seat belt buckles), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "23V158000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "26V663000",
+        "26V366000",
+        "26V332000",
+        "23V858000",
+        "24V744000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        45.43836051189695,
+        44.450765246677825,
+        42.085226105545686,
+        40.96532862280314,
+        40.67286946182804
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "26V663000",
+          "score": 45.43836051189695
+        },
+        {
+          "rank": 2,
+          "campaign_id": "26V366000",
+          "score": 44.450765246677825
+        },
+        {
+          "rank": 3,
+          "campaign_id": "26V332000",
+          "score": 42.085226105545686
+        },
+        {
+          "rank": 4,
+          "campaign_id": "23V858000",
+          "score": 40.96532862280314
+        },
+        {
+          "rank": 5,
+          "campaign_id": "24V744000",
+          "score": 40.67286946182804
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 27.621,
+      "usage": {
+        "completion_tokens": 927,
+        "prompt_tokens": 3772,
+        "total_tokens": 4699,
+        "completion_time": 1.004635004,
+        "completion_tokens_details": {
+          "reasoning_tokens": 914
+        },
+        "prompt_time": 0.247193303,
+        "prompt_tokens_details": null,
+        "queue_time": 0.169018127,
+        "total_time": 1.251828307
+      },
+      "error": null
+    },
+    {
+      "id": "q25",
+      "question": "How many recall campaigns in the NHTSA data cover the 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "8 campaigns.",
+        "source_records": [
+          "19V383000",
+          "19V569000",
+          "19V694000",
+          "19V865000",
+          "21V215000",
+          "23V158000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "26V663000",
+        "19V694000",
+        "26V366000",
+        "19V383000",
+        "23V858000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        44.92838140646781,
+        44.84097538836138,
+        44.804485811925346,
+        43.681915459608355,
+        42.543238171362844
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "26V663000",
+          "score": 44.92838140646781
+        },
+        {
+          "rank": 2,
+          "campaign_id": "19V694000",
+          "score": 44.84097538836138
+        },
+        {
+          "rank": 3,
+          "campaign_id": "26V366000",
+          "score": 44.804485811925346
+        },
+        {
+          "rank": 4,
+          "campaign_id": "19V383000",
+          "score": 43.681915459608355
+        },
+        {
+          "rank": 5,
+          "campaign_id": "23V858000",
+          "score": 42.543238171362844
+        }
+      ],
+      "status": "success",
+      "answer": "There are **two** recall campaigns in the NHTSA data that cover the 2019 Honda CR‑V.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 19.835,
+      "usage": {
+        "completion_tokens": 123,
+        "prompt_tokens": 2474,
+        "total_tokens": 2597,
+        "completion_time": 0.13230859,
+        "completion_tokens_details": {
+          "reasoning_tokens": 90
+        },
+        "prompt_time": 0.204630426,
+        "prompt_tokens_details": null,
+        "queue_time": 0.299427141,
+        "total_time": 0.336939016
+      },
+      "error": null
+    },
+    {
+      "id": "q26",
+      "question": "How many people were injured by the defect in recall 19V865000?",
+      "metadata": {
+        "task_type": "unanswerable",
+        "gold_answer": "Not in the corpus. Recall records do not include injury counts, so the system should say it does not know.",
+        "source_records": []
+      },
+      "retrieved_ids": [
+        "12E045000",
+        "12V395000",
+        "14V022000",
+        "14V664000",
+        "12V179000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        22.87267903981448,
+        22.17662471802194,
+        21.9376058253176,
+        21.925084111260208,
+        21.886425136987686
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "12E045000",
+          "score": 22.87267903981448
+        },
+        {
+          "rank": 2,
+          "campaign_id": "12V395000",
+          "score": 22.17662471802194
+        },
+        {
+          "rank": 3,
+          "campaign_id": "14V022000",
+          "score": 21.9376058253176
+        },
+        {
+          "rank": 4,
+          "campaign_id": "14V664000",
+          "score": 21.925084111260208
+        },
+        {
+          "rank": 5,
+          "campaign_id": "12V179000",
+          "score": 21.886425136987686
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 9.37,
+      "usage": {
+        "completion_tokens": 24,
+        "prompt_tokens": 1457,
+        "total_tokens": 1481,
+        "completion_time": 0.028198912,
+        "completion_tokens_details": {
+          "reasoning_tokens": 11
+        },
+        "prompt_time": 0.08666338,
+        "prompt_tokens_details": null,
+        "queue_time": 0.064733811,
+        "total_time": 0.114862292
+      },
+      "error": null
+    },
+    {
+      "id": "q27",
+      "question": "What recalls will affect the 2030 Honda CR-V?",
+      "metadata": {
+        "task_type": "unanswerable",
+        "gold_answer": "Not in the corpus. The system should say it does not know.",
+        "source_records": []
+      },
+      "retrieved_ids": [
+        "20V768000",
+        "26V366000",
+        "24V064000",
+        "17V417000",
+        "12V486000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        35.47665181132072,
+        35.14354797294021,
+        34.938893832668356,
+        34.85855728553023,
+        34.79791800825594
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "20V768000",
+          "score": 35.47665181132072
+        },
+        {
+          "rank": 2,
+          "campaign_id": "26V366000",
+          "score": 35.14354797294021
+        },
+        {
+          "rank": 3,
+          "campaign_id": "24V064000",
+          "score": 34.938893832668356
+        },
+        {
+          "rank": 4,
+          "campaign_id": "17V417000",
+          "score": 34.85855728553023
+        },
+        {
+          "rank": 5,
+          "campaign_id": "12V486000",
+          "score": 34.79791800825594
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 16.473,
+      "usage": {
+        "completion_tokens": 22,
+        "prompt_tokens": 1728,
+        "total_tokens": 1750,
+        "completion_time": 0.022587462,
+        "completion_tokens_details": {
+          "reasoning_tokens": 9
+        },
+        "prompt_time": 0.086473777,
+        "prompt_tokens_details": null,
+        "queue_time": 0.170815021,
+        "total_time": 0.109061239
+      },
+      "error": null
+    },
+    {
+      "id": "q28",
+      "question": "When was the original recall that 21V215000 expanded reported to NHTSA?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "21V215000 expanded recall 20V314000, which was reported to NHTSA on May 28, 2020.",
+        "source_records": [
+          "21V215000",
+          "20V314000"
+        ]
+      },
+      "retrieved_ids": [
+        "10E060000",
+        "14V369000",
+        "18V040000",
+        "10E010000",
+        "18V404000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        26.9887354212517,
+        24.51930422600656,
+        23.32366598344508,
+        22.28792472889282,
+        21.976535420271468
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "10E060000",
+          "score": 26.9887354212517
+        },
+        {
+          "rank": 2,
+          "campaign_id": "14V369000",
+          "score": 24.51930422600656
+        },
+        {
+          "rank": 3,
+          "campaign_id": "18V040000",
+          "score": 23.32366598344508
+        },
+        {
+          "rank": 4,
+          "campaign_id": "10E010000",
+          "score": 22.28792472889282
+        },
+        {
+          "rank": 5,
+          "campaign_id": "18V404000",
+          "score": 21.976535420271468
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 8.378,
+      "usage": {
+        "completion_tokens": 31,
+        "prompt_tokens": 2038,
+        "total_tokens": 2069,
+        "completion_time": 0.032226672,
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_time": 0.119669785,
+        "prompt_tokens_details": null,
+        "queue_time": 0.051455355,
+        "total_time": 0.151896457
+      },
+      "error": null
+    },
+    {
+      "id": "q29",
+      "question": "What component is involved in the original recall that both 21V215000 and 23V858000 expanded?",
+      "metadata": {
+        "task_type": "two_hop",
+        "gold_answer": "Both expanded recall 20V314000, which involves the fuel pump (fuel system, gasoline delivery).",
+        "source_records": [
+          "20V314000"
+        ]
+      },
+      "retrieved_ids": [
+        "18V040000",
+        "10E010000",
+        "25V887000",
+        "14V369000",
+        "25V615000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        31.11970964127302,
+        30.103679336464854,
+        30.098200951786346,
+        30.091518699932625,
+        29.044272398016012
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "18V040000",
+          "score": 31.11970964127302
+        },
+        {
+          "rank": 2,
+          "campaign_id": "10E010000",
+          "score": 30.103679336464854
+        },
+        {
+          "rank": 3,
+          "campaign_id": "25V887000",
+          "score": 30.098200951786346
+        },
+        {
+          "rank": 4,
+          "campaign_id": "14V369000",
+          "score": 30.091518699932625
+        },
+        {
+          "rank": 5,
+          "campaign_id": "25V615000",
+          "score": 29.044272398016012
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 11.86,
+      "usage": {
+        "completion_tokens": 40,
+        "prompt_tokens": 1784,
+        "total_tokens": 1824,
+        "completion_time": 0.042962792,
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        },
+        "prompt_time": 0.314384738,
+        "prompt_tokens_details": null,
+        "queue_time": 0.224574233,
+        "total_time": 0.35734753
+      },
+      "error": null
+    },
+    {
+      "id": "q30",
+      "question": "How many recall campaigns cover the 2019 Honda Civic?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "4 campaigns.",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "21V215000",
+        "20V314000",
+        "26V332000",
+        "19V378000",
+        "23V858000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        31.197155335328603,
+        30.301228147386265,
+        30.03233621480498,
+        29.25562872683384,
+        29.096243627456413
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "21V215000",
+          "score": 31.197155335328603
+        },
+        {
+          "rank": 2,
+          "campaign_id": "20V314000",
+          "score": 30.301228147386265
+        },
+        {
+          "rank": 3,
+          "campaign_id": "26V332000",
+          "score": 30.03233621480498
+        },
+        {
+          "rank": 4,
+          "campaign_id": "19V378000",
+          "score": 29.25562872683384
+        },
+        {
+          "rank": 5,
+          "campaign_id": "23V858000",
+          "score": 29.096243627456413
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 29.684,
+      "usage": {
+        "completion_tokens": 67,
+        "prompt_tokens": 4160,
+        "total_tokens": 4227,
+        "completion_time": 0.070401176,
+        "completion_tokens_details": {
+          "reasoning_tokens": 54
+        },
+        "prompt_time": 0.245009379,
+        "prompt_tokens_details": null,
+        "queue_time": 0.096256896,
+        "total_time": 0.315410555
+      },
+      "error": null
+    },
+    {
+      "id": "q31",
+      "question": "How many recall campaigns cover the 2019 Honda Accord?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "6 campaigns.",
+        "source_records": [
+          "20V314000",
+          "20V771000",
+          "21V215000",
+          "23V158000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "23V158000",
+        "20V771000",
+        "19V060000",
+        "21V215000",
+        "23V858000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        30.12317250695146,
+        30.04491639994164,
+        29.519056494446087,
+        29.490606188693683,
+        29.45601718579472
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "23V158000",
+          "score": 30.12317250695146
+        },
+        {
+          "rank": 2,
+          "campaign_id": "20V771000",
+          "score": 30.04491639994164
+        },
+        {
+          "rank": 3,
+          "campaign_id": "19V060000",
+          "score": 29.519056494446087
+        },
+        {
+          "rank": 4,
+          "campaign_id": "21V215000",
+          "score": 29.490606188693683
+        },
+        {
+          "rank": 5,
+          "campaign_id": "23V858000",
+          "score": 29.45601718579472
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 23.628,
+      "usage": {
+        "completion_tokens": 97,
+        "prompt_tokens": 2845,
+        "total_tokens": 2942,
+        "completion_time": 0.104630476,
+        "completion_tokens_details": {
+          "reasoning_tokens": 84
+        },
+        "prompt_time": 0.165256532,
+        "prompt_tokens_details": null,
+        "queue_time": 0.097110398,
+        "total_time": 0.269887008
+      },
+      "error": null
+    },
+    {
+      "id": "q32",
+      "question": "How many recall campaigns covering Honda-brand vehicles were reported to NHTSA in 2023?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "19 campaigns.",
+        "source_records": []
+      },
+      "retrieved_ids": [
+        "12E015000",
+        "26V054000",
+        "26V663000",
+        "10V145000",
+        "26V423000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        28.298253666825044,
+        28.167400231875448,
+        28.068575218499788,
+        27.520745478209456,
+        26.984659664240585
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "12E015000",
+          "score": 28.298253666825044
+        },
+        {
+          "rank": 2,
+          "campaign_id": "26V054000",
+          "score": 28.167400231875448
+        },
+        {
+          "rank": 3,
+          "campaign_id": "26V663000",
+          "score": 28.068575218499788
+        },
+        {
+          "rank": 4,
+          "campaign_id": "10V145000",
+          "score": 27.520745478209456
+        },
+        {
+          "rank": 5,
+          "campaign_id": "26V423000",
+          "score": 26.984659664240585
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 10.501,
+      "usage": {
+        "completion_tokens": 140,
+        "prompt_tokens": 1566,
+        "total_tokens": 1706,
+        "completion_time": 0.144788327,
+        "completion_tokens_details": {
+          "reasoning_tokens": 127
+        },
+        "prompt_time": 0.07937002,
+        "prompt_tokens_details": null,
+        "queue_time": 0.096101281,
+        "total_time": 0.224158347
+      },
+      "error": null
+    },
+    {
+      "id": "q33",
+      "question": "Among the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR-V, which has the most recall campaigns?",
+      "metadata": {
+        "task_type": "aggregate",
+        "gold_answer": "The 2019 Honda CR-V, with 8 campaigns, compared with 6 for the 2019 Accord and 4 for the 2019 Civic.",
+        "source_records": []
+      },
+      "retrieved_ids": [
+        "26V332000",
+        "23V858000",
+        "21V215000",
+        "18V268000",
+        "19V378000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        89.23279090771334,
+        89.20821712795077,
+        88.22858922985026,
+        83.38430857501787,
+        83.15781761394358
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "26V332000",
+          "score": 89.23279090771334
+        },
+        {
+          "rank": 2,
+          "campaign_id": "23V858000",
+          "score": 89.20821712795077
+        },
+        {
+          "rank": 3,
+          "campaign_id": "21V215000",
+          "score": 88.22858922985026
+        },
+        {
+          "rank": 4,
+          "campaign_id": "18V268000",
+          "score": 83.38430857501787
+        },
+        {
+          "rank": 5,
+          "campaign_id": "19V378000",
+          "score": 83.15781761394358
+        }
+      ],
+      "status": "success",
+      "answer": "All three— the 2019 Honda Civic, the 2019 Honda Accord, and the 2019 Honda CR‑V—have the same number of recall campaigns (three each).",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 34.147,
+      "usage": {
+        "completion_tokens": 262,
+        "prompt_tokens": 4614,
+        "total_tokens": 4876,
+        "completion_time": 0.367227732,
+        "completion_tokens_details": {
+          "reasoning_tokens": 210
+        },
+        "prompt_time": 0.237025145,
+        "prompt_tokens_details": null,
+        "queue_time": 0.248313221,
+        "total_time": 0.604252877
+      },
+      "error": null
+    },
+    {
+      "id": "q34",
+      "question": "Which recalls cover the 2019 Honda Civic?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "20V314000 (fuel pump), 21V215000 (fuel pump), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "21V215000",
+        "26V332000",
+        "20V314000",
+        "24V064000",
+        "15V320000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        27.9216525659725,
+        27.7573872043531,
+        27.220520957211154,
+        26.879220614972485,
+        26.652444645374903
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "21V215000",
+          "score": 27.9216525659725
+        },
+        {
+          "rank": 2,
+          "campaign_id": "26V332000",
+          "score": 27.7573872043531
+        },
+        {
+          "rank": 3,
+          "campaign_id": "20V314000",
+          "score": 27.220520957211154
+        },
+        {
+          "rank": 4,
+          "campaign_id": "24V064000",
+          "score": 26.879220614972485
+        },
+        {
+          "rank": 5,
+          "campaign_id": "15V320000",
+          "score": 26.652444645374903
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda Civic is covered by the following Honda recall campaigns:\n\n1. **Recall campaign 21V215000** – Low‑pressure fuel pump inside the fuel tank may fail.  \n2. **Recall campaign 20V314000** – Low‑pressure fuel pump inside the fuel tank may fail.  \n3. **Recall campaign 26V332000** – Front passenger seat weight sensor may crack and short‑circuit, potentially causing the air bag to deploy unintentionally.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 26.861,
+      "usage": {
+        "completion_tokens": 191,
+        "prompt_tokens": 3612,
+        "total_tokens": 3803,
+        "completion_time": 0.201286055,
+        "completion_tokens_details": {
+          "reasoning_tokens": 80
+        },
+        "prompt_time": 0.211631075,
+        "prompt_tokens_details": null,
+        "queue_time": 0.221906797,
+        "total_time": 0.41291713
+      },
+      "error": null
+    },
+    {
+      "id": "q35",
+      "question": "Which 2019 Honda Accord recalls involve the fuel system?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "20V314000, 21V215000, and 23V858000, all involving the fuel pump.",
+        "source_records": [
+          "20V314000",
+          "21V215000",
+          "23V858000"
+        ]
+      },
+      "retrieved_ids": [
+        "20V314000",
+        "21V215000",
+        "19V060000",
+        "23V858000",
+        "24V763000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        32.341925704949425,
+        31.99446161450717,
+        31.54173271775929,
+        31.202453935253597,
+        30.547190447349895
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "20V314000",
+          "score": 32.341925704949425
+        },
+        {
+          "rank": 2,
+          "campaign_id": "21V215000",
+          "score": 31.99446161450717
+        },
+        {
+          "rank": 3,
+          "campaign_id": "19V060000",
+          "score": 31.54173271775929
+        },
+        {
+          "rank": 4,
+          "campaign_id": "23V858000",
+          "score": 31.202453935253597
+        },
+        {
+          "rank": 5,
+          "campaign_id": "24V763000",
+          "score": 30.547190447349895
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda Accord is covered by the following fuel‑system recalls:\n\n| Recall campaign | Fuel‑system component involved | Key detail |\n|-----------------|--------------------------------|------------|\n| **20V314000** | Low‑pressure fuel pump inside the fuel tank | May fail, causing engine stall |\n| **21V215000** | Low‑pressure fuel pump inside the fuel tank | May fail, causing engine stall |\n| **23V858000** | Fuel pump inside the fuel tank | May fail, causing engine stall |\n\nThese are the only recall campaigns in the provided context that involve the fuel system for a 2019 Honda Accord.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 20.001,
+      "usage": {
+        "completion_tokens": 265,
+        "prompt_tokens": 2672,
+        "total_tokens": 2937,
+        "completion_time": 0.289028553,
+        "completion_tokens_details": {
+          "reasoning_tokens": 123
+        },
+        "prompt_time": 0.366723767,
+        "prompt_tokens_details": null,
+        "queue_time": 0.105183132,
+        "total_time": 0.65575232
+      },
+      "error": null
+    },
+    {
+      "id": "q36",
+      "question": "Which recalls cover all three of the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR-V?",
+      "metadata": {
+        "task_type": "filtered_list",
+        "gold_answer": "21V215000 (fuel pump), 23V858000 (fuel pump), and 26V332000 (passenger seat weight sensor).",
+        "source_records": [
+          "21V215000",
+          "23V858000",
+          "26V332000"
+        ]
+      },
+      "retrieved_ids": [
+        "23V858000",
+        "26V332000",
+        "21V215000",
+        "18V268000",
+        "19V378000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        86.07634088726326,
+        85.31657020645527,
+        84.5960079625873,
+        79.87975676329818,
+        79.36085927989943
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "23V858000",
+          "score": 86.07634088726326
+        },
+        {
+          "rank": 2,
+          "campaign_id": "26V332000",
+          "score": 85.31657020645527
+        },
+        {
+          "rank": 3,
+          "campaign_id": "21V215000",
+          "score": 84.5960079625873
+        },
+        {
+          "rank": 4,
+          "campaign_id": "18V268000",
+          "score": 79.87975676329818
+        },
+        {
+          "rank": 5,
+          "campaign_id": "19V378000",
+          "score": 79.36085927989943
+        }
+      ],
+      "status": "success",
+      "answer": "The recalls that list **all three** of the 2019 Honda Civic, 2019 Honda Accord, and 2019 Honda CR‑V are:\n\n1. **Recall campaign 23V858000** – “Fuel pump inside the fuel tank may fail” (covers 2019 Accord, Civic, and CR‑V).  \n2. **Recall campaign 26V332000** – “Front passenger seat weight sensor may crack” (covers 2019 Accord, Civic, and CR‑V).  \n3. **Recall campaign 21V215000** – “Low‑pressure fuel pump inside the fuel tank may fail” (covers 2019 Accord, Civic, and CR‑V).",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 34.11,
+      "usage": {
+        "completion_tokens": 378,
+        "prompt_tokens": 4612,
+        "total_tokens": 4990,
+        "completion_time": 0.417847939,
+        "completion_tokens_details": {
+          "reasoning_tokens": 225
+        },
+        "prompt_time": 0.264998899,
+        "prompt_tokens_details": null,
+        "queue_time": 0.170698202,
+        "total_time": 0.682846838
+      },
+      "error": null
+    },
+    {
+      "id": "q37",
+      "question": "Which was reported to NHTSA first: the 2019 Honda Accord body control module software recall or the 2019 Honda Accord seat belt buckle recall?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "The body control module software recall (20V771000, reported December 10, 2020) came before the seat belt buckle recall (23V158000, reported March 9, 2023).",
+        "source_records": [
+          "20V771000",
+          "23V158000"
+        ]
+      },
+      "retrieved_ids": [
+        "23V158000",
+        "20V771000",
+        "25V785000",
+        "19V060000",
+        "26V332000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        80.49483420033648,
+        71.57000633683458,
+        67.21763827521207,
+        64.72809093055751,
+        64.59298371113252
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "23V158000",
+          "score": 80.49483420033648
+        },
+        {
+          "rank": 2,
+          "campaign_id": "20V771000",
+          "score": 71.57000633683458
+        },
+        {
+          "rank": 3,
+          "campaign_id": "25V785000",
+          "score": 67.21763827521207
+        },
+        {
+          "rank": 4,
+          "campaign_id": "19V060000",
+          "score": 64.72809093055751
+        },
+        {
+          "rank": 5,
+          "campaign_id": "26V332000",
+          "score": 64.59298371113252
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda Accord body‑control‑module software recall (campaign 20V771000) was reported to NHTSA first.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 15.789,
+      "usage": {
+        "completion_tokens": 143,
+        "prompt_tokens": 2697,
+        "total_tokens": 2840,
+        "completion_time": 0.157026015,
+        "completion_tokens_details": {
+          "reasoning_tokens": 105
+        },
+        "prompt_time": 0.253565314,
+        "prompt_tokens_details": null,
+        "queue_time": 0.17412279,
+        "total_time": 0.410591329
+      },
+      "error": null
+    },
+    {
+      "id": "q38",
+      "question": "Which was reported to NHTSA first: the 2019 Honda CR-V fuel tank weld recall or the original fuel pump recall 20V314000?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "The fuel tank weld recall (19V569000, reported August 1, 2019) came before the fuel pump recall (20V314000, reported May 28, 2020).",
+        "source_records": [
+          "19V569000",
+          "20V314000"
+        ]
+      },
+      "retrieved_ids": [
+        "19V569000",
+        "21V215000",
+        "20V314000",
+        "23V858000",
+        "22V380000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        69.68383871504989,
+        67.07670000745166,
+        62.250352946051194,
+        61.86529126437134,
+        60.70211878888666
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "19V569000",
+          "score": 69.68383871504989
+        },
+        {
+          "rank": 2,
+          "campaign_id": "21V215000",
+          "score": 67.07670000745166
+        },
+        {
+          "rank": 3,
+          "campaign_id": "20V314000",
+          "score": 62.250352946051194
+        },
+        {
+          "rank": 4,
+          "campaign_id": "23V858000",
+          "score": 61.86529126437134
+        },
+        {
+          "rank": 5,
+          "campaign_id": "22V380000",
+          "score": 60.70211878888666
+        }
+      ],
+      "status": "success",
+      "answer": "The 2019 Honda CR‑V fuel‑tank weld recall (campaign 19V569000) was reported to NHTSA first. It began on September 16, 2019, whereas the original fuel‑pump recall 20V314000 started on July 22, 2020.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 17.581,
+      "usage": {
+        "completion_tokens": 134,
+        "prompt_tokens": 2468,
+        "total_tokens": 2602,
+        "completion_time": 0.140169413,
+        "completion_tokens_details": {
+          "reasoning_tokens": 62
+        },
+        "prompt_time": 0.134778191,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "queue_time": 0.141058088,
+        "total_time": 0.274947604
+      },
+      "error": null
+    },
+    {
+      "id": "q39",
+      "question": "Which was reported to NHTSA first: recall 20V314000 or the 2019 Honda Accord body control module software recall?",
+      "metadata": {
+        "task_type": "comparison",
+        "gold_answer": "20V314000 (reported May 28, 2020) came before the body control module software recall (20V771000, reported December 10, 2020).",
+        "source_records": [
+          "20V314000",
+          "20V771000"
+        ]
+      },
+      "retrieved_ids": [
+        "20V771000",
+        "25V785000",
+        "20V314000",
+        "21V215000",
+        "19V060000"
+      ],
+      "retrieval_method": "bm25",
+      "retrieval_scores": [
+        44.85063051292848,
+        44.61271006523786,
+        40.6656325191967,
+        39.890587270253526,
+        39.48634245804913
+      ],
+      "ranked_retrieval": [
+        {
+          "rank": 1,
+          "campaign_id": "20V771000",
+          "score": 44.85063051292848
+        },
+        {
+          "rank": 2,
+          "campaign_id": "25V785000",
+          "score": 44.61271006523786
+        },
+        {
+          "rank": 3,
+          "campaign_id": "20V314000",
+          "score": 40.6656325191967
+        },
+        {
+          "rank": 4,
+          "campaign_id": "21V215000",
+          "score": 39.890587270253526
+        },
+        {
+          "rank": 5,
+          "campaign_id": "19V060000",
+          "score": 39.48634245804913
+        }
+      ],
+      "status": "success",
+      "answer": "I don't know.",
+      "model": "openai/gpt-oss-20b",
+      "latency_seconds": 10.545,
+      "usage": {
+        "completion_tokens": 109,
+        "prompt_tokens": 1839,
+        "total_tokens": 1948,
+        "completion_time": 0.120912998,
+        "completion_tokens_details": {
+          "reasoning_tokens": 96
+        },
+        "prompt_time": 0.119062858,
+        "prompt_tokens_details": null,
+        "queue_time": 0.115108664,
+        "total_time": 0.239975856
+      },
+      "error": null
+    }
+  ]
+}

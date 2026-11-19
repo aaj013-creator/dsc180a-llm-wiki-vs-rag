@@ -135,6 +135,36 @@ Make only the necessary changes, explain them, and don't make API calls yourself
 
 I am on branch 'baseline' and want to merge into main. Please stage the right commits for me to merge into main, making sure everything stays intact and there are no conflicts. For right now, I am not concerned with keeping all code intact and making sure code isn't redundant.
 
+### Keyword-RAG implementation
+
+Implement BM25 keyword retrieval as an alternative to the existing dense retriever, following your architecture review.
+
+Scope:
+1. Add rank-bm25 to requirements.txt.
+2. In src/rag.py, implement a deterministic tokenizer, build_bm25_index(docs), and BM25 retrieval with ranked indices and scores.
+3. In scripts/run_rag.py, add --retriever {dense,bm25}, defaulting to dense.
+4. Reuse build_docs() for BOTH retrievers. Use doc["id"] directly for campaign IDs rather than separately reconstructing their order.
+5. Keep the current document text, search_document: prefix in context, top_k=5, RAG prompt, Groq model, generation parameters, and evaluation question set unchanged.
+6. Ensure the BM25 path never calls Ollama or loads embeddings.npy.
+7. Add retrieval method, scores, ranked IDs, and relevant retrieval configuration to the output metadata.
+8. Ensure BM25 and dense runs write to distinct result files, with no accidental overwriting.
+9. Add unit tests with small synthetic recall documents. Include campaign IDs, hyphenated/abbreviated ID variants, deterministic ranking, ID/document alignment, and fewer-than-k cases.
+10. Do not modify notebooks/eda.ipynb or unrelated files.
+
+Important:
+- Avoid changing the existing dense algorithm or fixing its missing search_query: prefix during this experiment.
+- Handle queries with no matching terms deterministically and document the behavior.
+- Do not add aggressive stopword removal, stemming, LLM query rewriting, or metadata boosting.
+- Do not fabricate or silently substitute a different recall corpus if the real data is missing.
+
+After implementation:
+- Run the offline tests.
+- Show the files modified.
+- Explain the exact commands for running BM25 retrieval and full generation.
+- Explicitly identify anything you could not test because the real corpus is missing.
+
+Proceed with implementation now.
+
 ---
 
 ## Shawn Cheng

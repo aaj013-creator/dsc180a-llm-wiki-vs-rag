@@ -12,6 +12,8 @@ from pathlib import Path
 
 from groq import Groq
 
+from dotenv import load_dotenv
+
 DEFAULT_JUDGE_MODEL = "openai/gpt-oss-120b"
 
 # Matches campaign IDs like 19V569000, 20V-314, or 21V215
@@ -125,12 +127,13 @@ def summarize(graded):
 
 
 def main():
+    load_dotenv()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("results", type=Path, help="Results JSON file to grade")
     parser.add_argument("--judge-model", default=DEFAULT_JUDGE_MODEL)
     args = parser.parse_args()
 
-    results = json.loads(args.results.read_text())["results"]
+    results = json.loads(args.results.read_text(encoding="utf-8"))["results"]
     client = Groq(api_key=os.environ["GROQ_API_KEY"])
 
     graded = []
