@@ -122,6 +122,7 @@ Tools: Claude, Codex
 ### How I used AI
 - I used Claude to help me write the introduction section of our checkpoint report. I provided it with the project details, and it helped me draft a well-structured introduction. I also used Claude Code to analyze our code repository and provide insights for improving the introduction section. I then used Codex to refine the draft introduction section, ensuring it followed research report writing quality and addressed any gaps or issues.
 - I also used Claude Code to help me migrate the code for the RAG implementation from a Jupyter notebook to a Python script.
+- Claude Code also helped with exploring and implementing different chunking strategies for the RAG implementation.
 
 ## Prompt Log
 
@@ -152,6 +153,11 @@ I've also attached feedback from my peer on some parts of the writing. Could you
 ### 5. Migrating rag.ipynb to rag.py (Claude Code)
 ```markdown
 Could you help me migrate the code from @notebooks/rag.ipynb to @src/rag.py ? I just want to move the code over from the notebook to an actual Python file, the logic and functionality should stay the same. I've already moved over most of the code, but I'm not sure it runs correctly, and probably some of the code can be better formatted / organized. If some code needs to be put into functions or rearranged for the Python script to run successfully that's fine too, just let me know what needs adjusting.
+```
+
+### 6. Chunking strategies (Claude Code)
+```markdown
+I'd like to implement a few different chunking methods in @src/rag.py  and be able to evaluate and compare the chunking methods to see if the way data is chunked can improve the accuracy of the LLM when answering questions with RAG. Currently, there is just one chunking approach, which is building a document for each recall campaign. I want to implement multiple chunking methods, such as semantic chunking, recursive chunking, adaptive chunking, etc. and be able to compare these chunking methods against each other when the LLM is evaluated on our question set. Please explore and look into different chunking approaches that can be implemented here that could improve the accuracy of the LLM with RAG.
 ```
 
 ### Testing

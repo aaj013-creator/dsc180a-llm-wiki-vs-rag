@@ -92,7 +92,21 @@ Download the NHTSA data into `data/raw/`:
 python run.py data
 ```
 
-[TO DO: add commands for the baseline, RAG, and evaluation stages as they are built]
+Compare RAG chunking strategies (needs Ollama with `nomic-embed-text`; `--generate` also needs `GROQ_API_KEY`):
+
+```
+python run.py eval-chunking                                   # retrieval metrics, all strategies
+python run.py eval-chunking --strategies campaign vehicle     # a subset
+python run.py eval-chunking --generate                        # + answers graded by an LLM judge
+python run.py eval-chunking --generate --generator ollama     # answers from local gpt-oss:20b (no API quota)
+python run.py eval-chunking --regrade results/chunking_eval_<timestamp>.json   # grade answers the judge missed
+```
+
+Answers are generated with Groq by default, or locally with Ollama (`ollama pull gpt-oss:20b`). Grading always uses the `gpt-oss-120b` judge on Groq, with the same rules as `scripts/grade.py`. Groq's free tier allows 200k tokens per day per model, which is about two strategies' worth of answers, so a full run of all strategies needs the local generator. If the judge's quota runs out, answers are still generated and saved ungraded, and `--regrade` fills in the scores later.
+
+Strategies are defined in `src/chunking.py`: `campaign` (one chunk per recall, the original), `fixed`, `recursive`, `recursive_ctx`, `semantic`, `semantic_ctx`, `field`, `adaptive`, and `vehicle`. Every strategy is built from the same per-campaign records and gets the same context budget (`--context-chars`, default 6000), so only the chunking differs. Embeddings are cached by content in `data/processed/embeddings/`. The first build of all strategies takes about 2 hours on a laptop; later runs reuse the cache. Results are written to `results/chunking_eval_<timestamp>.json` and `.csv`.
+
+[TO DO: add commands for the baseline and RAG stages as they are built]
 
 ## Status
 

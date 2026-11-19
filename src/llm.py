@@ -232,6 +232,91 @@ class GroqLLM:
         return self._client
 
 
+class OllamaLLM:
+    """Local inference through Ollama's chat API, with the same interface as GroqLLM
+
+    Runs open-weight models (e.g. ``gpt-oss:20b``) on the local machine, which
+    avoids API rate limits. The weights match Groq's gpt-oss-20b but the
+    inference stack differs, so absolute scores are not directly comparable
+    with Groq runs; comparisons within one backend are.
+    """
+
+    rate_limited = False  # no API quota to pace against
+
+    def __init__(
+        self,
+        settings: GenerationSettings | None = None,
+        host: str = "http://localhost:11434",
+        num_ctx: int = 8192,
+        timeout: float = 600,
+    ) -> None:
+        self.settings = settings or GenerationSettings(model="gpt-oss:20b")
+        self.host = host.rstrip("/")
+        self.num_ctx = num_ctx
+        self.timeout = timeout
+
+    def generate(self, messages: Sequence[Mapping[str, str]]) -> LLMResult:
+        started = time.perf_counter()
+        try:
+            import requests
+
+            response = requests.post(
+                f"{self.host}/api/chat",
+                json={
+                    "model": self.settings.model,
+                    "messages": _normalize_messages(messages),
+                    "stream": False,
+                    "think": self.settings.reasoning_effort,
+                    "options": {
+                        "temperature": self.settings.temperature,
+                        "top_p": self.settings.top_p,
+                        "seed": self.settings.seed,
+                        "num_predict": self.settings.max_completion_tokens,
+                        "num_ctx": self.num_ctx,
+                    },
+                },
+                timeout=self.timeout,
+            )
+            response.raise_for_status()
+            data = response.json()
+
+            prompt_tokens = data.get("prompt_eval_count")
+            completion_tokens = data.get("eval_count")
+            common_result = {
+                "model": data.get("model") or self.settings.model,
+                "usage": TokenUsage(
+                    prompt_tokens=prompt_tokens,
+                    completion_tokens=completion_tokens,
+                    total_tokens=(prompt_tokens or 0) + (completion_tokens or 0) or None,
+                ),
+                "latency_seconds": time.perf_counter() - started,
+                "finish_reason": data.get("done_reason"),
+            }
+            text = (data.get("message") or {}).get("content")
+            if not isinstance(text, str) or not text.strip():
+                return LLMResult(
+                    text=None,
+                    **common_result,
+                    error=LLMError(
+                        category="empty_response",
+                        error_type="EmptyResponse",
+                        message=(
+                            "Ollama returned empty final content"
+                            f" (done_reason={data.get('done_reason')!r})"
+                        ),
+                    ),
+                )
+            return LLMResult(text=text, **common_result)
+        except Exception as exc:
+            return LLMResult(
+                text=None,
+                model=self.settings.model,
+                usage=TokenUsage(),
+                latency_seconds=time.perf_counter() - started,
+                error=_structured_error(exc),
+            )
+
+
 def _normalize_messages(
     messages: Sequence[Mapping[str, str]],
 ) -> list[dict[str, str]]:
@@ -362,5 +447,6 @@ __all__ = [
     "GroqLLM",
     "LLMError",
     "LLMResult",
+    "OllamaLLM",
     "TokenUsage",
 ]
