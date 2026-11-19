@@ -305,5 +305,32 @@ class GenerationFailureTests(unittest.TestCase):
         self.assertEqual(ctx.exception.info["strategy"], "fake")
 
 
+class OutputPathTests(unittest.TestCase):
+    def test_names_by_run_type_and_never_overwrites(self):
+        import tempfile
+        from pathlib import Path
+        import src.evaluate_chunking as ev
+        from src.chunking import STRATEGIES
+        from src.rag import DEFAULT_CONTEXT_CHARS
+
+        all_strategies = list(STRATEGIES)
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            path = lambda *a: ev.default_output_path(*a, results_dir=tmp).name
+            self.assertEqual(path(False, 39, all_strategies, DEFAULT_CONTEXT_CHARS),
+                             "chunking_eval_retrieval_39q.json")
+            self.assertEqual(path(True, 39, all_strategies, DEFAULT_CONTEXT_CHARS),
+                             "chunking_eval_answers_39q.json")
+            self.assertEqual(path(True, 39, ["campaign", "vehicle"], 3000),
+                             "chunking_eval_answers_39q_campaign-vehicle_ctx3000.json")
+
+            (tmp / "chunking_eval_answers_39q.json").write_text("{}")
+            self.assertEqual(path(True, 39, all_strategies, DEFAULT_CONTEXT_CHARS),
+                             "chunking_eval_answers_39q_2.json")
+            (tmp / "chunking_eval_answers_39q_2.csv").write_text("")
+            self.assertEqual(path(True, 39, all_strategies, DEFAULT_CONTEXT_CHARS),
+                             "chunking_eval_answers_39q_3.json")
+
+
 if __name__ == "__main__":
     unittest.main()

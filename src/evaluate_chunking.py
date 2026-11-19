@@ -313,6 +313,27 @@ def regrade(path):
     return remaining
 
 
+def default_output_path(generate, n_questions, strategies, context_chars, results_dir=RESULTS_DIR):
+    """Name results by run type, e.g. chunking_eval_answers_39q.json
+
+    Mode is "answers" (with --generate) or "retrieval". A strategy subset and a
+    non-default context budget are added to the name. An existing file is never
+    overwritten: a _2, _3, ... suffix is added instead.
+    """
+    parts = ["chunking_eval", "answers" if generate else "retrieval", f"{n_questions}q"]
+    if list(strategies) != list(STRATEGIES):
+        parts.append("-".join(strategies))
+    if context_chars != DEFAULT_CONTEXT_CHARS:
+        parts.append(f"ctx{context_chars}")
+    stem = "_".join(parts)
+    path = results_dir / f"{stem}.json"
+    n = 2
+    while path.exists() or path.with_suffix(".csv").exists():
+        path = results_dir / f"{stem}_{n}.json"
+        n += 1
+    return path
+
+
 def make_generator(backend, ollama_model):
     """None means the default Groq client from src/rag.py"""
     if backend == "ollama":
@@ -334,7 +355,7 @@ def main(argv=None):
     parser.add_argument("--regrade", type=Path, metavar="RESULTS_JSON",
                         help="only grade the ungraded answers in an existing results file")
     parser.add_argument("--output", type=Path, default=None,
-                        help="JSON output path (default: results/chunking_eval_<timestamp>.json)")
+                        help="JSON output path (default: results/chunking_eval_<retrieval|answers>_<N>q.json)")
     args = parser.parse_args(argv)
 
     if args.regrade:
@@ -349,7 +370,8 @@ def main(argv=None):
     generator_llm = make_generator(args.generator, args.ollama_model)
     generator_settings = (generator_llm or get_llm()).settings.to_dict()
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    output = args.output or RESULTS_DIR / f"chunking_eval_{stamp}.json"
+    output = args.output or default_output_path(
+        args.generate, len(questions), args.strategies, args.context_chars)
     run = {
         "started_at_utc": stamp,
         "questions_file": str(args.questions),
